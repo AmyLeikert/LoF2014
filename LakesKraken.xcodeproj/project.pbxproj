@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370777194FCB3B00D8040E /* Foundation.framework */; };
+		2437077A194FCB3B00D8040E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370779194FCB3B00D8040E /* CoreGraphics.framework */; };
+		2437077C194FCB3B00D8040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2437077B194FCB3B00D8040E /* UIKit.framework */; };
+		24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24370780194FCB3B00D8040E /* InfoPlist.strings */; };
+		24370784194FCB3B00D8040E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24370783194FCB3B00D8040E /* main.m */; };
+		24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24370787194FCB3B00D8040E /* ALAppDelegate.m */; };
+		2437078A194FCB3B00D8040E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24370789194FCB3B00D8040E /* Images.xcassets */; };
+		24370791194FCB3B00D8040E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370790194FCB3B00D8040E /* XCTest.framework */; };
+		24370792194FCB3B00D8040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370777194FCB3B00D8040E /* Foundation.framework */; };
+		24370793194FCB3B00D8040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2437077B194FCB3B00D8040E /* UIKit.framework */; };
+		2437079B194FCB3B00D8040E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24370799194FCB3B00D8040E /* InfoPlist.strings */; };
+		2437079D194FCB3B00D8040E /* LakesKrakenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437079C194FCB3B00D8040E /* LakesKrakenTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24370794194FCB3B00D8040E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2437076C194FCB3B00D8040E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24370773194FCB3B00D8040E;
+			remoteInfo = LakesKraken;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24370774194FCB3B00D8040E /* LakesKraken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LakesKraken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24370777194FCB3B00D8040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24370779194FCB3B00D8040E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2437077B194FCB3B00D8040E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2437077F194FCB3B00D8040E /* LakesKraken-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LakesKraken-Info.plist"; sourceTree = "<group>"; };
+		24370781194FCB3B00D8040E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24370783194FCB3B00D8040E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		24370785194FCB3B00D8040E /* LakesKraken-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LakesKraken-Prefix.pch"; sourceTree = "<group>"; };
+		24370786194FCB3B00D8040E /* ALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAppDelegate.h; sourceTree = "<group>"; };
+		24370787194FCB3B00D8040E /* ALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALAppDelegate.m; sourceTree = "<group>"; };
+		24370789194FCB3B00D8040E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2437078F194FCB3B00D8040E /* LakesKrakenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LakesKrakenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24370790194FCB3B00D8040E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		24370798194FCB3B00D8040E /* LakesKrakenTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LakesKrakenTests-Info.plist"; sourceTree = "<group>"; };
+		2437079A194FCB3B00D8040E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2437079C194FCB3B00D8040E /* LakesKrakenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LakesKrakenTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24370771194FCB3B00D8040E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2437077A194FCB3B00D8040E /* CoreGraphics.framework in Frameworks */,
+				2437077C194FCB3B00D8040E /* UIKit.framework in Frameworks */,
+				24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2437078C194FCB3B00D8040E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24370791194FCB3B00D8040E /* XCTest.framework in Frameworks */,
+				24370793194FCB3B00D8040E /* UIKit.framework in Frameworks */,
+				24370792194FCB3B00D8040E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2437076B194FCB3B00D8040E = {
+			isa = PBXGroup;
+			children = (
+				2437077D194FCB3B00D8040E /* LakesKraken */,
+				24370796194FCB3B00D8040E /* LakesKrakenTests */,
+				24370776194FCB3B00D8040E /* Frameworks */,
+				24370775194FCB3B00D8040E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24370775194FCB3B00D8040E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24370774194FCB3B00D8040E /* LakesKraken.app */,
+				2437078F194FCB3B00D8040E /* LakesKrakenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24370776194FCB3B00D8040E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24370777194FCB3B00D8040E /* Foundation.framework */,
+				24370779194FCB3B00D8040E /* CoreGraphics.framework */,
+				2437077B194FCB3B00D8040E /* UIKit.framework */,
+				24370790194FCB3B00D8040E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2437077D194FCB3B00D8040E /* LakesKraken */ = {
+			isa = PBXGroup;
+			children = (
+				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
+				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
+				24370789194FCB3B00D8040E /* Images.xcassets */,
+				2437077E194FCB3B00D8040E /* Supporting Files */,
+			);
+			path = LakesKraken;
+			sourceTree = "<group>";
+		};
+		2437077E194FCB3B00D8040E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2437077F194FCB3B00D8040E /* LakesKraken-Info.plist */,
+				24370780194FCB3B00D8040E /* InfoPlist.strings */,
+				24370783194FCB3B00D8040E /* main.m */,
+				24370785194FCB3B00D8040E /* LakesKraken-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24370796194FCB3B00D8040E /* LakesKrakenTests */ = {
+			isa = PBXGroup;
+			children = (
+				2437079C194FCB3B00D8040E /* LakesKrakenTests.m */,
+				24370797194FCB3B00D8040E /* Supporting Files */,
+			);
+			path = LakesKrakenTests;
+			sourceTree = "<group>";
+		};
+		24370797194FCB3B00D8040E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24370798194FCB3B00D8040E /* LakesKrakenTests-Info.plist */,
+				24370799194FCB3B00D8040E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24370773194FCB3B00D8040E /* LakesKraken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 243707A0194FCB3B00D8040E /* Build configuration list for PBXNativeTarget "LakesKraken" */;
+			buildPhases = (
+				24370770194FCB3B00D8040E /* Sources */,
+				24370771194FCB3B00D8040E /* Frameworks */,
+				24370772194FCB3B00D8040E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LakesKraken;
+			productName = LakesKraken;
+			productReference = 24370774194FCB3B00D8040E /* LakesKraken.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2437078E194FCB3B00D8040E /* LakesKrakenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 243707A3194FCB3B00D8040E /* Build configuration list for PBXNativeTarget "LakesKrakenTests" */;
+			buildPhases = (
+				2437078B194FCB3B00D8040E /* Sources */,
+				2437078C194FCB3B00D8040E /* Frameworks */,
+				2437078D194FCB3B00D8040E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24370795194FCB3B00D8040E /* PBXTargetDependency */,
+			);
+			name = LakesKrakenTests;
+			productName = LakesKrakenTests;
+			productReference = 2437078F194FCB3B00D8040E /* LakesKrakenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2437076C194FCB3B00D8040E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = DetroitLabsUser;
+				TargetAttributes = {
+					2437078E194FCB3B00D8040E = {
+						TestTargetID = 24370773194FCB3B00D8040E;
+					};
+				};
+			};
+			buildConfigurationList = 2437076F194FCB3B00D8040E /* Build configuration list for PBXProject "LakesKraken" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2437076B194FCB3B00D8040E;
+			productRefGroup = 24370775194FCB3B00D8040E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24370773194FCB3B00D8040E /* LakesKraken */,
+				2437078E194FCB3B00D8040E /* LakesKrakenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24370772194FCB3B00D8040E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
+				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2437078D194FCB3B00D8040E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2437079B194FCB3B00D8040E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24370770194FCB3B00D8040E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24370784194FCB3B00D8040E /* main.m in Sources */,
+				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2437078B194FCB3B00D8040E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2437079D194FCB3B00D8040E /* LakesKrakenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24370795194FCB3B00D8040E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24370773194FCB3B00D8040E /* LakesKraken */;
+			targetProxy = 24370794194FCB3B00D8040E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24370780194FCB3B00D8040E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24370781194FCB3B00D8040E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		24370799194FCB3B00D8040E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2437079A194FCB3B00D8040E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2437079E194FCB3B00D8040E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2437079F194FCB3B00D8040E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		243707A1194FCB3B00D8040E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
+				INFOPLIST_FILE = "LakesKraken/LakesKraken-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		243707A2194FCB3B00D8040E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
+				INFOPLIST_FILE = "LakesKraken/LakesKraken-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		243707A4194FCB3B00D8040E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LakesKraken.app/LakesKraken";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LakesKrakenTests/LakesKrakenTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		243707A5194FCB3B00D8040E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LakesKraken.app/LakesKraken";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
+				INFOPLIST_FILE = "LakesKrakenTests/LakesKrakenTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2437076F194FCB3B00D8040E /* Build configuration list for PBXProject "LakesKraken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2437079E194FCB3B00D8040E /* Debug */,
+				2437079F194FCB3B00D8040E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		243707A0194FCB3B00D8040E /* Build configuration list for PBXNativeTarget "LakesKraken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				243707A1194FCB3B00D8040E /* Debug */,
+				243707A2194FCB3B00D8040E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		243707A3194FCB3B00D8040E /* Build configuration list for PBXNativeTarget "LakesKrakenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				243707A4194FCB3B00D8040E /* Debug */,
+				243707A5194FCB3B00D8040E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2437076C194FCB3B00D8040E /* Project object */;
+}
