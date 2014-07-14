@@ -18,7 +18,9 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    self.window.rootViewController = [[ALWelcomeView alloc] init];
+    ALWelcomeView *welcomeViewController = [[ALWelcomeView alloc]initWithNibName:@"ALWelcomeView" bundle:nil];
+    self.navController = [[UINavigationController alloc]initWithRootViewController:welcomeViewController];
+    self.window.rootViewController = self.navController;
     return YES;
 }
 

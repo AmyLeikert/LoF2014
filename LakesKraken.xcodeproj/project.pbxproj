@@ -28,6 +28,7 @@
 		24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5FA19744926005FAB18 /* menuViewController.xib */; };
 		24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */; };
 		24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C60219744E76005FAB18 /* OceanSounds.mp3 */; };
+		24A7C6051974556D005FAB18 /* krakenSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C6041974556D005FAB18 /* krakenSquare.png */; };
 		387300DABE4A41F3B5CD7CED /* libPods-LakesKraken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		24A7C5FA19744926005FAB18 /* menuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = menuViewController.xib; path = ../menuViewController.xib; sourceTree = "<group>"; };
 		24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		24A7C60219744E76005FAB18 /* OceanSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanSounds.mp3; sourceTree = "<group>"; };
+		24A7C6041974556D005FAB18 /* krakenSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = krakenSquare.png; sourceTree = "<group>"; };
 		8F0C0204BB5C42939315663B /* Pods-LakesKraken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LakesKraken.xcconfig"; path = "Pods/Pods-LakesKraken.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		24A7C5F71974468C005FAB18 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				24A7C6041974556D005FAB18 /* krakenSquare.png */,
 				24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */,
 				24A7C5F519744074005FAB18 /* kraken2.png */,
 				24A7C5F319743F4C005FAB18 /* kraken.png */,
@@ -285,6 +288,7 @@
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24A7C5F419743F4C005FAB18 /* kraken.png in Resources */,
+				24A7C6051974556D005FAB18 /* krakenSquare.png in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

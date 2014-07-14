@@ -8,13 +8,21 @@
 
 #import "ALWelcomeView.h"
 #import <AVFoundation/AVFoundation.h>
+#import "menuViewController.h"
 
 
 @interface ALWelcomeView ()
+@property (nonatomic, strong) menuViewController *menuView;
 
 @end
 
 @implementation ALWelcomeView
+
+-(IBAction)buttonPressed:(id)sender {
+    self.menuView = [[menuViewController alloc]initWithNibName:@"menuViewController" bundle:nil];
+    [self.navigationController pushViewController:self.menuView animated:YES];
+    [self.avSound stop];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +41,9 @@
 
     self.button.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:18];
     self.lakesLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:24];
+    self.yearLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
+  
+    [self.navigationController setNavigationBarHidden:YES];
     
     [self soundOceanWaves];
 }

@@ -13,6 +13,7 @@
 @interface ALWelcomeView : UIViewController
 @property IBOutlet BlinkButton *button;
 @property IBOutlet UILabel *lakesLabel;
+@property IBOutlet UILabel *yearLabel;
 
 @property AVAudioPlayer *avSound;
 
