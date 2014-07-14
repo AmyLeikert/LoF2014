@@ -58,9 +58,9 @@
 		243707A6194FCB6400D8040E /* ALWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALWelcomeView.h; path = ../ALWelcomeView.h; sourceTree = "<group>"; };
 		243707A7194FCB6400D8040E /* ALWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALWelcomeView.m; path = ../ALWelcomeView.m; sourceTree = "<group>"; };
 		243707A8194FCB6400D8040E /* ALWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ALWelcomeView.xib; path = ../ALWelcomeView.xib; sourceTree = "<group>"; };
-		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
-		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../../Downloads/kraken.png; sourceTree = "<group>"; };
-		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../../Downloads/kraken2.png; sourceTree = "<group>"; };
+		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
+		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../Downloads/kraken.png; sourceTree = "<group>"; };
+		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../Downloads/kraken2.png; sourceTree = "<group>"; };
 		8F0C0204BB5C42939315663B /* Pods-LakesKraken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LakesKraken.xcconfig"; path = "Pods/Pods-LakesKraken.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,16 +124,14 @@
 		2437077D194FCB3B00D8040E /* LakesKraken */ = {
 			isa = PBXGroup;
 			children = (
-				24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */,
 				243707A6194FCB6400D8040E /* ALWelcomeView.h */,
 				243707A7194FCB6400D8040E /* ALWelcomeView.m */,
 				243707A8194FCB6400D8040E /* ALWelcomeView.xib */,
-				24A7C5F519744074005FAB18 /* kraken2.png */,
-				24A7C5F319743F4C005FAB18 /* kraken.png */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
 				24370789194FCB3B00D8040E /* Images.xcassets */,
 				2437077E194FCB3B00D8040E /* Supporting Files */,
+				24A7C5F71974468C005FAB18 /* Images */,
 			);
 			path = LakesKraken;
 			sourceTree = "<group>";
@@ -165,6 +163,17 @@
 				24370799194FCB3B00D8040E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24A7C5F71974468C005FAB18 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */,
+				24A7C5F519744074005FAB18 /* kraken2.png */,
+				24A7C5F319743F4C005FAB18 /* kraken.png */,
+			);
+			name = Images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
