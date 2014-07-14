@@ -24,6 +24,10 @@
 		24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */; };
 		24A7C5F419743F4C005FAB18 /* kraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F319743F4C005FAB18 /* kraken.png */; };
 		24A7C5F619744074005FAB18 /* kraken2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F519744074005FAB18 /* kraken2.png */; };
+		24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A7C5F919744926005FAB18 /* menuViewController.m */; };
+		24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5FA19744926005FAB18 /* menuViewController.xib */; };
+		24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */; };
+		24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C60219744E76005FAB18 /* OceanSounds.mp3 */; };
 		387300DABE4A41F3B5CD7CED /* libPods-LakesKraken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +65,11 @@
 		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
 		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../Downloads/kraken.png; sourceTree = "<group>"; };
 		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../Downloads/kraken2.png; sourceTree = "<group>"; };
+		24A7C5F819744926005FAB18 /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menuViewController.h; path = ../menuViewController.h; sourceTree = "<group>"; };
+		24A7C5F919744926005FAB18 /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuViewController.m; path = ../menuViewController.m; sourceTree = "<group>"; };
+		24A7C5FA19744926005FAB18 /* menuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = menuViewController.xib; path = ../menuViewController.xib; sourceTree = "<group>"; };
+		24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		24A7C60219744E76005FAB18 /* OceanSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanSounds.mp3; sourceTree = "<group>"; };
 		8F0C0204BB5C42939315663B /* Pods-LakesKraken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LakesKraken.xcconfig"; path = "Pods/Pods-LakesKraken.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */,
 				2437077A194FCB3B00D8040E /* CoreGraphics.framework in Frameworks */,
 				2437077C194FCB3B00D8040E /* UIKit.framework in Frameworks */,
 				24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */,
@@ -112,6 +122,7 @@
 		24370776194FCB3B00D8040E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */,
 				24370777194FCB3B00D8040E /* Foundation.framework */,
 				24370779194FCB3B00D8040E /* CoreGraphics.framework */,
 				2437077B194FCB3B00D8040E /* UIKit.framework */,
@@ -127,9 +138,14 @@
 				243707A6194FCB6400D8040E /* ALWelcomeView.h */,
 				243707A7194FCB6400D8040E /* ALWelcomeView.m */,
 				243707A8194FCB6400D8040E /* ALWelcomeView.xib */,
+				24A7C60219744E76005FAB18 /* OceanSounds.mp3 */,
+				24A7C5F819744926005FAB18 /* menuViewController.h */,
+				24A7C5F919744926005FAB18 /* menuViewController.m */,
+				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
 				24370789194FCB3B00D8040E /* Images.xcassets */,
+				24A7C5FF19744D15005FAB18 /* Sounds */,
 				2437077E194FCB3B00D8040E /* Supporting Files */,
 				24A7C5F71974468C005FAB18 /* Images */,
 			);
@@ -173,6 +189,14 @@
 				24A7C5F319743F4C005FAB18 /* kraken.png */,
 			);
 			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		24A7C5FF19744D15005FAB18 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sounds;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -258,8 +282,10 @@
 				24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
 				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
+				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24A7C5F419743F4C005FAB18 /* kraken.png in Resources */,
+				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +340,7 @@
 				243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */,
 				24370784194FCB3B00D8040E /* main.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
+				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

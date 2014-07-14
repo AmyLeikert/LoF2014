@@ -7,6 +7,7 @@
 //
 
 #import "ALWelcomeView.h"
+#import <AVFoundation/AVFoundation.h>
 
 
 @interface ALWelcomeView ()
@@ -32,6 +33,8 @@
 
     self.button.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:18];
     self.lakesLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:24];
+    
+    [self soundOceanWaves];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,5 +42,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)soundOceanWaves{
+    
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:@"OceanSounds" withExtension:@"mp3"];
+    
+    self.avSound = [[AVAudioPlayer alloc]initWithContentsOfURL:soundURL error:nil];
+    [self.avSound play];
+    
+};
 
 @end

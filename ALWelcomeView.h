@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <BlinkButton.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ALWelcomeView : UIViewController
 @property IBOutlet BlinkButton *button;
 @property IBOutlet UILabel *lakesLabel;
+
+@property AVAudioPlayer *avSound;
+
+-(void)soundOceanWaves;
 
 @end
