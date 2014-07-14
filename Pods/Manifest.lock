@@ -1,0 +1,10 @@
+PODS:
+  - BlinkButton (0.0.1)
+
+DEPENDENCIES:
+  - BlinkButton (~> 0.0)
+
+SPEC CHECKSUMS:
+  BlinkButton: c675681c6be0840f78c4f5543ee644695ec790e1
+
+COCOAPODS: 0.32.1
