@@ -8,6 +8,7 @@
 
 #import "ALAppDelegate.h"
 #import "ALWelcomeView.h"
+#import <Parse/Parse.h>
 
 
 @implementation ALAppDelegate
@@ -21,6 +22,13 @@
     ALWelcomeView *welcomeViewController = [[ALWelcomeView alloc]initWithNibName:@"ALWelcomeView" bundle:nil];
     self.navController = [[UINavigationController alloc]initWithRootViewController:welcomeViewController];
     self.window.rootViewController = self.navController;
+    
+    [Parse setApplicationId:@"y8zOoUCmfdBwkLaTLuO7yIlXM0hHPiWKiiHbGAv6"
+                  clientKey:@"450qoRIbgFWEaK0OtvLFn3cJn2RgkMQo5vh6pZPg"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
     return YES;
 }
 
