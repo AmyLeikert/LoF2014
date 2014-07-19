@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240F392D197A2EB80087D566 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F392C197A2EB80087D566 /* Parse.framework */; };
+		240F392F197A2EC70087D566 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F392E197A2EC70087D566 /* AudioToolbox.framework */; };
+		240F3931197A2ED70087D566 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3930197A2ED70087D566 /* CFNetwork.framework */; };
+		240F3933197A2EE20087D566 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3932197A2EE20087D566 /* CoreLocation.framework */; };
+		240F3935197A2EE90087D566 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3934197A2EE90087D566 /* libz.1.1.3.dylib */; };
+		240F3937197A2EF10087D566 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3936197A2EF10087D566 /* MobileCoreServices.framework */; };
+		240F3939197A2EF50087D566 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3938197A2EF50087D566 /* QuartzCore.framework */; };
+		240F393B197A2EFB0087D566 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F393A197A2EFB0087D566 /* Security.framework */; };
+		240F393D197A2EFF0087D566 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F393C197A2EFF0087D566 /* StoreKit.framework */; };
+		240F393F197A2F040087D566 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F393E197A2F040087D566 /* SystemConfiguration.framework */; };
+		240F39C5197A2F8A0087D566 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F39C4197A2F8A0087D566 /* FacebookSDK.framework */; };
+		240F39C7197A2FA70087D566 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F39C6197A2FA70087D566 /* Twitter.framework */; };
+		240F39C9197A30680087D566 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F39C8197A30680087D566 /* Social.framework */; };
 		24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370777194FCB3B00D8040E /* Foundation.framework */; };
 		2437077A194FCB3B00D8040E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370779194FCB3B00D8040E /* CoreGraphics.framework */; };
 		2437077C194FCB3B00D8040E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2437077B194FCB3B00D8040E /* UIKit.framework */; };
@@ -29,6 +42,11 @@
 		24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */; };
 		24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C60219744E76005FAB18 /* OceanSounds.mp3 */; };
 		24A7C6051974556D005FAB18 /* krakenSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C6041974556D005FAB18 /* krakenSquare.png */; };
+		24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1CCCB197A318C000B7309 /* ALEvent.m */; };
+		24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */; };
+		24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */; };
+		24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */; };
+		24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */; };
 		387300DABE4A41F3B5CD7CED /* libPods-LakesKraken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +62,19 @@
 
 /* Begin PBXFileReference section */
 		16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LakesKraken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		240F392C197A2EB80087D566 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		240F392E197A2EC70087D566 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		240F3930197A2ED70087D566 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		240F3932197A2EE20087D566 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		240F3934197A2EE90087D566 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		240F3936197A2EF10087D566 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		240F3938197A2EF50087D566 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		240F393A197A2EFB0087D566 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		240F393C197A2EFF0087D566 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		240F393E197A2F040087D566 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		240F39C4197A2F8A0087D566 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		240F39C6197A2FA70087D566 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		240F39C8197A30680087D566 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		24370774194FCB3B00D8040E /* LakesKraken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LakesKraken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24370777194FCB3B00D8040E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24370779194FCB3B00D8040E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,6 +103,14 @@
 		24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		24A7C60219744E76005FAB18 /* OceanSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanSounds.mp3; sourceTree = "<group>"; };
 		24A7C6041974556D005FAB18 /* krakenSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = krakenSquare.png; sourceTree = "<group>"; };
+		24B1CCCA197A318C000B7309 /* ALEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEvent.h; sourceTree = "<group>"; };
+		24B1CCCB197A318C000B7309 /* ALEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEvent.m; sourceTree = "<group>"; };
+		24B1CCCC197A318C000B7309 /* ALScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALScheduleTableViewCell.h; sourceTree = "<group>"; };
+		24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALScheduleTableViewCell.m; sourceTree = "<group>"; };
+		24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSearchScheduleViewController.h; sourceTree = "<group>"; };
+		24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSearchScheduleViewController.m; sourceTree = "<group>"; };
+		24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALSearchScheduleViewController.xib; sourceTree = "<group>"; };
 		8F0C0204BB5C42939315663B /* Pods-LakesKraken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LakesKraken.xcconfig"; path = "Pods/Pods-LakesKraken.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,10 +119,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */,
+				240F39C9197A30680087D566 /* Social.framework in Frameworks */,
+				240F39C7197A2FA70087D566 /* Twitter.framework in Frameworks */,
+				240F393F197A2F040087D566 /* SystemConfiguration.framework in Frameworks */,
+				240F393D197A2EFF0087D566 /* StoreKit.framework in Frameworks */,
+				240F393B197A2EFB0087D566 /* Security.framework in Frameworks */,
+				240F3939197A2EF50087D566 /* QuartzCore.framework in Frameworks */,
+				240F3937197A2EF10087D566 /* MobileCoreServices.framework in Frameworks */,
+				240F3935197A2EE90087D566 /* libz.1.1.3.dylib in Frameworks */,
+				240F3933197A2EE20087D566 /* CoreLocation.framework in Frameworks */,
 				2437077A194FCB3B00D8040E /* CoreGraphics.framework in Frameworks */,
+				240F3931197A2ED70087D566 /* CFNetwork.framework in Frameworks */,
+				240F392F197A2EC70087D566 /* AudioToolbox.framework in Frameworks */,
+				24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */,
 				2437077C194FCB3B00D8040E /* UIKit.framework in Frameworks */,
 				24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */,
+				240F39C5197A2F8A0087D566 /* FacebookSDK.framework in Frameworks */,
+				240F392D197A2EB80087D566 /* Parse.framework in Frameworks */,
 				387300DABE4A41F3B5CD7CED /* libPods-LakesKraken.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +176,19 @@
 		24370776194FCB3B00D8040E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				240F39C8197A30680087D566 /* Social.framework */,
+				240F39C6197A2FA70087D566 /* Twitter.framework */,
+				240F39C4197A2F8A0087D566 /* FacebookSDK.framework */,
+				240F393E197A2F040087D566 /* SystemConfiguration.framework */,
+				240F393C197A2EFF0087D566 /* StoreKit.framework */,
+				240F393A197A2EFB0087D566 /* Security.framework */,
+				240F3938197A2EF50087D566 /* QuartzCore.framework */,
+				240F3936197A2EF10087D566 /* MobileCoreServices.framework */,
+				240F3934197A2EE90087D566 /* libz.1.1.3.dylib */,
+				240F3932197A2EE20087D566 /* CoreLocation.framework */,
+				240F3930197A2ED70087D566 /* CFNetwork.framework */,
+				240F392E197A2EC70087D566 /* AudioToolbox.framework */,
+				240F392C197A2EB80087D566 /* Parse.framework */,
 				24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */,
 				24370777194FCB3B00D8040E /* Foundation.framework */,
 				24370779194FCB3B00D8040E /* CoreGraphics.framework */,
@@ -144,6 +209,14 @@
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
+				24B1CCCA197A318C000B7309 /* ALEvent.h */,
+				24B1CCCB197A318C000B7309 /* ALEvent.m */,
+				24B1CCCC197A318C000B7309 /* ALScheduleTableViewCell.h */,
+				24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */,
+				24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */,
+				24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */,
+				24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */,
+				24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
 				24370789194FCB3B00D8040E /* Images.xcassets */,
@@ -282,7 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A7C5F619744074005FAB18 /* kraken2.png in Resources */,
+				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
 				24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */,
+				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
 				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
@@ -341,10 +416,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */,
 				243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */,
+				24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */,
 				24370784194FCB3B00D8040E /* main.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
 				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
+				24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +540,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/detroitlabsuser/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
 				INFOPLIST_FILE = "LakesKraken/LakesKraken-Info.plist";
@@ -476,6 +559,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/detroitlabsuser/Documents/FacebookSDK,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
 				INFOPLIST_FILE = "LakesKraken/LakesKraken-Info.plist";

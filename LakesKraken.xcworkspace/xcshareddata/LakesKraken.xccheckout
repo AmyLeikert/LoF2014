@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70FD4569-D836-4F8B-BFC4-C3BA75442ACD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LakesKraken</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AD576044-A17F-4970-AAE7-95E65F9A3555</key>
+		<string>ssh://github.com/AmyLeikert/LakesKraken.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LakesKraken.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AD576044-A17F-4970-AAE7-95E65F9A3555</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/AmyLeikert/LakesKraken.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AD576044-A17F-4970-AAE7-95E65F9A3555</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AD576044-A17F-4970-AAE7-95E65F9A3555</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LakesKraken</string>
+		</dict>
+	</array>
+</dict>
+</plist>

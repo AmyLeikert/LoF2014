@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <BlinkButton.h>
 #import <AVFoundation/AVFoundation.h>
+#import <Parse/Parse.h>
 
 @interface ALWelcomeView : UIViewController
 @property IBOutlet BlinkButton *button;

@@ -35,6 +35,7 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.button toggleBlink];
@@ -46,6 +47,8 @@
     [self.navigationController setNavigationBarHidden:YES];
     
     [self soundOceanWaves];
+    [Parse setApplicationId:@"y8zOoUCmfdBwkLaTLuO7yIlXM0hHPiWKiiHbGAv6"
+                  clientKey:@"450qoRIbgFWEaK0OtvLFn3cJn2RgkMQo5vh6pZPg"];
 }
 
 - (void)didReceiveMemoryWarning
