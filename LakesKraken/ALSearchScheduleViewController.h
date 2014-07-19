@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
+#import "ALEvent.h"
 
 @interface ALSearchScheduleViewController : UIViewController
+@property (nonatomic, strong) ALEvent *event1;
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "ALEvent.h"
+
 @interface menuViewController : UIViewController
+
 
 @end

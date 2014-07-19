@@ -47,8 +47,12 @@
             NSLog(@"Successfully retrieved %d scores.", objects.count);
             // Do something with the found objects
             for (PFObject *object in objects) {
+                ALEvent *event1 = [[ALEvent alloc]init];
+                event1.eventDescription = object[@"description"];
+                event1.startTime = object[@"endTime"];
                 
-                NSLog(@"%@", object[@"description"]);
+                NSLog(@"%@", event1.startTime);
+                
             }
         } else {
             // Log details of the failure
