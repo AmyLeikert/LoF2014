@@ -10,7 +10,8 @@
 #import <Parse/Parse.h>
 #import "ALEvent.h"
 
-@interface menuViewController : UIViewController
+@interface menuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) IBOutlet UITableView *menuTable;
 
 
 @end

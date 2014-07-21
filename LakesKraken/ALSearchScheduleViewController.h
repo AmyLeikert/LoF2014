@@ -12,5 +12,6 @@
 
 @interface ALSearchScheduleViewController : UIViewController
 @property (nonatomic, strong) ALEvent *event1;
+@property (nonatomic, strong) UIButton *allDayButton;
 
 @end

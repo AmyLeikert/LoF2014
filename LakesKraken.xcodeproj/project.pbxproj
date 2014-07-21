@@ -34,6 +34,8 @@
 		2437079D194FCB3B00D8040E /* LakesKrakenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2437079C194FCB3B00D8040E /* LakesKrakenTests.m */; };
 		243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 243707A7194FCB6400D8040E /* ALWelcomeView.m */; };
 		243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243707A8194FCB6400D8040E /* ALWelcomeView.xib */; };
+		246C1829197D6E6D00BE9990 /* starCheckboxOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 246C1827197D6E6D00BE9990 /* starCheckboxOff.png */; };
+		246C182A197D6E6D00BE9990 /* starCheckboxOn copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 246C1828197D6E6D00BE9990 /* starCheckboxOn copy.png */; };
 		24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */; };
 		24A7C5F419743F4C005FAB18 /* kraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F319743F4C005FAB18 /* kraken.png */; };
 		24A7C5F619744074005FAB18 /* kraken2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F519744074005FAB18 /* kraken2.png */; };
@@ -94,6 +96,8 @@
 		243707A6194FCB6400D8040E /* ALWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALWelcomeView.h; path = ../ALWelcomeView.h; sourceTree = "<group>"; };
 		243707A7194FCB6400D8040E /* ALWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALWelcomeView.m; path = ../ALWelcomeView.m; sourceTree = "<group>"; };
 		243707A8194FCB6400D8040E /* ALWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ALWelcomeView.xib; path = ../ALWelcomeView.xib; sourceTree = "<group>"; };
+		246C1827197D6E6D00BE9990 /* starCheckboxOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starCheckboxOff.png; path = LakesKraken/starCheckboxOff.png; sourceTree = "<group>"; };
+		246C1828197D6E6D00BE9990 /* starCheckboxOn copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "starCheckboxOn copy.png"; path = "LakesKraken/starCheckboxOn copy.png"; sourceTree = "<group>"; };
 		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
 		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../Downloads/kraken.png; sourceTree = "<group>"; };
 		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../Downloads/kraken2.png; sourceTree = "<group>"; };
@@ -209,14 +213,14 @@
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
+				24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */,
+				24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */,
+				24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */,
 				24B1CCCA197A318C000B7309 /* ALEvent.h */,
 				24B1CCCB197A318C000B7309 /* ALEvent.m */,
 				24B1CCCC197A318C000B7309 /* ALScheduleTableViewCell.h */,
 				24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */,
 				24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */,
-				24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */,
-				24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */,
-				24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
 				24370789194FCB3B00D8040E /* Images.xcassets */,
@@ -259,6 +263,8 @@
 		24A7C5F71974468C005FAB18 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				246C1827197D6E6D00BE9990 /* starCheckboxOff.png */,
+				246C1828197D6E6D00BE9990 /* starCheckboxOn copy.png */,
 				24A7C6041974556D005FAB18 /* krakenSquare.png */,
 				24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */,
 				24A7C5F519744074005FAB18 /* kraken2.png */,
@@ -356,6 +362,8 @@
 			files = (
 				24A7C5F619744074005FAB18 /* kraken2.png in Resources */,
 				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
+				246C1829197D6E6D00BE9990 /* starCheckboxOff.png in Resources */,
+				246C182A197D6E6D00BE9990 /* starCheckboxOn copy.png in Resources */,
 				24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */,
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,

@@ -13,6 +13,7 @@
 @end
 
 @implementation ALSearchScheduleViewController
+bool checked = NO;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self parseTesting];
+    [self.navigationController setNavigationBarHidden:NO];
 
     
 
@@ -61,5 +63,6 @@
         }
     }];
 }
+
 
 @end
