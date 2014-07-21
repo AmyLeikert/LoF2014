@@ -33,6 +33,16 @@
     return self;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
 - (void)viewDidLoad
 {
 
@@ -44,7 +54,7 @@
     self.lakesLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:24];
     self.yearLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
   
-    [self.navigationController setNavigationBarHidden:YES];
+    
     
     [self soundOceanWaves];
     [Parse setApplicationId:@"y8zOoUCmfdBwkLaTLuO7yIlXM0hHPiWKiiHbGAv6"

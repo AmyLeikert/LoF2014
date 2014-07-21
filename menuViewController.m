@@ -16,19 +16,6 @@
 NSString* const cellReuseIdentifier = @"cellIdentifier";
 @implementation menuViewController
 
-
-//- (id)initWithStyle:(UITableViewStyle)style {
-//   // self = [super initWithStyle:style];
-//    if (self.menuTable) {
-//        [self.menuTable registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReuseIdentifier];
-//        
-//        //self.tableView.delegate = self;
-//        //   self.tableView.dataSource = self;
-//    }
-//    
-//    return self;
-//}
-
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,8 +29,17 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self parseTesting];
 [self.menuTable registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cellReuseIdentifier"];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,29 +49,7 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
 }
 
 
--(void)parseTesting {
-    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
-    [query whereKey:@"hoursAM" containedIn:@[@"10"]];
-    [query whereKey:@"allDay" equalTo:@NO];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                ALEvent *event1 = [[ALEvent alloc]init];
-                event1.eventDescription = object[@"description"];
-                event1.startTime = object[@"endTime"];
-                
-                NSLog(@"%@", event1.startTime);
-                
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     

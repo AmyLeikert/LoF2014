@@ -47,14 +47,10 @@ bool checked = NO;
     [query whereKey:@"allDay" equalTo:@NO];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
             // Do something with the found objects
             for (PFObject *object in objects) {
-               // self.event1.eventDescription = object[@"description"];
-                self.event1.startTime = object[@"endTime"];
-                
-                //NSLog(@"%@", object[@"description"]);
+               self.event1.eventDescription = object[@"description"];
+                self.event1.startTime = object[@"startTime"];
              
             }
         } else {
