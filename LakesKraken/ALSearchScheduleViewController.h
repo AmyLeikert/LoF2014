@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "ALEvent.h"
 #import "ALFilterEvent.h"
+#import "ALParseQuery.h"
 @interface ALSearchScheduleViewController : UIViewController
 
 @property (nonatomic, strong) ALEvent *event1;

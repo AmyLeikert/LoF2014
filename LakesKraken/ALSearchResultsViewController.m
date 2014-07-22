@@ -7,6 +7,7 @@
 //
 
 #import "ALSearchResultsViewController.h"
+#import "ALParseQuery.h"
 
 @interface ALSearchResultsViewController ()
 
@@ -57,6 +58,7 @@
     else {
         self.testLabel.text = @"no";
     }
+    
 }
 
 - (void)viewDidLoad
@@ -66,6 +68,10 @@
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"cellReuseIdentifier"];
     
     [self testAllDayBool];
+    
+    self.parseQueryInstance = [[ALParseQuery alloc]init];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

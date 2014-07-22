@@ -10,5 +10,9 @@
 
 @interface ALFilterEvent : NSObject
 @property BOOL allDay;
+@property BOOL freeFood;
+@property BOOL thursday;
+@property BOOL friday;
+@property BOOL saturday;
 
 @end

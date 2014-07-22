@@ -35,6 +35,12 @@
     ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
     searchResults.filterEvent = self.filterEvent;
     [self.navigationController pushViewController:searchResults animated:YES];
+
+    
+    ///////
+    ALParseQuery *parseQ = [[ALParseQuery alloc]init];
+    [parseQ parse:searchResults.filterEvent];
+
 }
 
 - (void)viewDidLoad
@@ -56,12 +62,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)queryAllDay{
-   // ALFilterEvent *eventQuery = [[ALFilterEvent alloc]init];
-    if (self.filterEvent.allDay == NO) {
-        
-    }
-}
 
 -(void)parseTesting {
     PFQuery *query = [PFQuery queryWithClassName:@"schedule"];

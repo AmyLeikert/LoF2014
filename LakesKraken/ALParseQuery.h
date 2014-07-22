@@ -14,4 +14,6 @@
 @interface ALParseQuery : NSObject
 
 -(NSArray*)parseTesting:(ALFilterEvent *)filterEvent;
+
+-(NSArray*)parse:(ALFilterEvent *)filterEvent;
 @end

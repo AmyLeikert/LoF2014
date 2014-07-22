@@ -40,4 +40,27 @@
 //    }
 }
 
+-(NSArray*)parse:(ALFilterEvent *)filterEvent {
+    ALEvent *event =[[ALEvent alloc]init];
+    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
+    NSMutableArray *eventArray = [[NSMutableArray alloc]init];
+    if (filterEvent.allDay == NO) {
+        [query whereKey:@"allDay" equalTo:@NO];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                for (PFObject *object in objects) {
+                    event.eventDescription = object[@"description"];
+                    event.startTime = object[@"startTime"];
+                    [eventArray addObject:event];
+                    NSLog(@"%@", event.startTime);
+                }
+
+         
+         }
+         }];
+    }
+    return [eventArray copy];
+ 
+}
+
 @end

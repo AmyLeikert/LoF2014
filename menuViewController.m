@@ -30,6 +30,8 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 [self.menuTable registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cellReuseIdentifier"];
+
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
