@@ -13,6 +13,8 @@
 
 @interface ALParseQuery : NSObject
 
+@property (nonatomic, strong) NSMutableArray *eventArray;
+
 -(NSArray*)parseTesting:(ALFilterEvent *)filterEvent;
 
 -(NSArray*)parse:(ALFilterEvent *)filterEvent;

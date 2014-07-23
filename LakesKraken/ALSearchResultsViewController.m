@@ -68,8 +68,7 @@
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"cellReuseIdentifier"];
     
     [self testAllDayBool];
-    
-    self.parseQueryInstance = [[ALParseQuery alloc]init];
+
     
     
 }

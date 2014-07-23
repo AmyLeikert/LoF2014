@@ -14,6 +14,6 @@
 @property (nonatomic, strong) ALFilterEvent *filterEvent;
 @property (nonatomic, strong) IBOutlet UILabel *testLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableResults;
-@property (nonatomic, strong) ALParseQuery *parseQueryInstance;
+
 
 @end

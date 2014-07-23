@@ -40,6 +40,7 @@
 		246C1831197D942D00BE9990 /* ALSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 246C182F197D942D00BE9990 /* ALSearchResultsViewController.m */; };
 		246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246C1830197D942D00BE9990 /* ALSearchResultsViewController.xib */; };
 		246C1835197D9A9700BE9990 /* ALParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 246C1834197D9A9700BE9990 /* ALParseQuery.m */; };
+		246C183719800C1C00BE9990 /* krakenSquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 246C183619800C1C00BE9990 /* krakenSquare2.png */; };
 		24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */; };
 		24A7C5F419743F4C005FAB18 /* kraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F319743F4C005FAB18 /* kraken.png */; };
 		24A7C5F619744074005FAB18 /* kraken2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F519744074005FAB18 /* kraken2.png */; };
@@ -109,6 +110,7 @@
 		246C1830197D942D00BE9990 /* ALSearchResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALSearchResultsViewController.xib; sourceTree = "<group>"; };
 		246C1833197D9A9700BE9990 /* ALParseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALParseQuery.h; sourceTree = "<group>"; };
 		246C1834197D9A9700BE9990 /* ALParseQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALParseQuery.m; sourceTree = "<group>"; };
+		246C183619800C1C00BE9990 /* krakenSquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = krakenSquare2.png; path = LakesKraken/krakenSquare2.png; sourceTree = "<group>"; };
 		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
 		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../Downloads/kraken.png; sourceTree = "<group>"; };
 		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../Downloads/kraken2.png; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		24A7C5F71974468C005FAB18 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				246C183619800C1C00BE9990 /* krakenSquare2.png */,
 				246C1827197D6E6D00BE9990 /* starCheckboxOff.png */,
 				246C1828197D6E6D00BE9990 /* starCheckboxOn.png */,
 				24A7C6041974556D005FAB18 /* krakenSquare.png */,
@@ -390,6 +393,7 @@
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24A7C5F419743F4C005FAB18 /* kraken.png in Resources */,
+				246C183719800C1C00BE9990 /* krakenSquare2.png in Resources */,
 				24A7C6051974556D005FAB18 /* krakenSquare.png in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
 			);
