@@ -81,10 +81,12 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
      
     if (indexPath.section == 0 && indexPath.row == 1){
         cell.textLabel.text = @"Ten Principles";
-    }
+    }   
     
     [cell setBackgroundColor:[UIColor clearColor]];
     cell.textLabel.textAlignment = UITextAlignmentCenter;
+    
+    cell.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
     
     return cell;
 }

@@ -8,12 +8,58 @@
 
 #import "ALSearchScheduleViewController.h"
 #import "ALSearchResultsViewController.h"
+#import "ALParseQuery.h"
 
 @interface ALSearchScheduleViewController ()
 
 @end
 
 @implementation ALSearchScheduleViewController
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+    return 3;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    if (component == 0) {
+        return 4;
+    }
+    if (component == 1) {
+        return 12;
+    }
+    if (component == 2) {
+        return 2;
+    }
+    return component;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView
+             titleForRow:(NSInteger)row
+            forComponent:(NSInteger)component
+{
+    NSArray *dayArray = @[@"Thursday", @"Friday", @"Saturday", @"Sunday"];
+    NSArray *timeArray = @[@"1:00", @"2:00", @"3:00", @"4:00", @"5:00", @"6:00", @"7:00", @"8:00", @"9:00", @"10:00", @"11:00", @"12:00"];
+    NSArray *amPMArray = @[@"AM", @"PM"];
+    if (component == 0) {
+        return [dayArray objectAtIndex:row];
+    }
+    
+    if (self.allDayButton.selected) {
+        if (component == 1) {
+            return @"";
+        }
+    }
+    if (!self.allDayButton.selected) {
+        if (component == 1) {
+            return [timeArray objectAtIndex:row];
+        }
+    }
+    
+    if (component == 2) {
+        return [amPMArray objectAtIndex:row];
+    }
+    return @"hello";
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -38,8 +84,9 @@
 
     
     ///////
-    ALParseQuery *parseQ = [[ALParseQuery alloc]init];
-    [parseQ parse:searchResults.filterEvent];
+    
+    [self.parse parse:searchResults.filterEvent];
+    NSLog(@"%@", self.parse);
 
 }
 
@@ -51,10 +98,25 @@
     [self.navigationController setNavigationBarHidden:NO];
     
     self.filterEvent = [[ALFilterEvent alloc]init];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    
+    self.parse = [[ALParseQuery alloc]init];
 
     
 
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
 
 - (void)didReceiveMemoryWarning
 {

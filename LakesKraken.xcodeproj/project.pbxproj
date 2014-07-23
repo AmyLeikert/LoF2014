@@ -41,6 +41,10 @@
 		246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 246C1830197D942D00BE9990 /* ALSearchResultsViewController.xib */; };
 		246C1835197D9A9700BE9990 /* ALParseQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 246C1834197D9A9700BE9990 /* ALParseQuery.m */; };
 		246C183719800C1C00BE9990 /* krakenSquare2.png in Resources */ = {isa = PBXBuildFile; fileRef = 246C183619800C1C00BE9990 /* krakenSquare2.png */; };
+		24982DFC198046E60094191E /* AllDayOffSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982DFA198046E60094191E /* AllDayOffSimple.png */; };
+		24982DFD198046E60094191E /* AllDayOnSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982DFB198046E60094191E /* AllDayOnSimple.png */; };
+		24982DFF198048450094191E /* FreeFoodOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982DFE198048450094191E /* FreeFoodOff.png */; };
+		24982E01198048920094191E /* FreeFoodOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982E00198048920094191E /* FreeFoodOn.png */; };
 		24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */; };
 		24A7C5F419743F4C005FAB18 /* kraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F319743F4C005FAB18 /* kraken.png */; };
 		24A7C5F619744074005FAB18 /* kraken2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F519744074005FAB18 /* kraken2.png */; };
@@ -54,6 +58,10 @@
 		24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */; };
 		24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */; };
 		24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */; };
+		24C470CB19801334003F7957 /* whatsKraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 24C470CA19801334003F7957 /* whatsKraken.png */; };
+		24C470CD198016BE003F7957 /* whatsKraken2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24C470CC198016BE003F7957 /* whatsKraken2.png */; };
+		24C470CF198017BF003F7957 /* whatsKraken3.png in Resources */ = {isa = PBXBuildFile; fileRef = 24C470CE198017BF003F7957 /* whatsKraken3.png */; };
+		24C470D119802594003F7957 /* whatsKraken4.png in Resources */ = {isa = PBXBuildFile; fileRef = 24C470D019802594003F7957 /* whatsKraken4.png */; };
 		387300DABE4A41F3B5CD7CED /* libPods-LakesKraken.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +119,10 @@
 		246C1833197D9A9700BE9990 /* ALParseQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALParseQuery.h; sourceTree = "<group>"; };
 		246C1834197D9A9700BE9990 /* ALParseQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALParseQuery.m; sourceTree = "<group>"; };
 		246C183619800C1C00BE9990 /* krakenSquare2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = krakenSquare2.png; path = LakesKraken/krakenSquare2.png; sourceTree = "<group>"; };
+		24982DFA198046E60094191E /* AllDayOffSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AllDayOffSimple.png; path = LakesKraken/AllDayOffSimple.png; sourceTree = "<group>"; };
+		24982DFB198046E60094191E /* AllDayOnSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AllDayOnSimple.png; path = LakesKraken/AllDayOnSimple.png; sourceTree = "<group>"; };
+		24982DFE198048450094191E /* FreeFoodOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FreeFoodOff.png; path = LakesKraken/FreeFoodOff.png; sourceTree = "<group>"; };
+		24982E00198048920094191E /* FreeFoodOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreeFoodOn.png; sourceTree = "<group>"; };
 		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
 		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../Downloads/kraken.png; sourceTree = "<group>"; };
 		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../Downloads/kraken2.png; sourceTree = "<group>"; };
@@ -128,6 +140,10 @@
 		24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALSearchScheduleViewController.h; sourceTree = "<group>"; };
 		24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALSearchScheduleViewController.m; sourceTree = "<group>"; };
 		24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALSearchScheduleViewController.xib; sourceTree = "<group>"; };
+		24C470CA19801334003F7957 /* whatsKraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsKraken.png; sourceTree = "<group>"; };
+		24C470CC198016BE003F7957 /* whatsKraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whatsKraken2.png; sourceTree = "<group>"; };
+		24C470CE198017BF003F7957 /* whatsKraken3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whatsKraken3.png; path = LakesKraken/whatsKraken3.png; sourceTree = "<group>"; };
+		24C470D019802594003F7957 /* whatsKraken4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whatsKraken4.png; path = LakesKraken/whatsKraken4.png; sourceTree = "<group>"; };
 		8F0C0204BB5C42939315663B /* Pods-LakesKraken.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LakesKraken.xcconfig"; path = "Pods/Pods-LakesKraken.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,11 +299,19 @@
 		24A7C5F71974468C005FAB18 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				24982E00198048920094191E /* FreeFoodOn.png */,
+				24982DFE198048450094191E /* FreeFoodOff.png */,
+				24982DFA198046E60094191E /* AllDayOffSimple.png */,
+				24982DFB198046E60094191E /* AllDayOnSimple.png */,
+				24C470D019802594003F7957 /* whatsKraken4.png */,
 				246C183619800C1C00BE9990 /* krakenSquare2.png */,
+				24C470CE198017BF003F7957 /* whatsKraken3.png */,
 				246C1827197D6E6D00BE9990 /* starCheckboxOff.png */,
 				246C1828197D6E6D00BE9990 /* starCheckboxOn.png */,
 				24A7C6041974556D005FAB18 /* krakenSquare.png */,
 				24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */,
+				24C470CA19801334003F7957 /* whatsKraken.png */,
+				24C470CC198016BE003F7957 /* whatsKraken2.png */,
 				24A7C5F519744074005FAB18 /* kraken2.png */,
 				24A7C5F319743F4C005FAB18 /* kraken.png */,
 			);
@@ -384,18 +408,26 @@
 				24A7C5F619744074005FAB18 /* kraken2.png in Resources */,
 				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
 				246C1829197D6E6D00BE9990 /* starCheckboxOff.png in Resources */,
+				24C470D119802594003F7957 /* whatsKraken4.png in Resources */,
+				24C470CD198016BE003F7957 /* whatsKraken2.png in Resources */,
 				246C182A197D6E6D00BE9990 /* starCheckboxOn.png in Resources */,
+				24982DFD198046E60094191E /* AllDayOnSimple.png in Resources */,
 				24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */,
+				24C470CB19801334003F7957 /* whatsKraken.png in Resources */,
+				24C470CF198017BF003F7957 /* whatsKraken3.png in Resources */,
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
 				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
+				24982DFC198046E60094191E /* AllDayOffSimple.png in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24A7C5F419743F4C005FAB18 /* kraken.png in Resources */,
 				246C183719800C1C00BE9990 /* krakenSquare2.png in Resources */,
+				24982E01198048920094191E /* FreeFoodOn.png in Resources */,
 				24A7C6051974556D005FAB18 /* krakenSquare.png in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
+				24982DFF198048450094191E /* FreeFoodOff.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

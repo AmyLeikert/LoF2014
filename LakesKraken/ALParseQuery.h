@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALSearchScheduleViewController.h"
+#import <Parse/Parse.h>
 #import "ALEvent.h"
 #import "ALFilterEvent.h"
 

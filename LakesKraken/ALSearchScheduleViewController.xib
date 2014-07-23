@@ -6,7 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALSearchScheduleViewController">
             <connections>
-                <outlet property="allDayButton" destination="PMj-0g-OXi" id="fVm-or-cR6"/>
+                <outlet property="allDayButton" destination="G0m-63-Brr" id="05J-5r-crJ"/>
+                <outlet property="picker" destination="P2O-de-85N" id="8lU-KC-LLE"/>
                 <outlet property="searchButton" destination="I1H-aA-6LH" id="X8P-6K-MTg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -16,26 +17,49 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMj-0g-OXi">
-                    <rect key="frame" x="90" y="241" width="141" height="86"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="starCheckboxOff.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected" image="starCheckboxOn.png"/>
-                    <connections>
-                        <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="ETy-lE-dLB"/>
-                    </connections>
-                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whatsKraken4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-le-ucD">
+                    <rect key="frame" x="-13" y="20" width="346" height="201"/>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
-                    <rect key="frame" x="90" y="397" width="174" height="54"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="25" y="506" width="124" height="42"/>
                     <state key="normal" title="Search">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="hqQ-xJ-0ln"/>
                     </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-eU-T8P">
+                    <rect key="frame" x="162" y="506" width="133" height="42"/>
+                    <state key="normal" title="Go Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <pickerView contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-de-85N">
+                    <rect key="frame" x="0.0" y="241" width="320" height="162"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="W4l-jP-NTq"/>
+                        <outlet property="delegate" destination="-1" id="e17-Id-SkG"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
+                    <rect key="frame" x="20" y="441" width="157" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="AllDayOffSimple.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="AllDayOnSimple.png"/>
+                    <connections>
+                        <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="RUg-Dl-ejb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
+                    <rect key="frame" x="176" y="441" width="139" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="FreeFoodOff.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="FreeFoodOn.png"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -44,7 +68,10 @@
         </view>
     </objects>
     <resources>
-        <image name="starCheckboxOff.png" width="86" height="86"/>
-        <image name="starCheckboxOn.png" width="86" height="86"/>
+        <image name="AllDayOffSimple.png" width="425" height="121"/>
+        <image name="AllDayOnSimple.png" width="425" height="121"/>
+        <image name="FreeFoodOff.png" width="425" height="121"/>
+        <image name="FreeFoodOn.png" width="425" height="121"/>
+        <image name="whatsKraken4.png" width="576" height="446"/>
     </resources>
 </document>

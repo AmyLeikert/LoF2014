@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ALParseQuery.h"
 
 @interface ALEvent : NSObject
+
 @property (nonatomic, strong) NSString *startTime;
 @property (nonatomic, strong) NSString *eventDescription;
 @property (nonatomic, strong) NSString *endTime;

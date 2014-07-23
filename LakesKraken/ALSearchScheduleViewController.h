@@ -11,13 +11,16 @@
 #import "ALEvent.h"
 #import "ALFilterEvent.h"
 #import "ALParseQuery.h"
-@interface ALSearchScheduleViewController : UIViewController
+
+
+@interface ALSearchScheduleViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, strong) ALEvent *event1;
 @property (nonatomic, strong) IBOutlet UIButton *allDayButton;
 @property (nonatomic, strong) ALFilterEvent *filterEvent;
 @property (nonatomic, strong) IBOutlet UIButton *searchButton;
-
+@property (nonatomic, strong) IBOutlet UIPickerView *picker;
+@property (nonatomic, strong) ALParseQuery *parse;
 
 @end
 
