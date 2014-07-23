@@ -7,13 +7,14 @@
 //
 
 #import "ALSearchScheduleViewController.h"
+#import "ALSearchResultsViewController.h"
 
 @interface ALSearchScheduleViewController ()
 
 @end
 
 @implementation ALSearchScheduleViewController
-bool checked = NO;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,12 +25,32 @@ bool checked = NO;
     return self;
 }
 
+-(IBAction)allDayPressed:(id)sender{
+    self.filterEvent.allDay = !self.filterEvent.allDay;
+
+    self.allDayButton.selected = self.filterEvent.allDay;
+}
+
+-(IBAction)searchPressed:(id)sender {
+    ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
+    searchResults.filterEvent = self.filterEvent;
+    [self.navigationController pushViewController:searchResults animated:YES];
+
+    
+    ///////
+    ALParseQuery *parseQ = [[ALParseQuery alloc]init];
+    [parseQ parse:searchResults.filterEvent];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self parseTesting];
     [self.navigationController setNavigationBarHidden:NO];
+    
+    self.filterEvent = [[ALFilterEvent alloc]init];
 
     
 
@@ -41,9 +62,10 @@ bool checked = NO;
     // Dispose of any resources that can be recreated.
 }
 
+
 -(void)parseTesting {
     PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
-    [query whereKey:@"hoursAM" containedIn:@[@"10"]];
+   // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
     [query whereKey:@"allDay" equalTo:@NO];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {

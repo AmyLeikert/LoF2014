@@ -30,6 +30,10 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 [self.menuTable registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cellReuseIdentifier"];
+
+    
+    self.menuTable.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -78,6 +82,9 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     if (indexPath.section == 0 && indexPath.row == 1){
         cell.textLabel.text = @"Ten Principles";
     }
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
+    cell.textLabel.textAlignment = UITextAlignmentCenter;
     
     return cell;
 }

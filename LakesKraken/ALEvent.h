@@ -11,5 +11,10 @@
 @interface ALEvent : NSObject
 @property (nonatomic, strong) NSString *startTime;
 @property (nonatomic, strong) NSString *eventDescription;
+@property (nonatomic, strong) NSString *endTime;
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSString *eventName;
+
+
 
 @end
