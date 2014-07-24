@@ -11,8 +11,8 @@
 @interface ALFilterEvent : NSObject
 @property BOOL allDay;
 @property BOOL freeFood;
-@property BOOL thursday;
-@property BOOL friday;
-@property BOOL saturday;
+@property NSString *dayPickerValue;
+@property NSString *timePickerValue;
+@property NSString *PMPickerValue;
 
 @end

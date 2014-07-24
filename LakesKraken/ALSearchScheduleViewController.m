@@ -37,27 +37,31 @@
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component
 {
-    NSArray *dayArray = @[@"Thursday", @"Friday", @"Saturday", @"Sunday"];
-    NSArray *timeArray = @[@"1:00", @"2:00", @"3:00", @"4:00", @"5:00", @"6:00", @"7:00", @"8:00", @"9:00", @"10:00", @"11:00", @"12:00"];
-    NSArray *amPMArray = @[@"AM", @"PM"];
+
     if (component == 0) {
-        return [dayArray objectAtIndex:row];
+        return [self.dayArray objectAtIndex:row];
     }
     
     if (self.allDayButton.selected) {
         if (component == 1) {
-            return @"";
+            return nil;
+         
+        }
+        if (component == 2) {
+            return nil;
+            
         }
     }
     if (!self.allDayButton.selected) {
         if (component == 1) {
-            return [timeArray objectAtIndex:row];
+            return [self.timeArray objectAtIndex:row];
         }
     }
     
     if (component == 2) {
-        return [amPMArray objectAtIndex:row];
+        return [self.PMArray objectAtIndex:row];
     }
+
     return @"hello";
 }
 
@@ -72,21 +76,26 @@
 }
 
 -(IBAction)allDayPressed:(id)sender{
+
     self.filterEvent.allDay = !self.filterEvent.allDay;
 
     self.allDayButton.selected = self.filterEvent.allDay;
+
+}
+
+-(IBAction)freeFoodPressed:(id)sender {
+    self.filterEvent.freeFood = !self.filterEvent.freeFood;
+    self.freeFoodButton.selected = self.filterEvent.freeFood;
+
 }
 
 -(IBAction)searchPressed:(id)sender {
     ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
+    self.filterEvent.dayPickerValue = [self.dayArray objectAtIndex:[self.picker selectedRowInComponent:0]];
     searchResults.filterEvent = self.filterEvent;
     [self.navigationController pushViewController:searchResults animated:YES];
-
     
-    ///////
-    
-    [self.parse parse:searchResults.filterEvent];
-    NSLog(@"%@", self.parse);
+//    NSLog(@"%@", self.filterEvent.dayPickerValue);
 
 }
 
@@ -102,19 +111,13 @@
     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     
     self.parse = [[ALParseQuery alloc]init];
+    
+    self.dayArray = @[@"Thursday", @"Friday", @"Saturday", @"Sunday"];
+    self.timeArray = @[@"1:00", @"2:00", @"3:00", @"4:00", @"5:00", @"6:00", @"7:00", @"8:00", @"9:00", @"10:00", @"11:00", @"12:00"];
+    self.PMArray = @[@"AM", @"PM"];
 
     
 
-}
-
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];   //it hides
-}
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];    // it shows
 }
 
 
@@ -126,6 +129,8 @@
 
 
 -(void)parseTesting {
+    ALEvent *myEvent = [[ALEvent alloc] init];
+    self.event1 = myEvent;
     PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
    // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
     [query whereKey:@"allDay" equalTo:@NO];
@@ -135,6 +140,7 @@
             for (PFObject *object in objects) {
                self.event1.eventDescription = object[@"description"];
                 self.event1.startTime = object[@"startTime"];
+              //  NSLog(@"%@", self.event1.eventDescription);
              
             }
         } else {
@@ -142,6 +148,16 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
 }
 
 

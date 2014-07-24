@@ -2,11 +2,13 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALSearchScheduleViewController">
             <connections>
                 <outlet property="allDayButton" destination="G0m-63-Brr" id="05J-5r-crJ"/>
+                <outlet property="freeFoodButton" destination="DSZ-OL-lIh" id="NyC-7j-I6N"/>
                 <outlet property="picker" destination="P2O-de-85N" id="8lU-KC-LLE"/>
                 <outlet property="searchButton" destination="I1H-aA-6LH" id="X8P-6K-MTg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -17,32 +19,34 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whatsKraken4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-le-ucD">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsKraken4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-le-ucD">
                     <rect key="frame" x="-13" y="20" width="346" height="201"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
                     <rect key="frame" x="25" y="506" width="124" height="42"/>
                     <state key="normal" title="Search">
+                        <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="hqQ-xJ-0ln"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-eU-T8P">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-eU-T8P">
                     <rect key="frame" x="162" y="506" width="133" height="42"/>
                     <state key="normal" title="Go Back">
+                        <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <pickerView contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-de-85N">
-                    <rect key="frame" x="0.0" y="241" width="320" height="162"/>
+                <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-de-85N">
+                    <rect key="frame" x="0.0" y="229" width="320" height="162"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="W4l-jP-NTq"/>
                         <outlet property="delegate" destination="-1" id="e17-Id-SkG"/>
                     </connections>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
                     <rect key="frame" x="20" y="441" width="157" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="AllDayOffSimple.png">
@@ -50,19 +54,49 @@
                     </state>
                     <state key="selected" image="AllDayOnSimple.png"/>
                     <connections>
-                        <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="RUg-Dl-ejb"/>
+                        <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="IUB-ut-04T"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
                     <rect key="frame" x="176" y="441" width="139" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="FreeFoodOff.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="selected" image="FreeFoodOn.png"/>
+                    <connections>
+                        <action selector="freeFoodPressed:" destination="-1" eventType="touchUpInside" id="X51-H8-Kll"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="26" id="7N5-oe-BhA"/>
+                <constraint firstAttribute="bottom" secondItem="7aX-eU-T8P" secondAttribute="bottom" constant="20" id="8Rc-xa-LKc"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="97Z-iO-oQU"/>
+                <constraint firstItem="P2O-de-85N" firstAttribute="top" secondItem="Xpy-le-ucD" secondAttribute="bottom" constant="8" id="AGq-l6-rN6"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-13" id="DK2-ch-tWA"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="26" id="If6-hh-Wae"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="I1H-aA-6LH" secondAttribute="height" multiplier="173:21" id="L7E-K2-8GM"/>
+                <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="bottom" constant="26" id="MMT-Un-Y6f"/>
+                <constraint firstAttribute="trailing" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="143" id="Og5-ff-uKL"/>
+                <constraint firstItem="P2O-de-85N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rle-B8-Zow"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="176" id="U1f-gj-6QO"/>
+                <constraint firstItem="7aX-eU-T8P" firstAttribute="leading" secondItem="I1H-aA-6LH" secondAttribute="trailing" constant="13" id="Wxm-x0-jsG"/>
+                <constraint firstAttribute="trailing" secondItem="DSZ-OL-lIh" secondAttribute="trailing" constant="5" id="aLg-yo-6Tp"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="P2O-de-85N" secondAttribute="height" multiplier="173:81" id="aRz-wV-tT6"/>
+                <constraint firstAttribute="trailing" secondItem="P2O-de-85N" secondAttribute="trailing" id="d7i-dQ-I7u"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="50" id="ebd-NJ-gRz"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="G0m-63-Brr" secondAttribute="height" multiplier="346:39" id="ghw-WG-ZId"/>
+                <constraint firstAttribute="bottom" secondItem="I1H-aA-6LH" secondAttribute="bottom" constant="20" id="k3P-Ec-JJE"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="50" id="mwF-FJ-62d"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="7aX-eU-T8P" secondAttribute="height" multiplier="173:21" id="pqI-et-98q"/>
+                <constraint firstAttribute="trailing" secondItem="7aX-eU-T8P" secondAttribute="trailing" constant="25" id="pyC-Fv-kqE"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="DSZ-OL-lIh" secondAttribute="height" multiplier="346:39" id="u70-FF-Hzo"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="vkH-ti-1hk"/>
+                <constraint firstAttribute="trailing" secondItem="Xpy-le-ucD" secondAttribute="trailing" constant="-13" id="x3C-Md-F3g"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="zo4-8p-Vom"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>

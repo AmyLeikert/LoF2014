@@ -68,6 +68,8 @@
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"cellReuseIdentifier"];
     
     [self testAllDayBool];
+    
+   NSLog(@"%@", self.filterEvent.dayPickerValue);
 
     
     

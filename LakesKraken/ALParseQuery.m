@@ -13,15 +13,17 @@
 
 -(NSArray*)parseTesting:(ALFilterEvent *)filterEvent {
     
+    NSLog(@"hello");
+    
     NSMutableArray *parseArray = [[NSMutableArray alloc]init];
     ALEvent *event = [[ALEvent alloc]init];
     event.eventDescription = @"Coffee Time!";
     event.startTime = @"1:00pm";
     [parseArray addObject:event];
     
-    NSLog(@"%@", parseArray);
+    //NSLog(@"%@", parseArray);
     return [parseArray copy];
-//    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
+//    PFQuery *query = [PFQuery queryWithClassName:@"schedule"a];
 //    // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
 //    if (self.filterEvent.allDay == YES) {
 //    [query whereKey:@"allDay" equalTo:@NO];
@@ -42,7 +44,7 @@
 //    }
 }
 
--(NSArray*)parse:(ALFilterEvent *)filterEvent {
+-(NSArray*)fetchDataFromParse:(ALFilterEvent *)filterEvent {
     ALEvent *event =[[ALEvent alloc]init];
                      
     PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
@@ -55,7 +57,7 @@
                     event.eventDescription = object[@"description"];
                     event.startTime = object[@"startTime"];
                     [eventArray addObject:event];
-                    
+                    NSLog(@"%@", event.eventDescription);
                 }
                 
          

@@ -21,6 +21,12 @@
 @property (nonatomic, strong) IBOutlet UIButton *searchButton;
 @property (nonatomic, strong) IBOutlet UIPickerView *picker;
 @property (nonatomic, strong) ALParseQuery *parse;
+@property (nonatomic, strong) IBOutlet UIButton *freeFoodButton;
+
+
+@property (nonatomic, strong) NSArray *dayArray;
+@property (nonatomic, strong) NSArray *timeArray;
+@property (nonatomic, strong) NSArray *PMArray;
 
 @end
 
