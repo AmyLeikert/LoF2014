@@ -130,7 +130,7 @@
 		24A7C5F919744926005FAB18 /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuViewController.m; path = ../menuViewController.m; sourceTree = "<group>"; };
 		24A7C5FA19744926005FAB18 /* menuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = menuViewController.xib; path = ../menuViewController.xib; sourceTree = "<group>"; };
 		24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		24A7C60219744E76005FAB18 /* OceanSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = OceanSounds.mp3; sourceTree = "<group>"; };
+		24A7C60219744E76005FAB18 /* OceanSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = OceanSounds.mp3; path = LakesKraken/OceanSounds.mp3; sourceTree = "<group>"; };
 		24A7C6041974556D005FAB18 /* krakenSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = krakenSquare.png; sourceTree = "<group>"; };
 		24B1CCCA197A318C000B7309 /* ALEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEvent.h; sourceTree = "<group>"; };
 		24B1CCCB197A318C000B7309 /* ALEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEvent.m; sourceTree = "<group>"; };
@@ -238,7 +238,6 @@
 				243707A6194FCB6400D8040E /* ALWelcomeView.h */,
 				243707A7194FCB6400D8040E /* ALWelcomeView.m */,
 				243707A8194FCB6400D8040E /* ALWelcomeView.xib */,
-				24A7C60219744E76005FAB18 /* OceanSounds.mp3 */,
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
@@ -322,6 +321,7 @@
 		24A7C5FF19744D15005FAB18 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				24A7C60219744E76005FAB18 /* OceanSounds.mp3 */,
 			);
 			name = Sounds;
 			path = ..;

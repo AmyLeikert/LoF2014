@@ -92,8 +92,18 @@
 -(IBAction)searchPressed:(id)sender {
     ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
     self.filterEvent.dayPickerValue = [self.dayArray objectAtIndex:[self.picker selectedRowInComponent:0]];
+    
+    self.filterEvent.PMPickerValue = [self.PMArray objectAtIndex:[self.picker selectedRowInComponent:2]];
+    
+    self.filterEvent.timePickerValue = [self.timeArray objectAtIndex:[self.picker selectedRowInComponent:1]];
+    
+    // V THIS IS IMPORTANT TO MOVE INFO TO THE SEARCH RESULTS PAGE
     searchResults.filterEvent = self.filterEvent;
+    /// ^ OH MY GOD. THIS. DON'T FORGET THIS. AND THE SEARCHRESULTS ALLOC/INIT ABOVE.
+    
     [self.navigationController pushViewController:searchResults animated:YES];
+    
+    [self.parse fetchDataFromParse:self.filterEvent];
     
 //    NSLog(@"%@", self.filterEvent.dayPickerValue);
 
@@ -103,7 +113,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self parseTesting];
+    
+    [self.parse fetchDataFromParse:self.filterEvent];
+    
     [self.navigationController setNavigationBarHidden:NO];
     
     self.filterEvent = [[ALFilterEvent alloc]init];
@@ -128,27 +140,27 @@
 }
 
 
--(void)parseTesting {
-    ALEvent *myEvent = [[ALEvent alloc] init];
-    self.event1 = myEvent;
-    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
-   // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
-    [query whereKey:@"allDay" equalTo:@NO];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-               self.event1.eventDescription = object[@"description"];
-                self.event1.startTime = object[@"startTime"];
-              //  NSLog(@"%@", self.event1.eventDescription);
-             
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-}
+//-(void)parseTesting {
+//    ALEvent *myEvent = [[ALEvent alloc] init];
+//    self.event1 = myEvent;
+//    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
+//   // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
+//    [query whereKey:@"allDay" equalTo:@NO];
+//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//        if (!error) {
+//            // Do something with the found objects
+//            for (PFObject *object in objects) {
+//               self.event1.eventDescription = object[@"description"];
+//                self.event1.startTime = object[@"startTime"];
+//              //  NSLog(@"%@", self.event1.eventDescription);
+//             
+//            }
+//        } else {
+//            // Log details of the failure
+//            NSLog(@"Error: %@ %@", error, [error userInfo]);
+//        }
+//    }];
+//}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

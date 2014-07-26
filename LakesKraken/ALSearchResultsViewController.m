@@ -52,11 +52,11 @@
 
 
 -(void)testAllDayBool {
-    if (self.filterEvent.allDay == YES) {
-        self.testLabel.text = @"Yes!";
+    if (self.filterEvent.freeFood == YES) {
+        self.testLabel.text = @"Heck yes!";
     }
     else {
-        self.testLabel.text = @"no";
+        self.testLabel.text = @"nooooope :(";
     }
     
 }
@@ -67,12 +67,11 @@
     // Do any additional setup after loading the view from its nib.
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"cellReuseIdentifier"];
     
-    [self testAllDayBool];
     
-   NSLog(@"%@", self.filterEvent.dayPickerValue);
+    
+   // [self testAllDayBool];
+  // NSLog(@"%@", self.filterEvent.dayPickerValue);
 
-    
-    
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ALParseQuery.h"
+
 
 @interface ALEvent : NSObject
 

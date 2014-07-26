@@ -11,62 +11,82 @@
 
 @implementation ALParseQuery
 
--(NSArray*)parseTesting:(ALFilterEvent *)filterEvent {
-    
-    NSLog(@"hello");
-    
-    NSMutableArray *parseArray = [[NSMutableArray alloc]init];
-    ALEvent *event = [[ALEvent alloc]init];
-    event.eventDescription = @"Coffee Time!";
-    event.startTime = @"1:00pm";
-    [parseArray addObject:event];
-    
-    //NSLog(@"%@", parseArray);
-    return [parseArray copy];
-//    PFQuery *query = [PFQuery queryWithClassName:@"schedule"a];
-//    // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
-//    if (self.filterEvent.allDay == YES) {
-//    [query whereKey:@"allDay" equalTo:@NO];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            NSMutableArray *parseArray;
-//            // Do something with the found objects
-//            for (PFObject *object in objects) {
-//                self.event1.eventDescription = object[@"description"];
-//                self.event1.startTime = object[@"startTime"];
-//                
-//            }
-//        } else {
-//            // Log details of the failure
-//            NSLog(@"Error: %@ %@", error, [error userInfo]);
-//        }
-//    }];
-//    }
-}
 
 -(NSArray*)fetchDataFromParse:(ALFilterEvent *)filterEvent {
+    NSLog(@"hell");
     ALEvent *event =[[ALEvent alloc]init];
-                     
+    self.event = event;
     PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
     NSMutableArray *eventArray = [[NSMutableArray alloc]init];
-    if (filterEvent.allDay == NO) {
+    
+    
+    
+    if ([filterEvent.PMPickerValue isEqual: @"AM"] && filterEvent.freeFood == YES && filterEvent.allDay == NO) {
         [query whereKey:@"allDay" equalTo:@NO];
+        [query whereKey:@"food" equalTo:@YES];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
                 for (PFObject *object in objects) {
-                    event.eventDescription = object[@"description"];
-                    event.startTime = object[@"startTime"];
+                    self.event.eventDescription = object[@"description"];
+                    self.event.startTime = object[@"startTime"];
                     [eventArray addObject:event];
                     NSLog(@"%@", event.eventDescription);
+                    
+                    
+                    //Bookmark'd. Make an array property. (In a class. not in this method!)
+                    //To access a specific property in the array, do as follows below: V
+                    //    eventsArray[0].eventDescription;
                 }
-                
-         
-         }
+            }
+            
+        }];
+        
+    }
+    
+    else if (filterEvent.allDay == YES && filterEvent.freeFood == YES) {
+        [query whereKey:@"allDay" equalTo:@YES];
+        [query whereKey:@"food" equalTo:@YES];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                for (PFObject *object in objects) {
+                    self.event.eventDescription = object[@"description"];
+                    self.event.startTime = object[@"startTime"];
+                    [eventArray addObject:event];
+                    NSLog(@"%@", event.eventDescription);
+                    
+                    
+                    //Bookmark'd. Make an array property. (In a class. not in this method!)
+                    //To access a specific property in the array, do as follows below: V
+                    //    eventsArray[0].eventDescription;
+                }
+            }
+            
+        }];
+        
+    }
+
+     else if (filterEvent.allDay == YES) {
+        [query whereKey:@"allDay" equalTo:@YES];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                for (PFObject *object in objects) {
+                    self.event.eventDescription = object[@"description"];
+                   self.event.startTime = object[@"startTime"];
+                    [eventArray addObject:event];
+                    NSLog(@"%@", event.startTime);
+                    
+                    
+                    //Bookmark'd. Make an array property. (In a class. not in this method!)
+                    //To access a specific property in the array, do as follows below: V
+                //    eventsArray[0].eventDescription;
+                }
+            }
             
          }];
     }
-    return [eventArray copy];
- 
+    
+      return [eventArray copy];
+
 }
 
 @end
