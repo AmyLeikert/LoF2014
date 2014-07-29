@@ -14,6 +14,10 @@
 @property (nonatomic, strong) ALFilterEvent *filterEvent;
 @property (nonatomic, strong) IBOutlet UILabel *testLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableResults;
+@property (nonatomic, strong) ALEvent *event;
+@property (nonatomic, strong) NSMutableArray *array;
+@property (nonatomic, strong) IBOutlet UIImageView *imageTest;
+
 
 
 @end

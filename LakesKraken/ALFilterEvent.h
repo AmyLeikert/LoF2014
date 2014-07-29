@@ -14,5 +14,6 @@
 @property NSString *dayPickerValue;
 @property NSString *timePickerValue;
 @property NSString *PMPickerValue;
+@property NSMutableArray *resultsArray;
 
 @end

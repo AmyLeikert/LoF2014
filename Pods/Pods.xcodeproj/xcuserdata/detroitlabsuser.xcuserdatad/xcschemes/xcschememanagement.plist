@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-LakesKraken-EXPhotoViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LakesKraken.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3157D743B1D7461BABE0237D</key>
+		<key>3A8C85E5996E4C52BAB54E46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FC11E1867B7464FA4019CD4</key>
+		<key>739547DDC87B4025975A3B1A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3914E5A88BE4171AE780249</key>
 		<dict>
 			<key>primary</key>
 			<true/>

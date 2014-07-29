@@ -8,6 +8,7 @@
 
 #import "menuViewController.h"
 #import "ALSearchScheduleViewController.h"
+#import "ALKrakenPhotoController.h"
 
 @interface menuViewController ()
 
@@ -81,7 +82,11 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
      
     if (indexPath.section == 0 && indexPath.row == 1){
         cell.textLabel.text = @"Ten Principles";
-    }   
+    }
+    
+    if (indexPath.section == 0 && indexPath.row == 2) {
+        cell.textLabel.text = @"Photo Gallery";
+    }
     
     [cell setBackgroundColor:[UIColor clearColor]];
     cell.textLabel.textAlignment = UITextAlignmentCenter;
@@ -94,8 +99,13 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ALSearchScheduleViewController *searchViewController = [[ALSearchScheduleViewController alloc]init];
+    ALKrakenPhotoController *photoController = [[ALKrakenPhotoController alloc]init];
+    
     if (indexPath.section == 0 && indexPath.row == 0){
     return [self.navigationController pushViewController:searchViewController animated:YES];
+    }
+    if (indexPath.section == 0 && indexPath.row == 2) {
+        return [self.navigationController pushViewController:photoController animated:YES];
     }
 
 }

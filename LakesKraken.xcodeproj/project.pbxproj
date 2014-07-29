@@ -45,6 +45,10 @@
 		24982DFD198046E60094191E /* AllDayOnSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982DFB198046E60094191E /* AllDayOnSimple.png */; };
 		24982DFF198048450094191E /* FreeFoodOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982DFE198048450094191E /* FreeFoodOff.png */; };
 		24982E01198048920094191E /* FreeFoodOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 24982E00198048920094191E /* FreeFoodOn.png */; };
+		24982E051986D3650094191E /* ALKrakenPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24982E031986D3650094191E /* ALKrakenPhotoController.m */; };
+		24982E061986D3650094191E /* ALKrakenPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24982E041986D3650094191E /* ALKrakenPhotoController.xib */; };
+		24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24982E091987EB850094191E /* ALThumbCollectionCell.m */; };
+		24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */; };
 		24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */; };
 		24A7C5F419743F4C005FAB18 /* kraken.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F319743F4C005FAB18 /* kraken.png */; };
 		24A7C5F619744074005FAB18 /* kraken2.png in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5F519744074005FAB18 /* kraken2.png */; };
@@ -123,6 +127,12 @@
 		24982DFB198046E60094191E /* AllDayOnSimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AllDayOnSimple.png; path = LakesKraken/AllDayOnSimple.png; sourceTree = "<group>"; };
 		24982DFE198048450094191E /* FreeFoodOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FreeFoodOff.png; path = LakesKraken/FreeFoodOff.png; sourceTree = "<group>"; };
 		24982E00198048920094191E /* FreeFoodOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FreeFoodOn.png; sourceTree = "<group>"; };
+		24982E021986D3650094191E /* ALKrakenPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALKrakenPhotoController.h; sourceTree = "<group>"; };
+		24982E031986D3650094191E /* ALKrakenPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALKrakenPhotoController.m; sourceTree = "<group>"; };
+		24982E041986D3650094191E /* ALKrakenPhotoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALKrakenPhotoController.xib; sourceTree = "<group>"; };
+		24982E081987EB850094191E /* ALThumbCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALThumbCollectionCell.h; sourceTree = "<group>"; };
+		24982E091987EB850094191E /* ALThumbCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALThumbCollectionCell.m; sourceTree = "<group>"; };
+		24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALThumbCollectionCell.xib; sourceTree = "<group>"; };
 		24A7C5F119743CF9005FAB18 /* LakesLogoCleaned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LakesLogoCleaned.png; path = ../../../Downloads/LakesLogoCleaned.png; sourceTree = "<group>"; };
 		24A7C5F319743F4C005FAB18 /* kraken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken.png; path = ../../../Downloads/kraken.png; sourceTree = "<group>"; };
 		24A7C5F519744074005FAB18 /* kraken2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kraken2.png; path = ../../../Downloads/kraken2.png; sourceTree = "<group>"; };
@@ -241,21 +251,13 @@
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
-				24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */,
-				24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */,
-				24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */,
-				246C182E197D942D00BE9990 /* ALSearchResultsViewController.h */,
-				246C182F197D942D00BE9990 /* ALSearchResultsViewController.m */,
-				246C1830197D942D00BE9990 /* ALSearchResultsViewController.xib */,
-				246C182B197D906500BE9990 /* ALFilterEvent.h */,
-				246C182C197D906500BE9990 /* ALFilterEvent.m */,
-				246C1833197D9A9700BE9990 /* ALParseQuery.h */,
-				246C1834197D9A9700BE9990 /* ALParseQuery.m */,
-				24B1CCCA197A318C000B7309 /* ALEvent.h */,
-				24B1CCCB197A318C000B7309 /* ALEvent.m */,
-				24B1CCCC197A318C000B7309 /* ALScheduleTableViewCell.h */,
-				24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */,
-				24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */,
+				24982E021986D3650094191E /* ALKrakenPhotoController.h */,
+				24982E031986D3650094191E /* ALKrakenPhotoController.m */,
+				24982E041986D3650094191E /* ALKrakenPhotoController.xib */,
+				24982E081987EB850094191E /* ALThumbCollectionCell.h */,
+				24982E091987EB850094191E /* ALThumbCollectionCell.m */,
+				24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */,
+				24982E071986D39B0094191E /* SearchStuff */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
 				24370789194FCB3B00D8040E /* Images.xcassets */,
@@ -293,6 +295,28 @@
 				24370799194FCB3B00D8040E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24982E071986D39B0094191E /* SearchStuff */ = {
+			isa = PBXGroup;
+			children = (
+				24B1CCCF197A318C000B7309 /* ALSearchScheduleViewController.h */,
+				24B1CCD0197A318C000B7309 /* ALSearchScheduleViewController.m */,
+				24B1CCD1197A318C000B7309 /* ALSearchScheduleViewController.xib */,
+				246C182E197D942D00BE9990 /* ALSearchResultsViewController.h */,
+				246C182F197D942D00BE9990 /* ALSearchResultsViewController.m */,
+				246C1830197D942D00BE9990 /* ALSearchResultsViewController.xib */,
+				246C182B197D906500BE9990 /* ALFilterEvent.h */,
+				246C182C197D906500BE9990 /* ALFilterEvent.m */,
+				246C1833197D9A9700BE9990 /* ALParseQuery.h */,
+				246C1834197D9A9700BE9990 /* ALParseQuery.m */,
+				24B1CCCA197A318C000B7309 /* ALEvent.h */,
+				24B1CCCB197A318C000B7309 /* ALEvent.m */,
+				24B1CCCC197A318C000B7309 /* ALScheduleTableViewCell.h */,
+				24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */,
+				24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */,
+			);
+			name = SearchStuff;
 			sourceTree = "<group>";
 		};
 		24A7C5F71974468C005FAB18 /* Images */ = {
@@ -415,6 +439,7 @@
 				24A7C5F219743CF9005FAB18 /* LakesLogoCleaned.png in Resources */,
 				24C470CB19801334003F7957 /* whatsKraken.png in Resources */,
 				24C470CF198017BF003F7957 /* whatsKraken3.png in Resources */,
+				24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */,
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
@@ -424,6 +449,7 @@
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24A7C5F419743F4C005FAB18 /* kraken.png in Resources */,
 				246C183719800C1C00BE9990 /* krakenSquare2.png in Resources */,
+				24982E061986D3650094191E /* ALKrakenPhotoController.xib in Resources */,
 				24982E01198048920094191E /* FreeFoodOn.png in Resources */,
 				24A7C6051974556D005FAB18 /* krakenSquare.png in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
@@ -480,7 +506,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */,
+				24982E051986D3650094191E /* ALKrakenPhotoController.m in Sources */,
 				246C1831197D942D00BE9990 /* ALSearchResultsViewController.m in Sources */,
+				24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */,
 				243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */,
 				246C1835197D9A9700BE9990 /* ALParseQuery.m in Sources */,
 				24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */,

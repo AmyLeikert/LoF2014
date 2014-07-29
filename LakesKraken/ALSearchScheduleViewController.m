@@ -105,7 +105,7 @@
     
     [self.parse fetchDataFromParse:self.filterEvent];
     
-//    NSLog(@"%@", self.filterEvent.dayPickerValue);
+    
 
 }
 

@@ -1,10 +1,13 @@
 PODS:
   - BlinkButton (0.0.1)
+  - EXPhotoViewer (1.1.2)
 
 DEPENDENCIES:
   - BlinkButton (~> 0.0)
+  - EXPhotoViewer (~> 1.1)
 
 SPEC CHECKSUMS:
   BlinkButton: c675681c6be0840f78c4f5543ee644695ec790e1
+  EXPhotoViewer: 0e9d3e4fbf5918ffeeadc047ed798d54f4a2a6b1
 
 COCOAPODS: 0.32.1

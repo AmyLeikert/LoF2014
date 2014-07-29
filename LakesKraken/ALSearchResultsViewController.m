@@ -7,13 +7,17 @@
 //
 
 #import "ALSearchResultsViewController.h"
-#import "ALParseQuery.h"
+
 
 @interface ALSearchResultsViewController ()
 
 @end
 
 @implementation ALSearchResultsViewController
+
+-(IBAction)whatever:(id)sender {
+      NSLog(@"%@ this", self.event.resultsArray[0]);
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -67,10 +71,23 @@
     // Do any additional setup after loading the view from its nib.
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"cellReuseIdentifier"];
     
-    
+  // self.testLabel.text = self.filterEvent.resultsArray[0];
     
    // [self testAllDayBool];
-  // NSLog(@"%@", self.filterEvent.dayPickerValue);
+    
+    UIImage *image1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.scottish-at-heart.com/images/scottish_fold_longhair.jpg"]]];
+    
+    [self.imageTest setImage:image1];
+
+    
+    
+    
+    
+    ALParseQuery *parse = [[ALParseQuery alloc]init];
+    
+    self.event = [[ALEvent alloc]init];
+    self.event = parse.event;
+
 
 }
 
