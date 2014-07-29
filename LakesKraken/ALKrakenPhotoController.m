@@ -8,6 +8,7 @@
 
 #import "ALKrakenPhotoController.h"
 #import "ALThumbCollectionCell.h"
+#import "menuViewController.h"
 
 #define CELL_NAME    @"ThumbCollectionCell"
 
@@ -18,7 +19,7 @@
 
 @implementation ALKrakenPhotoController {
     NSArray *photoArray;
-    __weak IBOutlet UICollectionView *photoCollectionView;
+    //__weak IBOutlet UICollectionView *photoCollectionView;
 };
 
 
@@ -50,9 +51,12 @@
                    @"08Kbq2x.jpg",
                    @"3YAjOJm.jpg"];
     
-    [photoCollectionView registerNib:[UINib nibWithNibName:@"ALThumbCollectionCell" bundle:nil] forCellWithReuseIdentifier:CELL_NAME];
-    [photoCollectionView reloadData];
-    
+    [self.photoCollectionView registerNib:[UINib nibWithNibName:@"ALThumbCollectionCell" bundle:nil] forCellWithReuseIdentifier:CELL_NAME];
+    [self.photoCollectionView reloadData];
+    self.photoCollectionView.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    self.backButton.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
+    self.backButton.titleLabel.textColor = [UIColor colorWithRed:0.431 green:0 blue:0 alpha:1];
     self.urlArray = [[NSMutableArray alloc]init];
 }
 
@@ -61,17 +65,23 @@
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     ALThumbCollectionCell *thumbCell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_NAME forIndexPath:indexPath];
+    
+    thumbCell.layer.borderWidth = 3;
+    thumbCell.layer.borderColor = [[UIColor colorWithRed:0.431 green:0 blue:0 alpha:1]CGColor];
+    
     int i;
     NSString *photoCode;
     NSString *photoURL;
+    
     for (i = 0; i < 13; i++) {
         NSString *imgrURL = @"http://i.imgur.com/";
         photoCode = [photoArray objectAtIndex:i];
         photoURL = [imgrURL stringByAppendingString:photoCode];
         [self.urlArray addObject:photoURL];
-
     }
+    
     thumbCell.thumbImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.urlArray[indexPath.row]]]];
     
    return thumbCell;
@@ -82,5 +92,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(IBAction)goBackPressed:(id)sender {
+    menuViewController *menu = [[menuViewController alloc]init];
+    [self.navigationController pushViewController:menu animated:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
 
 @end

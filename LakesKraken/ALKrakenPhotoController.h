@@ -10,4 +10,6 @@
 
 @interface ALKrakenPhotoController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSMutableArray *urlArray;
+@property (weak) IBOutlet UICollectionView *photoCollectionView;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 @end
