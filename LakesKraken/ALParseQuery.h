@@ -7,15 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ALSearchResultsViewController.h"
 #import <Parse/Parse.h>
 #import "ALEvent.h"
-#import "ALFilterEvent.h"
-#import "ALSearchResultsViewController.h"
+
+
 
 @interface ALParseQuery : NSObject
 
 @property (nonatomic, strong) NSMutableArray *eventArray;
-@property (nonatomic, strong) ALEvent *event;
+@property (nonatomic, retain) ALEvent *event;
+
 
 
 //-(NSArray*)parseTesting:(ALFilterEvent *)filterEvent;

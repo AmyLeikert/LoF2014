@@ -35,6 +35,9 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     
     self.menuTable.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
 
+    self.loadingLabel.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:16];
+    [self.loadingLabel setText:@"Loading..."];
+    self.loadingLabel.hidden = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -76,15 +79,24 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     
     if (indexPath.section == 0 && indexPath.row == 0){
         
+        cell.textLabel.text = @"About Lakes of Fire";
+    }
+    
+    if (indexPath.section == 0 && indexPath.row == 1){
+        
+        cell.textLabel.text = @"How to Get Here";
+    }
+    
+    if (indexPath.section == 0 && indexPath.row == 2){
+        
+        cell.textLabel.text = @"Ten Principles";
+    }
+     
+    if (indexPath.section == 0 && indexPath.row == 3){
         cell.textLabel.text = @"Search Schedule";
     }
     
-     
-    if (indexPath.section == 0 && indexPath.row == 1){
-        cell.textLabel.text = @"Ten Principles";
-    }
-    
-    if (indexPath.section == 0 && indexPath.row == 2) {
+    if (indexPath.section == 0 && indexPath.row == 4) {
         cell.textLabel.text = @"Photo Gallery";
     }
     
@@ -101,11 +113,13 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     ALSearchScheduleViewController *searchViewController = [[ALSearchScheduleViewController alloc]init];
     ALKrakenPhotoController *photoController = [[ALKrakenPhotoController alloc]init];
     
-    if (indexPath.section == 0 && indexPath.row == 0){
+    if (indexPath.section == 0 && indexPath.row == 3){
     return [self.navigationController pushViewController:searchViewController animated:YES];
     }
-    if (indexPath.section == 0 && indexPath.row == 2) {
-        return [self.navigationController pushViewController:photoController animated:YES];
+    if (indexPath.section == 0 && indexPath.row == 4) {
+        self.loadingLabel.hidden = NO;
+        
+        [self.navigationController pushViewController:photoController animated:YES];
     }
 
 }

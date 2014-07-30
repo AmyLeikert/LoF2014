@@ -12,6 +12,7 @@
 
 @interface menuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) IBOutlet UITableView *menuTable;
+@property (strong, nonatomic) IBOutlet UILabel *loadingLabel;
 
 
 @end

@@ -7,29 +7,35 @@
 //
 
 #import "ALParseQuery.h"
+#import "ALSearchResultsViewController.h"
 
+@interface ALParseQuery ()
+@property ALSearchResultsViewController *searchView;
+
+@end
 
 
 @implementation ALParseQuery
 
 
-
-
 -(NSArray*)fetchDataFromParse:(ALFilterEvent *)filterEvent {
-    NSLog(@"hell");
-    ALEvent *event =[[ALEvent alloc]init];
-    
-    ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
-    
+    NSLog(@"hello");
+    self.event = [[ALEvent alloc]init];
+    // ALEvent *event = [[ALEvent alloc]init];
+    //  self.event = event;
 
-    self.event = event;
-    searchResults.event = self.event;
-      PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
-   // NSMutableArray *array = [[NSArray alloc]init];
-   // NSMutableArray *eventArray = [[NSMutableArray alloc]init];
+    
+    self.event.resultsArray = [[NSMutableArray alloc]init];
+    
+ 
+    self.searchView = [[ALSearchResultsViewController alloc]init];
+    //ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
+        //searchResults.event = self.event
+    
+        self.searchView.event = self.event;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
 
-  //  searchResults.array = eventArray;
-  // self.event.resultsArray = eventArray;
     
     if ([filterEvent.PMPickerValue isEqual: @"AM"] && filterEvent.freeFood == YES && filterEvent.allDay == NO) {
         [query whereKey:@"Days" equalTo:filterEvent.dayPickerValue];
@@ -43,6 +49,7 @@
                     self.event.eventDescription = object[@"description"];
                     self.event.startTime = object[@"startTime"];
                     [self.event.resultsArray addObject:self.event];
+                    
                     NSLog(@"%@", [self.event.resultsArray description]);
                    
                 
@@ -50,17 +57,9 @@
                     //To access a specific property in the array, do as follows below: V
                     //    eventsArray[0].eventDescription;
                 }
-
             }
-                
-        }];
-        searchResults.event = self.event;
-        NSLog(@"searchResults array: %@", [event.resultsArray description]);
-        NSLog(@"self array: %@", [self.event.resultsArray description]);
-        return [self.event.resultsArray copy];
-        
+               }];
 
-        
     }
     
     
@@ -72,18 +71,9 @@
                 for (PFObject *object in objects) {
                     self.event.eventDescription = object[@"description"];
                     self.event.startTime = object[@"startTime"];
-                 //   [searchResults.event.resultsArray addObject:self.event];
-                   
-                    
-                    
-                    //Bookmark'd. Make an array property. (In a class. not in this method!)
-                    //To access a specific property in the array, do as follows below: V
-                    //    eventsArray[0].eventDescription;
                 }
             }
-            
         }];
-        
     }
 
     
@@ -95,19 +85,9 @@
                 for (PFObject *object in objects) {
                     self.event.eventDescription = object[@"description"];
                     self.event.startTime = object[@"startTime"];
-                 //  [array addObject:self.event];
-                  //  NSLog(@"%@", array);
-                   
-                    
-                    
-                    //Make an array property. (In a class. not in this method!)
-                    //To access a specific property in the array, do as follows below: V
-                    //    eventsArray[0].eventDescription;
                 }
             }
-            
         }];
-        
     }
 
      else if (filterEvent.allDay == YES) {
@@ -117,25 +97,13 @@
                 for (PFObject *object in objects) {
                     self.event.eventDescription = object[@"description"];
                    self.event.startTime = object[@"startTime"];
-             //       [eventArray addObject:self.event];
-                  
-                    
-                    //Bookmark'd. Make an array property. (In a class. not in this method!)
-                    //To access a specific property in the array, do as follows below: V
-                //    eventsArray[0].eventDescription;
                 }
-            
-
             }
-            
 
-            
          }];
-
     }
     
 
-    
     return [self.event.resultsArray copy];
 }
 

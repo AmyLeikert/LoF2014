@@ -20,6 +20,11 @@
     return self;
 }
 
+- (IBAction)onButtonTUI:(id)sender {
+    [EXPhotoViewer showImageFrom:self.thumbImage];
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

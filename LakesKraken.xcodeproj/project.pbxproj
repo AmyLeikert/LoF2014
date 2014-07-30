@@ -251,12 +251,7 @@
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
-				24982E021986D3650094191E /* ALKrakenPhotoController.h */,
-				24982E031986D3650094191E /* ALKrakenPhotoController.m */,
-				24982E041986D3650094191E /* ALKrakenPhotoController.xib */,
-				24982E081987EB850094191E /* ALThumbCollectionCell.h */,
-				24982E091987EB850094191E /* ALThumbCollectionCell.m */,
-				24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */,
+				24982E0D19888DA80094191E /* PhotoGallery */,
 				24982E071986D39B0094191E /* SearchStuff */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
@@ -317,6 +312,19 @@
 				24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */,
 			);
 			name = SearchStuff;
+			sourceTree = "<group>";
+		};
+		24982E0D19888DA80094191E /* PhotoGallery */ = {
+			isa = PBXGroup;
+			children = (
+				24982E021986D3650094191E /* ALKrakenPhotoController.h */,
+				24982E031986D3650094191E /* ALKrakenPhotoController.m */,
+				24982E041986D3650094191E /* ALKrakenPhotoController.xib */,
+				24982E081987EB850094191E /* ALThumbCollectionCell.h */,
+				24982E091987EB850094191E /* ALThumbCollectionCell.m */,
+				24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */,
+			);
+			name = PhotoGallery;
 			sourceTree = "<group>";
 		};
 		24A7C5F71974468C005FAB18 /* Images */ = {

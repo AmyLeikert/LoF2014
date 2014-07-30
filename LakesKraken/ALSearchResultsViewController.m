@@ -16,7 +16,7 @@
 @implementation ALSearchResultsViewController
 
 -(IBAction)whatever:(id)sender {
-      NSLog(@"%@ this", self.event.resultsArray[0]);
+      NSLog(@"%@ this", [self.event.resultsArray description]);
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -83,10 +83,10 @@
     
     
     
-    ALParseQuery *parse = [[ALParseQuery alloc]init];
+   // ALParseQuery *parse = [[ALParseQuery alloc]init];
     
-    self.event = [[ALEvent alloc]init];
-    self.event = parse.event;
+    
+    //self.event = parse.event;
 
 
 }

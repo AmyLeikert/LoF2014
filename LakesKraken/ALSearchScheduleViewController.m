@@ -91,6 +91,7 @@
 
 -(IBAction)searchPressed:(id)sender {
     ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
+    ALParseQuery *parse = [[ALParseQuery alloc]init];
     self.filterEvent.dayPickerValue = [self.dayArray objectAtIndex:[self.picker selectedRowInComponent:0]];
     
     self.filterEvent.PMPickerValue = [self.PMArray objectAtIndex:[self.picker selectedRowInComponent:2]];
@@ -100,6 +101,7 @@
     // V THIS IS IMPORTANT TO MOVE INFO TO THE SEARCH RESULTS PAGE
     searchResults.filterEvent = self.filterEvent;
     /// ^ OH MY GOD. THIS. DON'T FORGET THIS. AND THE SEARCHRESULTS ALLOC/INIT ABOVE.
+    searchResults.event.resultsArray = parse.event.resultsArray;
     
     [self.navigationController pushViewController:searchResults animated:YES];
     
@@ -113,16 +115,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.parse = [[ALParseQuery alloc]init];
+    
+    self.filterEvent = [[ALFilterEvent alloc]init];
     
     [self.parse fetchDataFromParse:self.filterEvent];
     
     [self.navigationController setNavigationBarHidden:NO];
-    
-    self.filterEvent = [[ALFilterEvent alloc]init];
+
     
     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     
-    self.parse = [[ALParseQuery alloc]init];
+    
     
     self.dayArray = @[@"Thursday", @"Friday", @"Saturday", @"Sunday"];
     self.timeArray = @[@"1:00", @"2:00", @"3:00", @"4:00", @"5:00", @"6:00", @"7:00", @"8:00", @"9:00", @"10:00", @"11:00", @"12:00"];

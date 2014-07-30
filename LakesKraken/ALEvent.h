@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *endTime;
 @property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSString *eventName;
-@property (nonatomic, strong) NSMutableArray *resultsArray;
+@property (nonatomic, retain) NSMutableArray *resultsArray;
 
 
 
