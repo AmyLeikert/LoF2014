@@ -10,7 +10,7 @@
 #import "ALSearchResultsViewController.h"
 #import <Parse/Parse.h>
 #import "ALEvent.h"
-
+#import "ALFilterEvent.h"
 
 
 @interface ALParseQuery : NSObject
@@ -18,7 +18,9 @@
 @property (nonatomic, strong) NSMutableArray *eventArray;
 @property (nonatomic, retain) ALEvent *event;
 
+typedef void(^ALParseQueryResultBlock)(NSArray *objects, NSError *error);
 
+-(void)fetchDataFromParse:(ALFilterEvent *)filterEvent withResultBlock:(ALParseQueryResultBlock)resultBlock;
 
 //-(NSArray*)parseTesting:(ALFilterEvent *)filterEvent;
 

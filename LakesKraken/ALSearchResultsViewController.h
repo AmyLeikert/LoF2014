@@ -10,15 +10,15 @@
 #import "ALFilterEvent.h"
 #import "ALParseQuery.h"
 #import "ALEvent.h"
+#import "ALScheduleTableViewCell.h"
 
 @interface ALSearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) ALFilterEvent *filterEvent;
 @property (nonatomic, strong) IBOutlet UILabel *testLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableResults;
-@property (nonatomic, strong) ALEvent *event;
-@property (nonatomic, retain) NSMutableArray *array;
+@property (nonatomic, retain) NSArray *events;
 @property (nonatomic, strong) IBOutlet UIImageView *imageTest;
 
 
-
+-(void)setEvents:(NSArray *)events;
 @end

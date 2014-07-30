@@ -10,4 +10,10 @@
 
 @interface ALScheduleTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+@property (nonatomic, strong) IBOutlet UILabel *dayLabel;
+@property (nonatomic, strong) IBOutlet UILabel *siteLabel;
+@property (nonatomic, strong) IBOutlet UILabel *eventNameLabel;
+@property (nonatomic, strong) IBOutlet UITextView *eventDescriptionText;
+
 @end

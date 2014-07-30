@@ -98,15 +98,18 @@
     
     self.filterEvent.timePickerValue = [self.timeArray objectAtIndex:[self.picker selectedRowInComponent:1]];
     
+    
     // V THIS IS IMPORTANT TO MOVE INFO TO THE SEARCH RESULTS PAGE
     searchResults.filterEvent = self.filterEvent;
     /// ^ OH MY GOD. THIS. DON'T FORGET THIS. AND THE SEARCHRESULTS ALLOC/INIT ABOVE.
-    searchResults.event.resultsArray = parse.event.resultsArray;
+
     
     [self.navigationController pushViewController:searchResults animated:YES];
+
     
-    [self.parse fetchDataFromParse:self.filterEvent];
-    
+    [self.parse fetchDataFromParse:self.filterEvent withResultBlock:^(NSArray *events, NSError *error) {
+        [searchResults setEvents:events];
+          }];
     
 
 }
@@ -119,7 +122,7 @@
     
     self.filterEvent = [[ALFilterEvent alloc]init];
     
-    [self.parse fetchDataFromParse:self.filterEvent];
+   // [self.parse fetchDataFromParse:self.filterEvent];
     
     [self.navigationController setNavigationBarHidden:NO];
 

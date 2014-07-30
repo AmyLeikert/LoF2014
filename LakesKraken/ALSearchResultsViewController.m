@@ -9,14 +9,21 @@
 #import "ALSearchResultsViewController.h"
 
 
+
 @interface ALSearchResultsViewController ()
 
 @end
 
 @implementation ALSearchResultsViewController
 
+-(void)setEvents:(NSArray *)events {
+    _events = events;
+    [self.tableResults reloadData];
+     
+}
+
 -(IBAction)whatever:(id)sender {
-      NSLog(@"%@ this", [self.event.resultsArray description]);
+   //   NSLog(@"%@ this", [self.event.resultsArray description]);
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,66 +42,37 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return [self.events count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReuseIdentifier" forIndexPath:indexPath];
-    
-    if (!cell) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"cellReuseIdentifier"];
+    ALScheduleTableViewCell *eventCell = [tableView dequeueReusableCellWithIdentifier:@"thumbCell"];
+    if (eventCell) {
+        [tableView registerNib:[UINib nibWithNibName:@"ALScheduleTableViewCell" bundle:nil] forCellReuseIdentifier:@"thumbCell"];
+        eventCell = [tableView dequeueReusableCellWithIdentifier:@"thumbCell"];
+    }
+    if (indexPath.section == 0) {
+       ALEvent *event = self.events[indexPath.row];
+       // cell.textLabel.text = event.eventDescription;
+      //  cell.eventDescriptionText.text = event.eventDescription;
+        [eventCell.eventNameLabel setText:event.eventDescription];
     }
     
     
-    if (indexPath.section == 0 && indexPath.row == 0){
-        
-        cell.textLabel.text = @"hello";
-    }
-    
-    return cell;
-}
-
-
--(void)testAllDayBool {
-    if (self.filterEvent.freeFood == YES) {
-        self.testLabel.text = @"Heck yes!";
-    }
-    else {
-        self.testLabel.text = @"nooooope :(";
-    }
-    
+    return eventCell;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"cellReuseIdentifier"];
-    
-  // self.testLabel.text = self.filterEvent.resultsArray[0];
-    
-   // [self testAllDayBool];
-    
-    UIImage *image1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://www.scottish-at-heart.com/images/scottish_fold_longhair.jpg"]]];
-    
-    [self.imageTest setImage:image1];
 
-    
-    
-    
-    
-   // ALParseQuery *parse = [[ALParseQuery alloc]init];
-    
-    
-    //self.event = parse.event;
-
-
+    [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"thumbCell"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 @end
