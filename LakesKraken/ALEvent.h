@@ -14,10 +14,10 @@
 @property (nonatomic, strong) NSString *startTime;
 @property (nonatomic, strong) NSString *eventDescription;
 @property (nonatomic, strong) NSString *endTime;
-@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSString *siteLocation;
 @property (nonatomic, strong) NSString *eventName;
 @property (nonatomic, retain) NSMutableArray *resultsArray;
-
+@property (nonatomic, strong) NSString *days;
 
 
 @end

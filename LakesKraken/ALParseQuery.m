@@ -38,10 +38,40 @@
 
     
     PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
-
-    if (filterEvent.allDay) {
-        [query whereKey:@"allDay" equalTo:@YES];
+    
+    if (filterEvent.allDay == NO && [filterEvent.PMPickerValue isEqual: @"PM"] && filterEvent.freeFood == YES) {
+        [query whereKey:@"Days" containsString: filterEvent.dayPickerValue];
+        [query whereKey:@"hoursPM" containsString:filterEvent.timePickerValue];
+        [query whereKey:@"food" equalTo:@YES];
+    };
+    if (filterEvent.allDay == NO && [filterEvent.PMPickerValue isEqual: @"AM"]&& filterEvent.freeFood == YES) {
+        [query whereKey:@"food" equalTo:@YES];
+        [query whereKey:@"Days" containsString:filterEvent.dayPickerValue];
+        [query whereKey:@"hoursAM" containsString:filterEvent.timePickerValue];
+    };
+    
+     if (filterEvent.allDay == NO && [filterEvent.PMPickerValue isEqual: @"AM"]&& filterEvent.freeFood == NO) {
+        [query whereKey:@"Days" containsString:filterEvent.dayPickerValue];
+        [query whereKey:@"hoursAM" containsString:filterEvent.timePickerValue];
     }
+    
+    else if (filterEvent.allDay == NO && [filterEvent.PMPickerValue isEqual: @"PM"]&& filterEvent.freeFood == NO) {
+        [query whereKey:@"Days" containsString:filterEvent.dayPickerValue];
+        [query whereKey:@"hoursPM" containsString:filterEvent.timePickerValue];
+    }
+    
+    else if (filterEvent.allDay == YES && filterEvent.freeFood == YES) {
+        [query whereKey:@"Days" containsString:filterEvent.dayPickerValue];
+        [query whereKey:@"allDay" equalTo:@YES];
+        [query whereKey:@"food" equalTo:@YES];
+    }
+    
+    else if (filterEvent.allDay == YES) {
+        [query whereKey:@"Days" containsString:filterEvent.dayPickerValue];
+    };
+    
+
+//
     
 //    if ([filterEvent.PMPickerValue isEqual: @"AM"] && filterEvent.freeFood == YES && filterEvent.allDay == NO) {
 //        [query whereKey:@"Days" equalTo:filterEvent.dayPickerValue];
@@ -122,6 +152,10 @@
                 ALEvent *event = [[ALEvent alloc]init];
                 event.eventDescription = object[@"description"];
                 event.startTime = object[@"startTime"];
+                event.siteLocation = object[@"location"];
+                event.endTime = object[@"endTime"];
+                event.eventName = object[@"eventName"];
+                event.days = object[@"daysString"];
                 [events addObject:event];
             }
             resultBlock([events copy], error);

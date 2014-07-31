@@ -55,7 +55,11 @@
        ALEvent *event = self.events[indexPath.row];
        // cell.textLabel.text = event.eventDescription;
       //  cell.eventDescriptionText.text = event.eventDescription;
-        [eventCell.eventNameLabel setText:event.eventDescription];
+        [eventCell.eventDescriptionText setText:event.eventDescription];
+        [eventCell.eventNameLabel setText:event.eventName];
+        [eventCell.siteLabel setText:event.siteLocation];
+        [eventCell.timeLabel setText:[NSString stringWithFormat:@"%@ %@", event.startTime, event.endTime]];
+        [eventCell.dayLabel setText:event.days];
     }
     
     
