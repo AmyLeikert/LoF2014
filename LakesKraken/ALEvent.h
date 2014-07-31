@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString *eventName;
 @property (nonatomic, retain) NSMutableArray *resultsArray;
 @property (nonatomic, strong) NSString *days;
+@property (nonatomic) BOOL freeFood;
 
 
 @end

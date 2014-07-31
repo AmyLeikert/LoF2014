@@ -60,6 +60,9 @@
         [eventCell.siteLabel setText:event.siteLocation];
         [eventCell.timeLabel setText:[NSString stringWithFormat:@"%@ %@", event.startTime, event.endTime]];
         [eventCell.dayLabel setText:event.days];
+        if (event.freeFood == YES) {
+            [eventCell.yummyImage setImage:[UIImage imageNamed:@"forkknife.png"]];
+             };
     }
     
     

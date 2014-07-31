@@ -156,6 +156,7 @@
                 event.endTime = object[@"endTime"];
                 event.eventName = object[@"eventName"];
                 event.days = object[@"daysString"];
+                event.freeFood = [object[@"food"] boolValue];
                 [events addObject:event];
             }
             resultBlock([events copy], error);
