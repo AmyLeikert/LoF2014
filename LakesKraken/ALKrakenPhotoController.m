@@ -53,10 +53,10 @@
     
     [self.photoCollectionView registerNib:[UINib nibWithNibName:@"ALThumbCollectionCell" bundle:nil] forCellWithReuseIdentifier:CELL_NAME];
     [self.photoCollectionView reloadData];
-    self.photoCollectionView.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
-    self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    self.photoCollectionView.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
     self.backButton.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
-    self.backButton.titleLabel.textColor = [UIColor colorWithRed:0.431 green:0 blue:0 alpha:1];
+    //self.backButton.titleLabel.textColor = [UIColor colorWithRed:0.431 green:0 blue:0 alpha:1];
     self.urlArray = [[NSMutableArray alloc]init];
 }
 
@@ -69,7 +69,7 @@
     ALThumbCollectionCell *thumbCell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_NAME forIndexPath:indexPath];
     
     thumbCell.layer.borderWidth = 3;
-    thumbCell.layer.borderColor = [[UIColor colorWithRed:0.431 green:0 blue:0 alpha:1]CGColor];
+    thumbCell.layer.borderColor = [[UIColor blackColor]CGColor];
     
     int i;
     NSString *photoCode;

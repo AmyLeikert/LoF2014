@@ -17,7 +17,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *testLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableResults;
 @property (nonatomic, retain) NSArray *events;
-@property (nonatomic, strong) IBOutlet UIImageView *imageTest;
+
+@property (nonatomic, strong) UIButton *backButton;
 
 
 -(void)setEvents:(NSArray *)events;

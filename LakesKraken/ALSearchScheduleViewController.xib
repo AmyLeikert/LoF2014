@@ -38,6 +38,9 @@
                         <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="XT1-sf-y59"/>
+                    </connections>
                 </button>
                 <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-de-85N">
                     <rect key="frame" x="0.0" y="229" width="320" height="162"/>

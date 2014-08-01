@@ -9,6 +9,7 @@
 #import "ALSearchScheduleViewController.h"
 #import "ALSearchResultsViewController.h"
 #import "ALParseQuery.h"
+#import "menuViewController.h"
 
 @interface ALSearchScheduleViewController ()
 
@@ -177,6 +178,12 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
+-(IBAction)goBackPressed:(id)sender {
+    menuViewController *menuView = [[menuViewController alloc]init];
+    
+    [self.navigationController pushViewController:menuView animated:YES];
 }
 
 
