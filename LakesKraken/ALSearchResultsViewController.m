@@ -62,11 +62,17 @@
         [eventCell.dayLabel setText:event.days];
         if (event.freeFood == YES) {
             [eventCell.yummyImage setImage:[UIImage imageNamed:@"forkknife.png"]];
+            [eventCell.yummyImage2 setImage:[UIImage imageNamed:@"forkknife.png"]];
              };
     }
     
     
     return eventCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    // This will create a "invisible" footer
+    return 0.01f;
 }
 
 - (void)viewDidLoad

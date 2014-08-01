@@ -16,5 +16,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *eventNameLabel;
 @property (nonatomic, strong) IBOutlet UITextView *eventDescriptionText;
 @property (nonatomic, strong) IBOutlet UIImageView *yummyImage;
+@property (nonatomic, strong) IBOutlet UIImageView *yummyImage2;
 
 @end
