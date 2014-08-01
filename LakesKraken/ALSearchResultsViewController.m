@@ -46,6 +46,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIView* bview = [[UIView alloc] init];
+    bview.backgroundColor = [UIColor colorWithRed:0 green:0.055 blue:0.231 alpha:1];
+    [tableView setBackgroundView:bview];
+    
+    
     ALScheduleTableViewCell *eventCell = [tableView dequeueReusableCellWithIdentifier:@"thumbCell"];
     if (eventCell) {
         [tableView registerNib:[UINib nibWithNibName:@"ALScheduleTableViewCell" bundle:nil] forCellReuseIdentifier:@"thumbCell"];
@@ -80,6 +86,7 @@
     [super viewDidLoad];
 
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"thumbCell"];
+    self.view.backgroundColor = [UIColor colorWithRed:0 green:0.055 blue:0.231 alpha:1]; /*#000e3b*/
 }
 
 - (void)didReceiveMemoryWarning
