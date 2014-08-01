@@ -53,6 +53,9 @@
     
     
     ALScheduleTableViewCell *eventCell = [tableView dequeueReusableCellWithIdentifier:@"thumbCell"];
+  //  [eventCell customizeCellLabelText:eventCell.eventNameLabel textFieldText:eventCell.eventDescriptionText];
+   
+    
     if (eventCell) {
         [tableView registerNib:[UINib nibWithNibName:@"ALScheduleTableViewCell" bundle:nil] forCellReuseIdentifier:@"thumbCell"];
         eventCell = [tableView dequeueReusableCellWithIdentifier:@"thumbCell"];
@@ -87,6 +90,7 @@
 
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"thumbCell"];
     self.view.backgroundColor = [UIColor colorWithRed:0 green:0.055 blue:0.231 alpha:1]; /*#000e3b*/
+    
 }
 
 - (void)didReceiveMemoryWarning

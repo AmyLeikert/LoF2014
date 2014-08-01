@@ -18,4 +18,6 @@
 @property (nonatomic, strong) IBOutlet UIImageView *yummyImage;
 @property (nonatomic, strong) IBOutlet UIImageView *yummyImage2;
 
+//-(void)customizeCellLabelText:(UILabel*)cellLabel textFieldText:(UITextView*)textField;
+
 @end
