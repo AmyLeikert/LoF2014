@@ -51,6 +51,7 @@
                    @"08Kbq2x.jpg",
                    @"3YAjOJm.jpg"];
     
+    
     [self.photoCollectionView registerNib:[UINib nibWithNibName:@"ALThumbCollectionCell" bundle:nil] forCellWithReuseIdentifier:CELL_NAME];
     [self.photoCollectionView reloadData];
     self.photoCollectionView.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
