@@ -17,6 +17,46 @@
 
 @implementation ALSearchScheduleViewController
 
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel* tView = (UILabel*)view;
+    if (!tView)
+    {
+        tView = [[UILabel alloc] init];
+        [tView setFont:[UIFont fontWithName:@"AmericanTypewriter" size:18]];
+        [tView setTextAlignment:UITextAlignmentCenter];
+        tView.numberOfLines=3;
+    }
+
+    if (component == 0) {
+        tView.text = [self.dayArray objectAtIndex:row];
+    }
+    
+    if (self.allDayButton.selected) {
+        if (component == 1) {
+            return nil;
+            
+        }
+        if (component == 2) {
+            return nil;
+            
+        }
+    }
+
+    if (!self.allDayButton.selected) {
+        if (component == 1) {
+            tView.text = [self.timeArray objectAtIndex:row];
+        }
+    }
+    
+    if (component == 2) {
+        tView.text = [self.PMArray objectAtIndex:row];
+    }
+
+    
+    return tView;
+}
+
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 3;
 }
@@ -34,37 +74,37 @@
     return component;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
-
-    if (component == 0) {
-        return [self.dayArray objectAtIndex:row];
-    }
-    
-    if (self.allDayButton.selected) {
-        if (component == 1) {
-            return nil;
-         
-        }
-        if (component == 2) {
-            return nil;
-            
-        }
-    }
-    if (!self.allDayButton.selected) {
-        if (component == 1) {
-            return [self.timeArray objectAtIndex:row];
-        }
-    }
-    
-    if (component == 2) {
-        return [self.PMArray objectAtIndex:row];
-    }
-
-    return @"hello";
-}
+//- (NSString *)pickerView:(UIPickerView *)pickerView
+//             titleForRow:(NSInteger)row
+//            forComponent:(NSInteger)component
+//{
+//
+//    if (component == 0) {
+//        return [self.dayArray objectAtIndex:row];
+//    }
+//    
+//    if (self.allDayButton.selected) {
+//        if (component == 1) {
+//            return nil;
+//         
+//        }
+//        if (component == 2) {
+//            return nil;
+//            
+//        }
+//    }
+//    if (!self.allDayButton.selected) {
+//        if (component == 1) {
+//            return [self.timeArray objectAtIndex:row];
+//        }
+//    }
+//    
+//    if (component == 2) {
+//        return [self.PMArray objectAtIndex:row];
+//    }
+//
+//    return @"hello";
+//}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
