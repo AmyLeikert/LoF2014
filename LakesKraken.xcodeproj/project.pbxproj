@@ -17,7 +17,6 @@
 		240F393B197A2EFB0087D566 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F393A197A2EFB0087D566 /* Security.framework */; };
 		240F393D197A2EFF0087D566 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F393C197A2EFF0087D566 /* StoreKit.framework */; };
 		240F393F197A2F040087D566 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F393E197A2F040087D566 /* SystemConfiguration.framework */; };
-		240F39C5197A2F8A0087D566 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F39C4197A2F8A0087D566 /* FacebookSDK.framework */; };
 		240F39C7197A2FA70087D566 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F39C6197A2FA70087D566 /* Twitter.framework */; };
 		240F39C9197A30680087D566 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F39C8197A30680087D566 /* Social.framework */; };
 		24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24370777194FCB3B00D8040E /* Foundation.framework */; };
@@ -76,7 +75,6 @@
 		240F393A197A2EFB0087D566 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		240F393C197A2EFF0087D566 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		240F393E197A2F040087D566 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		240F39C4197A2F8A0087D566 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		240F39C6197A2FA70087D566 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		240F39C8197A30680087D566 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		24370774194FCB3B00D8040E /* LakesKraken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LakesKraken.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +145,6 @@
 				24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */,
 				2437077C194FCB3B00D8040E /* UIKit.framework in Frameworks */,
 				24370778194FCB3B00D8040E /* Foundation.framework in Frameworks */,
-				240F39C5197A2F8A0087D566 /* FacebookSDK.framework in Frameworks */,
 				240F392D197A2EB80087D566 /* Parse.framework in Frameworks */,
 				387300DABE4A41F3B5CD7CED /* libPods-LakesKraken.a in Frameworks */,
 			);
@@ -191,7 +188,6 @@
 			children = (
 				240F39C8197A30680087D566 /* Social.framework */,
 				240F39C6197A2FA70087D566 /* Twitter.framework */,
-				240F39C4197A2F8A0087D566 /* FacebookSDK.framework */,
 				240F393E197A2F040087D566 /* SystemConfiguration.framework */,
 				240F393C197A2EFF0087D566 /* StoreKit.framework */,
 				240F393A197A2EFB0087D566 /* Security.framework */,
@@ -586,6 +582,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/Users/detroitlabsuser/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/LakesKraken",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
@@ -605,6 +602,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/Users/detroitlabsuser/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/LakesKraken",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";

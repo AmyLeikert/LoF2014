@@ -1,13 +1,19 @@
 PODS:
   - BlinkButton (0.0.1)
+  - Bolts (1.1.2)
   - EXPhotoViewer (1.1.2)
+  - Facebook-iOS-SDK (3.17.0):
+    - Bolts
 
 DEPENDENCIES:
   - BlinkButton (~> 0.0)
   - EXPhotoViewer (~> 1.1)
+  - Facebook-iOS-SDK (~> 3.17)
 
 SPEC CHECKSUMS:
   BlinkButton: c675681c6be0840f78c4f5543ee644695ec790e1
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
   EXPhotoViewer: 0e9d3e4fbf5918ffeeadc047ed798d54f4a2a6b1
+  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1
