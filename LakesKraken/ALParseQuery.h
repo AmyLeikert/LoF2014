@@ -22,10 +22,6 @@ typedef void(^ALParseQueryResultBlock)(NSArray *objects, NSError *error);
 
 -(void)fetchDataFromParse:(ALFilterEvent *)filterEvent withResultBlock:(ALParseQueryResultBlock)resultBlock;
 
-//-(NSArray*)parseTesting:(ALFilterEvent *)filterEvent;
 
-//-(NSArray*)parse:(ALFilterEvent *)filterEvent;
-
-//-(NSArray*)fetchDataFromParse:(ALFilterEvent *)filterEvent;
 
 @end

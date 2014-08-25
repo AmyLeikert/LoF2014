@@ -10,11 +10,7 @@
 
 @implementation ALScheduleTableViewCell
 
-//-(void)customizeCellLabelText:(UILabel*)cellLabel textFieldText:(UITextView*)textField {
-//    cellLabel.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:16];
-//    textField.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:16];
-//    
-//}
+
 
 - (void)awakeFromNib
 {
@@ -23,8 +19,7 @@
     self.eventDescriptionText.editable = YES;
     self.eventDescriptionText.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];;
     self.eventDescriptionText.editable = NO;
-    
-   // self.eventDescriptionText.font =[UIFont fontWithName:@"AmericanTypewriter" size:16];
+
     self.timeLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];
     self.eventNameLabel.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:14];
     self.siteLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:12];

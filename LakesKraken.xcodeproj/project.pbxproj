@@ -211,14 +211,14 @@
 		2437077D194FCB3B00D8040E /* LakesKraken */ = {
 			isa = PBXGroup;
 			children = (
+				24982E0D19888DA80094191E /* PhotoGallery */,
+				24982E071986D39B0094191E /* SearchStuff */,
 				243707A6194FCB6400D8040E /* ALWelcomeView.h */,
 				243707A7194FCB6400D8040E /* ALWelcomeView.m */,
 				243707A8194FCB6400D8040E /* ALWelcomeView.xib */,
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
-				24982E0D19888DA80094191E /* PhotoGallery */,
-				24982E071986D39B0094191E /* SearchStuff */,
 				24370786194FCB3B00D8040E /* ALAppDelegate.h */,
 				24370787194FCB3B00D8040E /* ALAppDelegate.m */,
 				24370789194FCB3B00D8040E /* Images.xcassets */,

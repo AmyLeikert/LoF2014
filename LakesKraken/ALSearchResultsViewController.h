@@ -14,11 +14,9 @@
 
 @interface ALSearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) ALFilterEvent *filterEvent;
-@property (nonatomic, strong) IBOutlet UILabel *testLabel;
 @property (nonatomic, strong) IBOutlet UITableView *tableResults;
 @property (nonatomic, retain) NSArray *events;
-
-@property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) IBOutlet UIView *barView;
 
 
 -(void)setEvents:(NSArray *)events;

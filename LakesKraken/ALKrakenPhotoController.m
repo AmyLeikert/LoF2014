@@ -57,7 +57,6 @@
     self.photoCollectionView.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
     self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
     self.backButton.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
-    //self.backButton.titleLabel.textColor = [UIColor colorWithRed:0.431 green:0 blue:0 alpha:1];
     self.urlArray = [[NSMutableArray alloc]init];
 }
 

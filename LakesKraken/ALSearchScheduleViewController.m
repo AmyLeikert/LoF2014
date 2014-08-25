@@ -23,7 +23,7 @@
     if (!tView)
     {
         tView = [[UILabel alloc] init];
-        [tView setFont:[UIFont fontWithName:@"AmericanTypewriter" size:18]];
+        [tView setFont:[UIFont fontWithName:@"AmericanTypewriter-Bold" size:18]];
         [tView setTextAlignment:UITextAlignmentCenter];
         tView.numberOfLines=3;
     }
@@ -74,39 +74,6 @@
     return component;
 }
 
-//- (NSString *)pickerView:(UIPickerView *)pickerView
-//             titleForRow:(NSInteger)row
-//            forComponent:(NSInteger)component
-//{
-//
-//    if (component == 0) {
-//        return [self.dayArray objectAtIndex:row];
-//    }
-//    
-//    if (self.allDayButton.selected) {
-//        if (component == 1) {
-//            return nil;
-//         
-//        }
-//        if (component == 2) {
-//            return nil;
-//            
-//        }
-//    }
-//    if (!self.allDayButton.selected) {
-//        if (component == 1) {
-//            return [self.timeArray objectAtIndex:row];
-//        }
-//    }
-//    
-//    if (component == 2) {
-//        return [self.PMArray objectAtIndex:row];
-//    }
-//
-//    return @"hello";
-//}
-
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -132,17 +99,14 @@
 
 -(IBAction)searchPressed:(id)sender {
     ALSearchResultsViewController *searchResults = [[ALSearchResultsViewController alloc]init];
-    ALParseQuery *parse = [[ALParseQuery alloc]init];
     self.filterEvent.dayPickerValue = [self.dayArray objectAtIndex:[self.picker selectedRowInComponent:0]];
     
     self.filterEvent.PMPickerValue = [self.PMArray objectAtIndex:[self.picker selectedRowInComponent:2]];
     
     self.filterEvent.timePickerValue = [self.timeArray objectAtIndex:[self.picker selectedRowInComponent:1]];
     
-    
-    // V THIS IS IMPORTANT TO MOVE INFO TO THE SEARCH RESULTS PAGE
     searchResults.filterEvent = self.filterEvent;
-    /// ^ OH MY GOD. THIS. DON'T FORGET THIS. AND THE SEARCHRESULTS ALLOC/INIT ABOVE.
+
 
     
     [self.navigationController pushViewController:searchResults animated:YES];
@@ -162,8 +126,6 @@
     self.parse = [[ALParseQuery alloc]init];
     
     self.filterEvent = [[ALFilterEvent alloc]init];
-    
-   // [self.parse fetchDataFromParse:self.filterEvent];
     
     [self.navigationController setNavigationBarHidden:NO];
 
@@ -187,28 +149,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-//-(void)parseTesting {
-//    ALEvent *myEvent = [[ALEvent alloc] init];
-//    self.event1 = myEvent;
-//    PFQuery *query = [PFQuery queryWithClassName:@"schedule"];
-//   // [query whereKey:@"hoursAM" containedIn:@[@"10"]];
-//    [query whereKey:@"allDay" equalTo:@NO];
-//    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//        if (!error) {
-//            // Do something with the found objects
-//            for (PFObject *object in objects) {
-//               self.event1.eventDescription = object[@"description"];
-//                self.event1.startTime = object[@"startTime"];
-//              //  NSLog(@"%@", self.event1.eventDescription);
-//             
-//            }
-//        } else {
-//            // Log details of the failure
-//            NSLog(@"Error: %@ %@", error, [error userInfo]);
-//        }
-//    }];
-//}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
