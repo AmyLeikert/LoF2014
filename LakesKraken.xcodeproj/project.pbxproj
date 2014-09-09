@@ -41,6 +41,10 @@
 		24982E061986D3650094191E /* ALKrakenPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24982E041986D3650094191E /* ALKrakenPhotoController.xib */; };
 		24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24982E091987EB850094191E /* ALThumbCollectionCell.m */; };
 		24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */; };
+		24A60E1F19BE9020009657F7 /* ALToDoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A60E1A19BE9020009657F7 /* ALToDoList.m */; };
+		24A60E2019BE9020009657F7 /* ALToDoList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A60E1B19BE9020009657F7 /* ALToDoList.xib */; };
+		24A60E2119BE9020009657F7 /* ALAddToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A60E1D19BE9020009657F7 /* ALAddToDoItem.m */; };
+		24A60E2219BE9020009657F7 /* ALAddToDoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A60E1E19BE9020009657F7 /* ALAddToDoItem.xib */; };
 		24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A7C5F919744926005FAB18 /* menuViewController.m */; };
 		24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5FA19744926005FAB18 /* menuViewController.xib */; };
 		24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */; };
@@ -109,6 +113,12 @@
 		24982E081987EB850094191E /* ALThumbCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALThumbCollectionCell.h; sourceTree = "<group>"; };
 		24982E091987EB850094191E /* ALThumbCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALThumbCollectionCell.m; sourceTree = "<group>"; };
 		24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALThumbCollectionCell.xib; sourceTree = "<group>"; };
+		24A60E1919BE9020009657F7 /* ALToDoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoList.h; sourceTree = "<group>"; };
+		24A60E1A19BE9020009657F7 /* ALToDoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToDoList.m; sourceTree = "<group>"; };
+		24A60E1B19BE9020009657F7 /* ALToDoList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALToDoList.xib; sourceTree = "<group>"; };
+		24A60E1C19BE9020009657F7 /* ALAddToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAddToDoItem.h; sourceTree = "<group>"; };
+		24A60E1D19BE9020009657F7 /* ALAddToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAddToDoItem.m; sourceTree = "<group>"; };
+		24A60E1E19BE9020009657F7 /* ALAddToDoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALAddToDoItem.xib; sourceTree = "<group>"; };
 		24A7C5F819744926005FAB18 /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menuViewController.h; path = ../menuViewController.h; sourceTree = "<group>"; };
 		24A7C5F919744926005FAB18 /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuViewController.m; path = ../menuViewController.m; sourceTree = "<group>"; };
 		24A7C5FA19744926005FAB18 /* menuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = menuViewController.xib; path = ../menuViewController.xib; sourceTree = "<group>"; };
@@ -211,6 +221,7 @@
 		2437077D194FCB3B00D8040E /* LakesKraken */ = {
 			isa = PBXGroup;
 			children = (
+				24A60E0E19BE8F84009657F7 /* ToDo */,
 				24982E0D19888DA80094191E /* PhotoGallery */,
 				24982E071986D39B0094191E /* SearchStuff */,
 				243707A6194FCB6400D8040E /* ALWelcomeView.h */,
@@ -291,6 +302,19 @@
 				24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */,
 			);
 			name = PhotoGallery;
+			sourceTree = "<group>";
+		};
+		24A60E0E19BE8F84009657F7 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				24A60E1919BE9020009657F7 /* ALToDoList.h */,
+				24A60E1A19BE9020009657F7 /* ALToDoList.m */,
+				24A60E1B19BE9020009657F7 /* ALToDoList.xib */,
+				24A60E1C19BE9020009657F7 /* ALAddToDoItem.h */,
+				24A60E1D19BE9020009657F7 /* ALAddToDoItem.m */,
+				24A60E1E19BE9020009657F7 /* ALAddToDoItem.xib */,
+			);
+			name = ToDo;
 			sourceTree = "<group>";
 		};
 		24A7C5F71974468C005FAB18 /* Images */ = {
@@ -393,8 +417,10 @@
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
+				24A60E2219BE9020009657F7 /* ALAddToDoItem.xib in Resources */,
 				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
+				24A60E2019BE9020009657F7 /* ALToDoList.xib in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24982E061986D3650094191E /* ALKrakenPhotoController.xib in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
@@ -452,11 +478,13 @@
 				24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */,
 				24982E051986D3650094191E /* ALKrakenPhotoController.m in Sources */,
 				246C1831197D942D00BE9990 /* ALSearchResultsViewController.m in Sources */,
+				24A60E2119BE9020009657F7 /* ALAddToDoItem.m in Sources */,
 				24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */,
 				243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */,
 				246C1835197D9A9700BE9990 /* ALParseQuery.m in Sources */,
 				24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */,
 				24370784194FCB3B00D8040E /* main.m in Sources */,
+				24A60E1F19BE9020009657F7 /* ALToDoList.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
 				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
 				24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */,
