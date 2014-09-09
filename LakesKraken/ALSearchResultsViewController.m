@@ -22,10 +22,6 @@
      
 }
 
--(IBAction)whatever:(id)sender {
-   //   NSLog(@"%@ this", [self.event.resultsArray description]);
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -48,15 +44,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UIView* bview = [[UIView alloc] init];
-   // bview.backgroundColor = [UIColor colorWithRed:0 green:0.055 blue:0.231 alpha:1];
     
     bview.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
     [tableView setBackgroundView:bview];
     
     
     ALScheduleTableViewCell *eventCell = [tableView dequeueReusableCellWithIdentifier:@"thumbCell"];
-  //  [eventCell customizeCellLabelText:eventCell.eventNameLabel textFieldText:eventCell.eventDescriptionText];
-   
     
     if (eventCell) {
         [tableView registerNib:[UINib nibWithNibName:@"ALScheduleTableViewCell" bundle:nil] forCellReuseIdentifier:@"thumbCell"];
@@ -64,8 +57,6 @@
     }
     if (indexPath.section == 0) {
        ALEvent *event = self.events[indexPath.row];
-       // cell.textLabel.text = event.eventDescription;
-      //  cell.eventDescriptionText.text = event.eventDescription;
         [eventCell.eventDescriptionText setText:event.eventDescription];
         [eventCell.eventNameLabel setText:event.eventName];
         [eventCell.siteLabel setText:event.siteLocation];
@@ -82,7 +73,6 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    // This will create a "invisible" footer
     return 0.01f;
 }
 
@@ -91,15 +81,8 @@
     [super viewDidLoad];
 
     [self.tableResults registerClass: [UITableViewCell class]forCellReuseIdentifier:@"thumbCell"];
-   // self.view.backgroundColor = [UIColor colorWithRed:0 green:0.055 blue:0.231 alpha:1]; /*#000e3b*/
     self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
-    
-   // [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1]];
-    
-//    UINavigationBar *navBar = self.navigationController.navigationBar;
-//    UIImage *woodImage = [UIImage imageNamed:@"WoodTexture2.png"];
-//    self.navigationController.navigationBar.translucent = NO;
-//    [navBar setBackgroundImage:woodImage forBarMetrics:UIBarMetricsDefault];
+    self.barView.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,12 +93,12 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES];   //it hides
+    [self.navigationController setNavigationBarHidden:YES];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];    // it shows
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 -(IBAction)goBackPressed:(id)sender {

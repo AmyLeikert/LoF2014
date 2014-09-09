@@ -9,6 +9,7 @@
 #import "menuViewController.h"
 #import "ALSearchScheduleViewController.h"
 #import "ALKrakenPhotoController.h"
+#import "ALToDoList.h"
 
 @interface menuViewController ()
 
@@ -66,7 +67,7 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 5;
+    return 6;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -100,6 +101,10 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
         cell.textLabel.text = @"Photo Gallery";
     }
     
+    if (indexPath.section == 0 && indexPath.row == 5) {
+        cell.textLabel.text = @"What Should I Bring?";
+    }
+    
     [cell setBackgroundColor:[UIColor clearColor]];
     cell.textLabel.textAlignment = UITextAlignmentCenter;
     
@@ -112,6 +117,7 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ALSearchScheduleViewController *searchViewController = [[ALSearchScheduleViewController alloc]init];
     ALKrakenPhotoController *photoController = [[ALKrakenPhotoController alloc]init];
+    ALToDoList *toDoList = [[ALToDoList alloc]init];
     
     if (indexPath.section == 0 && indexPath.row == 3){
     return [self.navigationController pushViewController:searchViewController animated:YES];
@@ -119,22 +125,17 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     if (indexPath.section == 0 && indexPath.row == 4) {
         self.loadingLabel.hidden = NO;
         
-        [self.navigationController pushViewController:photoController animated:YES];
+        return [self.navigationController pushViewController:photoController animated:YES];
+    }
+    
+    if (indexPath.section == 0 && indexPath.row == 5) {
+         return [self.navigationController pushViewController:toDoList animated:YES];
     }
 
 }
 
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -9,7 +9,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-LakesKraken-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LakesKraken-EXPhotoViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LakesKraken-Facebook-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3A8C85E5996E4C52BAB54E46</key>
+		<key>06F0A3E1F43F4395BF48CFC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>739547DDC87B4025975A3B1A</key>
+		<key>14B11F5EC7AC42C7AE16A996</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3914E5A88BE4171AE780249</key>
+		<key>37904D9334D34BE3B7B7571D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EDB5F30DC1140E9BC6108B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DEF5C451AB0940C58606FC5C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

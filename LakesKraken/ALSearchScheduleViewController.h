@@ -15,7 +15,6 @@
 
 @interface ALSearchScheduleViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (nonatomic, strong) ALEvent *event1;
 @property (nonatomic, strong) IBOutlet UIButton *allDayButton;
 @property (nonatomic, strong) ALFilterEvent *filterEvent;
 @property (nonatomic, strong) IBOutlet UIButton *searchButton;
