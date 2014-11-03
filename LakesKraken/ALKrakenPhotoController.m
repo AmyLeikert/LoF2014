@@ -58,6 +58,8 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
     self.backButton.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
     self.urlArray = [[NSMutableArray alloc]init];
+    
+    [self.indicator startAnimating];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -75,15 +77,21 @@
     NSString *photoCode;
     NSString *photoURL;
     
-    for (i = 0; i < 13; i++) {
+    for (i = 0; i < photoArray.count; i++) {
         NSString *imgrURL = @"http://i.imgur.com/";
         photoCode = [photoArray objectAtIndex:i];
         photoURL = [imgrURL stringByAppendingString:photoCode];
         [self.urlArray addObject:photoURL];
     }
     
-    thumbCell.thumbImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.urlArray[indexPath.row]]]];
+     //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+     dispatch_async(dispatch_get_main_queue(), ^{
     
+    thumbCell.thumbImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.urlArray[indexPath.row]]]];
+         [self.indicator stopAnimating];
+         
+});
+
    return thumbCell;
 }
 

@@ -9,7 +9,7 @@
 #import "menuViewController.h"
 #import "ALSearchScheduleViewController.h"
 #import "ALKrakenPhotoController.h"
-#import "ALToDoList.h"
+#import "ALToDoTable.h"
 
 @interface menuViewController ()
 
@@ -117,7 +117,9 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ALSearchScheduleViewController *searchViewController = [[ALSearchScheduleViewController alloc]init];
     ALKrakenPhotoController *photoController = [[ALKrakenPhotoController alloc]init];
-    ALToDoList *toDoList = [[ALToDoList alloc]init];
+    ALToDoTable *table = [[ALToDoTable alloc]init];
+
+    
     
     if (indexPath.section == 0 && indexPath.row == 3){
     return [self.navigationController pushViewController:searchViewController animated:YES];
@@ -129,13 +131,11 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     }
     
     if (indexPath.section == 0 && indexPath.row == 5) {
-         return [self.navigationController pushViewController:toDoList animated:YES];
-    }
+        return [self.navigationController pushViewController:table animated:YES];
+        
+          }
 
 }
-
-
-
 
 
 @end

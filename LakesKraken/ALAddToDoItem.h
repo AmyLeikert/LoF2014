@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ALAddToDoItem : UIViewController
+@interface ALAddToDoItem : UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, strong) IBOutlet UITextField *textField;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+
 
 @end

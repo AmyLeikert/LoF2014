@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-LakesKraken-BlinkButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LakesKraken-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LakesKraken-EXPhotoViewer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LakesKraken-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LakesKraken.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2F8FD563A7999E0DE8CE5D52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67A54A4D488E05551F2846A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9446DB3493FAC027B3D228E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C983A977393AAF6C16C47FB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EDEB67EBCCFCD51BFC256B66</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

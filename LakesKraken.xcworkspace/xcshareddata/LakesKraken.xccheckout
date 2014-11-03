@@ -10,29 +10,29 @@
 	<string>LakesKraken</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AD576044-A17F-4970-AAE7-95E65F9A3555</key>
+		<key>5F2B2DED448831F16CB389BC1EA12BE8EA607AA8</key>
 		<string>ssh://github.com/AmyLeikert/LakesKraken.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LakesKraken.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AD576044-A17F-4970-AAE7-95E65F9A3555</key>
+		<key>5F2B2DED448831F16CB389BC1EA12BE8EA607AA8</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/AmyLeikert/LakesKraken.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AD576044-A17F-4970-AAE7-95E65F9A3555</string>
+	<string>5F2B2DED448831F16CB389BC1EA12BE8EA607AA8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AD576044-A17F-4970-AAE7-95E65F9A3555</string>
+			<string>5F2B2DED448831F16CB389BC1EA12BE8EA607AA8</string>
 			<key>IDESourceControlWCCName</key>
 			<string>LakesKraken</string>
 		</dict>
