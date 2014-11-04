@@ -44,21 +44,7 @@
     if ([toDoTable isKindOfClass:[ALToDoTable class]]) {
         [toDoTable setManagedObjectContext:self.managedObjectContext];
     }
-    
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-    
-    // Initialize Record
-    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    // Populate Record
-    [record setValue:@"Propane Grill" forKey:@"name"];
-    [record setValue:@"Earplugs" forKey:@"name"];
-    [record setValue:@"Tent" forKey:@"name"];
-    [record setValue:@"Sunscreen" forKey:@"name"];
-    
-    
-    
+        
     return YES;
 }
 

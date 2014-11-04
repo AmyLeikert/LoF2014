@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */; };
+		01368DCF1A09701B00DE2DDA /* ALUpdateListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */; };
+		01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */; };
 		01CFB86519F9576700EE824B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CFB86419F9576700EE824B /* CoreData.framework */; };
 		01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB86719F957D400EE824B /* ToDoData.xcdatamodeld */; };
 		01CFB87819F96C4C00EE824B /* ALToDoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87619F96C4C00EE824B /* ALToDoTable.m */; };
@@ -74,6 +76,9 @@
 
 /* Begin PBXFileReference section */
 		01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALAddToDoItem.xib; sourceTree = "<group>"; };
+		01368DCC1A09701B00DE2DDA /* ALUpdateListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUpdateListController.h; sourceTree = "<group>"; };
+		01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUpdateListController.m; sourceTree = "<group>"; };
+		01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALUpdateListController.xib; sourceTree = "<group>"; };
 		01CFB86419F9576700EE824B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01CFB86819F957D400EE824B /* ToDoData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoData.xcdatamodel; sourceTree = "<group>"; };
 		01CFB87519F96C4C00EE824B /* ALToDoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoTable.h; sourceTree = "<group>"; };
@@ -351,6 +356,9 @@
 				01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */,
 				24ACAEC719CA086100293B61 /* ALToDoItem.h */,
 				24ACAEC819CA086100293B61 /* ALToDoItem.m */,
+				01368DCC1A09701B00DE2DDA /* ALUpdateListController.h */,
+				01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */,
+				01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */,
 			);
 			name = ToDo;
 			sourceTree = "<group>";
@@ -453,6 +461,7 @@
 				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
 				24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */,
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
+				01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */,
 				246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */,
 				01CFB87E19FADEDC00EE824B /* ALToDoCell.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
@@ -523,6 +532,7 @@
 				243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */,
 				246C1835197D9A9700BE9990 /* ALParseQuery.m in Sources */,
 				01CFB87819F96C4C00EE824B /* ALToDoTable.m in Sources */,
+				01368DCF1A09701B00DE2DDA /* ALUpdateListController.m in Sources */,
 				24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */,
 				24370784194FCB3B00D8040E /* main.m in Sources */,
 				01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */,

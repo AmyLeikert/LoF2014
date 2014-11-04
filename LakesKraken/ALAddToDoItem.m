@@ -66,13 +66,27 @@
 - (void)save {
             // Helpers
         NSString *name = self.textField.text;
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
+    
+    // Initialize Record
+    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+    
+    NSArray *array = @[@"2", @"3", @"4"];
+    
+    for (NSString *string in array) {
         
+    NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+        
+    [thing setValue:string forKey:@"name"];
+    }
+    
         if (name && name.length) {
             // Create Entity
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-            
-            // Initialize Record
-            NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+//            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
+//            
+//            // Initialize Record
+//            NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
             
             // Populate Record
             [record setValue:name forKey:@"name"];

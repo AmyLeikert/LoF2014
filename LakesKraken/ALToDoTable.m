@@ -96,9 +96,9 @@
     
     // Populate Record
     [record setValue:@"Propane Grill" forKey:@"name"];
-    [record setValue:@"Earplugs" forKey:@"name"];
-    [record setValue:@"Tent" forKey:@"name"];
-    [record setValue:@"Sunscreen" forKey:@"name"];
+//    [record setValue:@"Earplugs" forKey:@"name"];
+//    [record setValue:@"Tent" forKey:@"name"];
+//    [record setValue:@"Sunscreen" forKey:@"name"];
     
 }
 
@@ -138,7 +138,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray *prepopulatedData = 
     
     
     NSArray *sections = [self.fetchedResultsController sections];
