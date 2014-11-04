@@ -43,6 +43,7 @@
                                               entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
     
     
+    
      NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Entity"];
 
     [fetchRequest setEntity:entityDescription];
@@ -87,6 +88,21 @@
 
 }
 
+-(void)prePopulateData {
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
+    
+    // Initialize Record
+    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+    
+    // Populate Record
+    [record setValue:@"Propane Grill" forKey:@"name"];
+    [record setValue:@"Earplugs" forKey:@"name"];
+    [record setValue:@"Tent" forKey:@"name"];
+    [record setValue:@"Sunscreen" forKey:@"name"];
+    
+}
+
+
 -(void)segueToAddToDoItem {
     ALAddToDoItem *add = [[ALAddToDoItem alloc]init];
     [add setManagedObjectContext:self.managedObjectContext];
@@ -122,6 +138,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSArray *prepopulatedData = 
+    
+    
     NSArray *sections = [self.fetchedResultsController sections];
     id<NSFetchedResultsSectionInfo> sectionInfo = [sections objectAtIndex:section];
     
@@ -140,12 +159,7 @@
         [tableView registerNib:[UINib nibWithNibName:@"ALToDoCell" bundle:nil] forCellReuseIdentifier:@"cell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     }
-     
-     
-     if (indexPath.section == 0 && indexPath.row == 0){
-         
-         cell.textLabel.text = @"About Lakes of Fire";
-     }
+
  
      
      [self configureCell:cell atIndexPath:indexPath];

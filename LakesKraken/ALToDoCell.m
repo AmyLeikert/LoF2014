@@ -16,8 +16,12 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
+}
 
-    // Configure the view for the selected state
+-(IBAction)packedPressed:(id)sender {
+    self.packed = !self.packed;
+    self.packedButton.selected = self.packed;
+    
 }
 
 @end

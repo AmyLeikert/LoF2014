@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */; };
 		01CFB86519F9576700EE824B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CFB86419F9576700EE824B /* CoreData.framework */; };
 		01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB86719F957D400EE824B /* ToDoData.xcdatamodeld */; };
 		01CFB87819F96C4C00EE824B /* ALToDoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87619F96C4C00EE824B /* ALToDoTable.m */; };
@@ -48,11 +49,11 @@
 		24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24982E091987EB850094191E /* ALThumbCollectionCell.m */; };
 		24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */; };
 		24A60E2119BE9020009657F7 /* ALAddToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A60E1D19BE9020009657F7 /* ALAddToDoItem.m */; };
-		24A60E2219BE9020009657F7 /* ALAddToDoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A60E1E19BE9020009657F7 /* ALAddToDoItem.xib */; };
 		24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A7C5F919744926005FAB18 /* menuViewController.m */; };
 		24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C5FA19744926005FAB18 /* menuViewController.xib */; };
 		24A7C5FE19744CF9005FAB18 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */; };
 		24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24A7C60219744E76005FAB18 /* OceanSounds.mp3 */; };
+		24ACAEC619CA054E00293B61 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1CCCB197A318C000B7309 /* ALEvent.m */; };
 		24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24B1CCCD197A318C000B7309 /* ALScheduleTableViewCell.m */; };
 		24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B1CCCE197A318C000B7309 /* ALScheduleTableViewCell.xib */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALAddToDoItem.xib; sourceTree = "<group>"; };
 		01CFB86419F9576700EE824B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01CFB86819F957D400EE824B /* ToDoData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoData.xcdatamodel; sourceTree = "<group>"; };
 		01CFB87519F96C4C00EE824B /* ALToDoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoTable.h; sourceTree = "<group>"; };
@@ -127,12 +129,13 @@
 		24982E0B1987EEFC0094191E /* ALThumbCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALThumbCollectionCell.xib; sourceTree = "<group>"; };
 		24A60E1C19BE9020009657F7 /* ALAddToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAddToDoItem.h; sourceTree = "<group>"; };
 		24A60E1D19BE9020009657F7 /* ALAddToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAddToDoItem.m; sourceTree = "<group>"; };
-		24A60E1E19BE9020009657F7 /* ALAddToDoItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALAddToDoItem.xib; sourceTree = "<group>"; };
 		24A7C5F819744926005FAB18 /* menuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = menuViewController.h; path = ../menuViewController.h; sourceTree = "<group>"; };
 		24A7C5F919744926005FAB18 /* menuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = menuViewController.m; path = ../menuViewController.m; sourceTree = "<group>"; };
 		24A7C5FA19744926005FAB18 /* menuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = menuViewController.xib; path = ../menuViewController.xib; sourceTree = "<group>"; };
 		24A7C5FD19744CF9005FAB18 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		24A7C60219744E76005FAB18 /* OceanSounds.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = OceanSounds.mp3; path = LakesKraken/OceanSounds.mp3; sourceTree = "<group>"; };
+		24ACAEC719CA086100293B61 /* ALToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoItem.h; sourceTree = "<group>"; };
+		24ACAEC819CA086100293B61 /* ALToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToDoItem.m; sourceTree = "<group>"; };
 		24B1CCCA197A318C000B7309 /* ALEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALEvent.h; sourceTree = "<group>"; };
 		24B1CCCB197A318C000B7309 /* ALEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALEvent.m; sourceTree = "<group>"; };
 		24B1CCCC197A318C000B7309 /* ALScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALScheduleTableViewCell.h; sourceTree = "<group>"; };
@@ -345,7 +348,9 @@
 				01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */,
 				24A60E1C19BE9020009657F7 /* ALAddToDoItem.h */,
 				24A60E1D19BE9020009657F7 /* ALAddToDoItem.m */,
-				24A60E1E19BE9020009657F7 /* ALAddToDoItem.xib */,
+				01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */,
+				24ACAEC719CA086100293B61 /* ALToDoItem.h */,
+				24ACAEC819CA086100293B61 /* ALToDoItem.m */,
 			);
 			name = ToDo;
 			sourceTree = "<group>";
@@ -452,11 +457,12 @@
 				01CFB87E19FADEDC00EE824B /* ALToDoCell.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
 				01CFB87919F96C4C00EE824B /* ALToDoTable.xib in Resources */,
-				24A60E2219BE9020009657F7 /* ALAddToDoItem.xib in Resources */,
 				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
+				01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24982E061986D3650094191E /* ALKrakenPhotoController.xib in Resources */,
+				24ACAEC619CA054E00293B61 /* (null) in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

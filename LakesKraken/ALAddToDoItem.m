@@ -19,7 +19,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self = [super initWithNibName:@"ALAddToDoItem" bundle:nibBundleOrNil];
     }
     return self;
 }
@@ -30,14 +30,22 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     self.navigationController.navigationBar.translucent = NO;
+    
+//    UIBarButtonItem *addToDoItem = [[UIBarButtonItem alloc]
+//                                    initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+//                                    target:self
+//                                    action:@selector(segueToAddToDoItem)];
+//    self.navigationItem.rightBarButtonItem = addToDoItem;
+    
+    
     // Do any additional setup after loading the view from its nib.
     
     UIBarButtonItem *addToDoItem = [[UIBarButtonItem alloc]
                                     initWithBarButtonSystemItem:UIBarButtonSystemItemSave                                    target:self
                                     action:@selector(save)];
     self.navigationItem.rightBarButtonItem = addToDoItem;
-}
 
+}
 
 -(void)segueToAddToDoItem {
     ALToDoTable *toDoList = [[ALToDoTable alloc]init];
