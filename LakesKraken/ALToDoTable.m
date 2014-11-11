@@ -12,8 +12,6 @@
 #import "ALAppDelegate.h"
 #import <CoreData/CoreData.h>
 #import "YFJLeftSwipeDeleteTableView.h"
-#import "ALPrePopulate.h"
-
 
 
 @interface ALToDoTable ()  <NSFetchedResultsControllerDelegate>
