@@ -14,5 +14,7 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) IBOutlet UIButton *suggButton;
+
 
 @end

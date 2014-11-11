@@ -72,12 +72,12 @@
     // Initialize Record
     NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     
-    NSArray *array = @[@"2", @"3", @"4"];
+    NSArray *array = @[@"two", @"three", @"four"];
     
     for (NSString *string in array) {
         
     NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-        
+
     [thing setValue:string forKey:@"name"];
     }
     
@@ -119,6 +119,22 @@
     
 }
 
+-(void)prepopulate {
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
+    
+    // Initialize Record
+    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+    
+    NSArray *array = @[@"2", @"3", @"4"];
+    
+    for (NSString *string in array) {
+        
+        NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+        
+        [thing setValue:string forKey:@"name"];
+    }
+}
+
 /*
 #pragma mark - Navigation
 
@@ -129,5 +145,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

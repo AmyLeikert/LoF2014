@@ -16,6 +16,8 @@
 		01CFB87919F96C4C00EE824B /* ALToDoTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CFB87719F96C4C00EE824B /* ALToDoTable.xib */; };
 		01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87B19FADEDC00EE824B /* ALToDoCell.m */; };
 		01CFB87E19FADEDC00EE824B /* ALToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */; };
+		01D8A7F71A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D8A7F61A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.m */; };
+		01D8A7FA1A0BD9B30069F1E4 /* ALPrePopulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D8A7F91A0BD9B30069F1E4 /* ALPrePopulate.m */; };
 		240F392D197A2EB80087D566 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F392C197A2EB80087D566 /* Parse.framework */; };
 		240F392F197A2EC70087D566 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F392E197A2EC70087D566 /* AudioToolbox.framework */; };
 		240F3931197A2ED70087D566 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3930197A2ED70087D566 /* CFNetwork.framework */; };
@@ -87,6 +89,10 @@
 		01CFB87A19FADEDC00EE824B /* ALToDoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoCell.h; sourceTree = "<group>"; };
 		01CFB87B19FADEDC00EE824B /* ALToDoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToDoCell.m; sourceTree = "<group>"; };
 		01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALToDoCell.xib; sourceTree = "<group>"; };
+		01D8A7F51A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YFJLeftSwipeDeleteTableView.h; path = "../../../../Downloads/YFJLeftSwipeDeleteTableView-master/YFJLeftSwipeDeleteTableView/YFJLeftSwipeDeleteTableView.h"; sourceTree = "<group>"; };
+		01D8A7F61A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YFJLeftSwipeDeleteTableView.m; path = "../../../../Downloads/YFJLeftSwipeDeleteTableView-master/YFJLeftSwipeDeleteTableView/YFJLeftSwipeDeleteTableView.m"; sourceTree = "<group>"; };
+		01D8A7F81A0BD9B30069F1E4 /* ALPrePopulate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPrePopulate.h; sourceTree = "<group>"; };
+		01D8A7F91A0BD9B30069F1E4 /* ALPrePopulate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPrePopulate.m; sourceTree = "<group>"; };
 		16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LakesKraken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		240F392C197A2EB80087D566 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		240F392E197A2EC70087D566 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -347,6 +353,8 @@
 				01CFB86619F957B500EE824B /* Data */,
 				01CFB87519F96C4C00EE824B /* ALToDoTable.h */,
 				01CFB87619F96C4C00EE824B /* ALToDoTable.m */,
+				01D8A7F51A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.h */,
+				01D8A7F61A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.m */,
 				01CFB87719F96C4C00EE824B /* ALToDoTable.xib */,
 				01CFB87A19FADEDC00EE824B /* ALToDoCell.h */,
 				01CFB87B19FADEDC00EE824B /* ALToDoCell.m */,
@@ -359,6 +367,8 @@
 				01368DCC1A09701B00DE2DDA /* ALUpdateListController.h */,
 				01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */,
 				01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */,
+				01D8A7F81A0BD9B30069F1E4 /* ALPrePopulate.h */,
+				01D8A7F91A0BD9B30069F1E4 /* ALPrePopulate.m */,
 			);
 			name = ToDo;
 			sourceTree = "<group>";
@@ -526,6 +536,7 @@
 			files = (
 				24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */,
 				24982E051986D3650094191E /* ALKrakenPhotoController.m in Sources */,
+				01D8A7FA1A0BD9B30069F1E4 /* ALPrePopulate.m in Sources */,
 				246C1831197D942D00BE9990 /* ALSearchResultsViewController.m in Sources */,
 				24A60E2119BE9020009657F7 /* ALAddToDoItem.m in Sources */,
 				24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */,
@@ -538,6 +549,7 @@
 				01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
 				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
+				01D8A7F71A0AC61A0069F1E4 /* YFJLeftSwipeDeleteTableView.m in Sources */,
 				01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */,
 				24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */,
 				246C182D197D906500BE9990 /* ALFilterEvent.m in Sources */,

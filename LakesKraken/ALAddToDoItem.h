@@ -15,5 +15,6 @@
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 
-
+-(void)save;
+-(void)prepopulate;
 @end
