@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALSearchScheduleViewController">
@@ -19,11 +21,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatsKraken4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-le-ucD">
-                    <rect key="frame" x="-13" y="20" width="346" height="201"/>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
-                    <rect key="frame" x="25" y="506" width="124" height="42"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
+                    <rect key="frame" x="129" y="531" width="62" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="1Z6-iw-JLo"/>
+                        <constraint firstAttribute="width" constant="62" id="lRM-yn-ao9"/>
+                    </constraints>
                     <state key="normal" title="Search">
                         <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,9 +35,44 @@
                         <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="hqQ-xJ-0ln"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-eU-T8P">
-                    <rect key="frame" x="162" y="506" width="133" height="42"/>
-                    <state key="normal" title="Go Back">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsKrakenSign3" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-le-ucD">
+                    <rect key="frame" x="-19" y="54" width="359" height="239"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="239" id="6BQ-bx-Nhh"/>
+                    </constraints>
+                </imageView>
+                <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-de-85N">
+                    <rect key="frame" x="-1" y="275" width="320" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="7oM-m4-Swo"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="W4l-jP-NTq"/>
+                        <outlet property="delegate" destination="-1" id="e17-Id-SkG"/>
+                    </connections>
+                </pickerView>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
+                    <rect key="frame" x="190" y="468" width="122" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DSZ-OL-lIh" secondAttribute="height" multiplier="122:75" id="DMI-4d-ZKa"/>
+                    </constraints>
+                    <state key="normal" image="FreeFoodOff">
+                        <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="FreeFoodOn"/>
+                    <connections>
+                        <action selector="freeFoodPressed:" destination="-1" eventType="touchUpInside" id="X51-H8-Kll"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="yNA-CI-5W6">
+                    <rect key="frame" x="0.0" y="-31" width="320" height="108"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aX-eU-T8P">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="7aX-eU-T8P" secondAttribute="height" multiplier="55:46" id="0HZ-hq-ikG"/>
+                    </constraints>
+                    <state key="normal" image="woodBackButton2">
                         <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -42,15 +80,11 @@
                         <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="XT1-sf-y59"/>
                     </connections>
                 </button>
-                <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="P2O-de-85N">
-                    <rect key="frame" x="0.0" y="229" width="320" height="162"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="W4l-jP-NTq"/>
-                        <outlet property="delegate" destination="-1" id="e17-Id-SkG"/>
-                    </connections>
-                </pickerView>
                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
-                    <rect key="frame" x="20" y="441" width="157" height="39"/>
+                    <rect key="frame" x="8" y="468" width="122" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="G0m-63-Brr" secondAttribute="height" multiplier="122:75" id="Px8-CW-cC1"/>
+                    </constraints>
                     <state key="normal" image="AllDayOffSimple.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -59,53 +93,43 @@
                         <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="IUB-ut-04T"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
-                    <rect key="frame" x="176" y="441" width="139" height="39"/>
-                    <state key="normal" image="FreeFoodOff.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <state key="selected" image="FreeFoodOn.png"/>
-                    <connections>
-                        <action selector="freeFoodPressed:" destination="-1" eventType="touchUpInside" id="X51-H8-Kll"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="26" id="7N5-oe-BhA"/>
-                <constraint firstAttribute="bottom" secondItem="7aX-eU-T8P" secondAttribute="bottom" constant="20" id="8Rc-xa-LKc"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="97Z-iO-oQU"/>
-                <constraint firstItem="P2O-de-85N" firstAttribute="top" secondItem="Xpy-le-ucD" secondAttribute="bottom" constant="8" id="AGq-l6-rN6"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-13" id="DK2-ch-tWA"/>
-                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="26" id="If6-hh-Wae"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="I1H-aA-6LH" secondAttribute="height" multiplier="173:21" id="L7E-K2-8GM"/>
-                <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="bottom" constant="26" id="MMT-Un-Y6f"/>
-                <constraint firstAttribute="trailing" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="143" id="Og5-ff-uKL"/>
-                <constraint firstItem="P2O-de-85N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rle-B8-Zow"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="176" id="U1f-gj-6QO"/>
-                <constraint firstItem="7aX-eU-T8P" firstAttribute="leading" secondItem="I1H-aA-6LH" secondAttribute="trailing" constant="13" id="Wxm-x0-jsG"/>
-                <constraint firstAttribute="trailing" secondItem="DSZ-OL-lIh" secondAttribute="trailing" constant="5" id="aLg-yo-6Tp"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="P2O-de-85N" secondAttribute="height" multiplier="173:81" id="aRz-wV-tT6"/>
-                <constraint firstAttribute="trailing" secondItem="P2O-de-85N" secondAttribute="trailing" id="d7i-dQ-I7u"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="50" id="ebd-NJ-gRz"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="G0m-63-Brr" secondAttribute="height" multiplier="346:39" id="ghw-WG-ZId"/>
-                <constraint firstAttribute="bottom" secondItem="I1H-aA-6LH" secondAttribute="bottom" constant="20" id="k3P-Ec-JJE"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="50" id="mwF-FJ-62d"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="7aX-eU-T8P" secondAttribute="height" multiplier="173:21" id="pqI-et-98q"/>
-                <constraint firstAttribute="trailing" secondItem="7aX-eU-T8P" secondAttribute="trailing" constant="25" id="pyC-Fv-kqE"/>
-                <constraint firstItem="Xpy-le-ucD" firstAttribute="width" secondItem="DSZ-OL-lIh" secondAttribute="height" multiplier="346:39" id="u70-FF-Hzo"/>
-                <constraint firstItem="I1H-aA-6LH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="vkH-ti-1hk"/>
-                <constraint firstAttribute="trailing" secondItem="Xpy-le-ucD" secondAttribute="trailing" constant="-13" id="x3C-Md-F3g"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="zo4-8p-Vom"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-19" id="5T4-DI-j1H"/>
+                <constraint firstAttribute="bottom" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="25" id="7ZI-Vo-IfA"/>
+                <constraint firstItem="P2O-de-85N" firstAttribute="leading" secondItem="7aX-eU-T8P" secondAttribute="leading" id="8oQ-Yi-GO7"/>
+                <constraint firstItem="yNA-CI-5W6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-31" id="9mT-YC-qmp"/>
+                <constraint firstItem="7aX-eU-T8P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="BKf-Bs-HNk"/>
+                <constraint firstAttribute="trailing" secondItem="DSZ-OL-lIh" secondAttribute="trailing" constant="8" id="FNR-eg-cv8"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="IIa-tX-J2C"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="13" id="KBV-AX-VuW"/>
+                <constraint firstAttribute="trailing" secondItem="Xpy-le-ucD" secondAttribute="trailing" constant="-20" id="OCb-Sz-ZvE"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="PBe-dz-hXk"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="PWF-gY-Mj6"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="60" id="Rft-ko-RWe"/>
+                <constraint firstItem="P2O-de-85N" firstAttribute="top" secondItem="Xpy-le-ucD" secondAttribute="bottom" constant="-18" id="c8B-fT-Afd"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="13" id="chE-LL-X8j"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="centerX" secondItem="Xpy-le-ucD" secondAttribute="centerX" id="eOh-sd-OIH"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="bottom" constant="-12" id="gUa-s0-gcn"/>
+                <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="i3m-8v-n3c"/>
+                <constraint firstAttribute="trailing" secondItem="yNA-CI-5W6" secondAttribute="trailing" id="ltC-hk-EhP"/>
+                <constraint firstAttribute="bottom" secondItem="I1H-aA-6LH" secondAttribute="bottom" constant="8" id="tXg-XX-0De"/>
+                <constraint firstItem="yNA-CI-5W6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="up4-7U-Syj"/>
+                <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="7aX-eU-T8P" secondAttribute="bottom" constant="-5" id="vYW-Ki-VOg"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="top" id="wcQ-D6-CXW"/>
             </constraints>
+            <point key="canvasLocation" x="139" y="137"/>
         </view>
     </objects>
     <resources>
-        <image name="AllDayOffSimple.png" width="425" height="121"/>
+        <image name="AllDayOffSimple.png" width="321" height="132"/>
         <image name="AllDayOnSimple.png" width="425" height="121"/>
-        <image name="FreeFoodOff.png" width="425" height="121"/>
-        <image name="FreeFoodOn.png" width="425" height="121"/>
-        <image name="whatsKraken4.png" width="576" height="446"/>
+        <image name="FreeFoodOff" width="425" height="121"/>
+        <image name="FreeFoodOn" width="425" height="121"/>
+        <image name="WhatsKrakenSign3" width="552" height="458"/>
+        <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodNavigation" width="550" height="108"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
