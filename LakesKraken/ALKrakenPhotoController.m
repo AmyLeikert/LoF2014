@@ -37,6 +37,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+   // self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    
+    
     photoArray = @[@"lK0RuE9.jpg",
                    @"Nipbu6N.jpg",
                    @"cq3MvGY.jpg",
@@ -51,11 +54,14 @@
                    @"08Kbq2x.jpg",
                    @"3YAjOJm.jpg"];
     
-    
     [self.photoCollectionView registerNib:[UINib nibWithNibName:@"ALThumbCollectionCell" bundle:nil] forCellWithReuseIdentifier:CELL_NAME];
     [self.photoCollectionView reloadData];
-    self.photoCollectionView.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
-    self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
+   // self.photoCollectionView.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
+  //  self.view.backgroundColor = [UIColor colorWithRed:0.173 green:0.082 blue:0 alpha:1];
+    
+    self.photoCollectionView.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+
     self.backButton.titleLabel.font = [UIFont fontWithName:@"AmericanTypewriter" size:16];
     self.urlArray = [[NSMutableArray alloc]init];
     

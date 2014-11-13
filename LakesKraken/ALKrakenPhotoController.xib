@@ -17,8 +17,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="Lat-UV-1cK">
+                    <rect key="frame" x="0.0" y="-31" width="320" height="108"/>
+                </imageView>
                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-kM-RnL">
-                    <rect key="frame" x="8" y="53" width="305" height="515"/>
+                    <rect key="frame" x="8" y="67" width="305" height="501"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Faw-xZ-it8">
                         <size key="itemSize" width="150" height="150"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,24 +34,26 @@
                         <outlet property="delegate" destination="-1" id="un4-vG-Muq"/>
                     </connections>
                 </collectionView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wg9-sX-bA6">
+                    <rect key="frame" x="142" y="245" width="37" height="37"/>
+                </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysy-o7-yS4">
-                    <rect key="frame" x="109" y="20" width="103" height="31"/>
-                    <state key="normal" image="woodBackButton">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <state key="normal" image="woodBackButton2">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="C4O-GT-n0K"/>
                     </connections>
                 </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wg9-sX-bA6">
-                    <rect key="frame" x="142" y="245" width="37" height="37"/>
-                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="148" y="153"/>
         </view>
     </objects>
     <resources>
-        <image name="woodBackButton" width="321" height="132"/>
+        <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodNavigation" width="550" height="108"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

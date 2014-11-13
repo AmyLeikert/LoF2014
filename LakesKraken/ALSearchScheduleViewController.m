@@ -24,6 +24,8 @@
     {
         tView = [[UILabel alloc] init];
         [tView setFont:[UIFont fontWithName:@"AmericanTypewriter-Bold" size:18]];
+        tView.textColor = [UIColor brownColor];
+
         [tView setTextAlignment:UITextAlignmentCenter];
         tView.numberOfLines=3;
     }

@@ -12,6 +12,7 @@
 #import "ALAppDelegate.h"
 #import <CoreData/CoreData.h>
 #import "YFJLeftSwipeDeleteTableView.h"
+#import "menuViewController.h"
 
 
 @interface ALToDoTable ()  <NSFetchedResultsControllerDelegate>
@@ -367,5 +368,20 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
+
+- (IBAction)backTouched:(id)sender {
+    menuViewController *menu = [[menuViewController alloc]init];
+    [self.navigationController pushViewController:menu animated:YES];
+}
 
 @end

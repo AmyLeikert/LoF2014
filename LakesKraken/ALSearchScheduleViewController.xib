@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,20 +20,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
-                    <rect key="frame" x="129" y="531" width="62" height="29"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="29" id="1Z6-iw-JLo"/>
-                        <constraint firstAttribute="width" constant="62" id="lRM-yn-ao9"/>
-                    </constraints>
-                    <state key="normal" title="Search">
-                        <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="hqQ-xJ-0ln"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhatsKrakenSign3" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-le-ucD">
                     <rect key="frame" x="-19" y="54" width="359" height="239"/>
                     <constraints>
@@ -51,15 +36,17 @@
                         <outlet property="delegate" destination="-1" id="e17-Id-SkG"/>
                     </connections>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
-                    <rect key="frame" x="190" y="468" width="122" height="75"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
+                    <rect key="frame" x="210" y="475" width="102" height="63"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="DSZ-OL-lIh" secondAttribute="height" multiplier="122:75" id="DMI-4d-ZKa"/>
                     </constraints>
-                    <state key="normal" image="FreeFoodOff">
+                    <state key="normal" image="FreeFoodNewOff">
                         <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" image="FreeFoodOn"/>
+                    <state key="selected" image="FreeFoodNew">
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
                     <connections>
                         <action selector="freeFoodPressed:" destination="-1" eventType="touchUpInside" id="X51-H8-Kll"/>
                     </connections>
@@ -80,15 +67,28 @@
                         <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="XT1-sf-y59"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
-                    <rect key="frame" x="8" y="468" width="122" height="75"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
+                    <rect key="frame" x="118" y="480" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="I1H-aA-6LH" secondAttribute="height" multiplier="1:1" id="7Rz-fU-IEM"/>
+                    </constraints>
+                    <state key="normal" image="woodGoButton">
+                        <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="hqQ-xJ-0ln"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
+                    <rect key="frame" x="14" y="477" width="96" height="59"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="G0m-63-Brr" secondAttribute="height" multiplier="122:75" id="Px8-CW-cC1"/>
                     </constraints>
-                    <state key="normal" image="AllDayOffSimple.png">
+                    <state key="normal" image="AllDayNewOff">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" image="AllDayOnSimple.png"/>
+                    <state key="selected" image="AllDayNew"/>
                     <connections>
                         <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="IUB-ut-04T"/>
                     </connections>
@@ -97,38 +97,39 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Xpy-le-ucD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-19" id="5T4-DI-j1H"/>
-                <constraint firstAttribute="bottom" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="25" id="7ZI-Vo-IfA"/>
+                <constraint firstAttribute="bottom" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="32" id="7ZI-Vo-IfA"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="25" id="8Vn-Fw-vZG"/>
                 <constraint firstItem="P2O-de-85N" firstAttribute="leading" secondItem="7aX-eU-T8P" secondAttribute="leading" id="8oQ-Yi-GO7"/>
                 <constraint firstItem="yNA-CI-5W6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-31" id="9mT-YC-qmp"/>
                 <constraint firstItem="7aX-eU-T8P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="BKf-Bs-HNk"/>
                 <constraint firstAttribute="trailing" secondItem="DSZ-OL-lIh" secondAttribute="trailing" constant="8" id="FNR-eg-cv8"/>
                 <constraint firstItem="DSZ-OL-lIh" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="IIa-tX-J2C"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="13" id="KBV-AX-VuW"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="22" id="KBV-AX-VuW"/>
                 <constraint firstAttribute="trailing" secondItem="Xpy-le-ucD" secondAttribute="trailing" constant="-20" id="OCb-Sz-ZvE"/>
                 <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="PBe-dz-hXk"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="PWF-gY-Mj6"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="60" id="Rft-ko-RWe"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="6" id="PWF-gY-Mj6"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="100" id="Rft-ko-RWe"/>
+                <constraint firstAttribute="bottom" secondItem="I1H-aA-6LH" secondAttribute="bottom" constant="8" id="UzX-cc-sQE"/>
                 <constraint firstItem="P2O-de-85N" firstAttribute="top" secondItem="Xpy-le-ucD" secondAttribute="bottom" constant="-18" id="c8B-fT-Afd"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="13" id="chE-LL-X8j"/>
-                <constraint firstItem="I1H-aA-6LH" firstAttribute="centerX" secondItem="Xpy-le-ucD" secondAttribute="centerX" id="eOh-sd-OIH"/>
-                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="bottom" constant="-12" id="gUa-s0-gcn"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="20" id="chE-LL-X8j"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="centerX" secondItem="Xpy-le-ucD" secondAttribute="centerX" constant="-2.5" id="dvb-ko-Jc9"/>
                 <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="i3m-8v-n3c"/>
                 <constraint firstAttribute="trailing" secondItem="yNA-CI-5W6" secondAttribute="trailing" id="ltC-hk-EhP"/>
-                <constraint firstAttribute="bottom" secondItem="I1H-aA-6LH" secondAttribute="bottom" constant="8" id="tXg-XX-0De"/>
                 <constraint firstItem="yNA-CI-5W6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="up4-7U-Syj"/>
                 <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="7aX-eU-T8P" secondAttribute="bottom" constant="-5" id="vYW-Ki-VOg"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="top" id="wcQ-D6-CXW"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="top" constant="2" id="wcQ-D6-CXW"/>
             </constraints>
             <point key="canvasLocation" x="139" y="137"/>
         </view>
     </objects>
     <resources>
-        <image name="AllDayOffSimple.png" width="321" height="132"/>
-        <image name="AllDayOnSimple.png" width="425" height="121"/>
-        <image name="FreeFoodOff" width="425" height="121"/>
-        <image name="FreeFoodOn" width="425" height="121"/>
+        <image name="AllDayNew" width="232" height="113"/>
+        <image name="AllDayNewOff" width="232" height="113"/>
+        <image name="FreeFoodNew" width="232" height="113"/>
+        <image name="FreeFoodNewOff" width="232" height="113"/>
         <image name="WhatsKrakenSign3" width="552" height="458"/>
         <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodGoButton" width="256" height="256"/>
         <image name="woodNavigation" width="550" height="108"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

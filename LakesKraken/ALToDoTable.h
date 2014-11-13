@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UIButton *suggButton;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 
 
 @end
