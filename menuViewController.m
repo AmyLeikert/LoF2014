@@ -33,7 +33,7 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     // Do any additional setup after loading the view from its nib.
 [self.menuTable registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cellReuseIdentifier"];
 
-    
+    self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     self.menuTable.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
 
     self.loadingLabel.font = [UIFont fontWithName:@"AmericanTypewriter-Bold" size:16];

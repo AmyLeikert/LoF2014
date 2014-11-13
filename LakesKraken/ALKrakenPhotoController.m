@@ -77,7 +77,7 @@
     ALThumbCollectionCell *thumbCell = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_NAME forIndexPath:indexPath];
     
     thumbCell.layer.borderWidth = 3;
-    thumbCell.layer.borderColor = [[UIColor blackColor]CGColor];
+    thumbCell.layer.borderColor = [[UIColor brownColor]CGColor];
     
     int i;
     NSString *photoCode;

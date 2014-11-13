@@ -32,10 +32,7 @@
     self.tableView.backgroundColor = [UIColor redColor];
     
      self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
-    
-   // ALPrePopulate *addTo = [[ALPrePopulate alloc]init];
-    
-    
+
 //    [self.tableView setEditing:YES animated:YES];
 //    
 //     self.tableView.allowsMultipleSelectionDuringEditing = NO;
@@ -190,7 +187,6 @@
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
-    // [tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cell"];
      
      self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
      
@@ -299,23 +295,7 @@
 //    
 //}
 
--(IBAction)addSuggestion:(id)sender {
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-    
-    // Initialize Record
-    //NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    NSArray *array = @[@"tent", @"sunscreen", @"earplugs"];
-    
-    for (NSString *string in array) {
-        
-        NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-        
-        [thing setValue:string forKey:@"name"];
-    }
 
-    
-}
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -336,7 +316,7 @@
 -(void)addStuff {
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
     
-    NSArray *array = @[@"tent", @"sunscreen", @"earplugs"];
+    NSArray *array = @[@"Tent + Stakes", @"Sunscreen", @"Earplugs", @"Water bottle", @"Baby Wipes", @"Snacks", @"MOOP/Trash Bag"];
     
     for (NSString *string in array) {
         
