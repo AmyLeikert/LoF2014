@@ -29,6 +29,10 @@
     
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = [UIColor redColor];
+    
+     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    
    // ALPrePopulate *addTo = [[ALPrePopulate alloc]init];
     
     
@@ -41,12 +45,9 @@
     NSEntityDescription *entityDescription = [NSEntityDescription
                                               entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
     
-    //self.managedObjectContext = [(ALAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Entity"];
-    
-   // addTo.managedObjectContext = self.managedObjectContext;
-    //[addTo prepopulate];
+
     [fetchRequest setEntity:entityDescription];
     
     
@@ -54,21 +55,10 @@
     
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     [self.fetchedResultsController setDelegate:self];
-   // self.managedObjectContext = addTo.managedObjectContext;
-  //  [addTo prepopulate];
     
     NSError *error = nil;
     [self.fetchedResultsController performFetch:&error];
     
-      //  [fetchRequest setEntity:entityDescription];
-    
- //   self.managedObjectContext = [(ALAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    
- //   NSManagedObjectContext *moc = [(ALAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    
- //   NSEntityDescription *entityDescription = [NSEntityDescription
-  //                                            entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-
     
     self.navigationController.navigationBar.translucent = NO;
     
@@ -76,12 +66,6 @@
     
     NSLog(@"%@", self.managedObjectContext);
     
-    
-    UIBarButtonItem *addToDoItem = [[UIBarButtonItem alloc]
-                                    initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                    target:self
-                                    action:@selector(segueToAddToDoItem)];
-    self.navigationItem.rightBarButtonItem = addToDoItem;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -89,39 +73,16 @@
         NSLog(@"Unable to perform fetch.");
         NSLog(@"%@, %@", error, error.localizedDescription);
     }
+    [self oneTimeMethodCall];
     
 }
 
-//- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
 
 //- (void)setEditing:(BOOL)editing animated:(BOOL)animated
 //{
 //    self.tableView.allowsMultipleSelectionDuringEditing = editing;
 //    [super setEditing:editing animated:animated];
 //}
-
--(void)prepopulate {
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-    
-    // Initialize Record
-    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    NSArray *array = @[@"2", @"3", @"4"];
-    
-    for (NSString *string in array) {
-        
-        NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-        
-        [thing setValue:string forKey:@"name"];
-    }
-}
 
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
@@ -180,22 +141,7 @@
     return YES;
 }
 
--(void)prePopulateData {
-    NSArray *array = @[@"two", @"three", @"four"];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-    
-    for (NSString *string in array) {
-        
-        NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-        
-        [thing setValue:string forKey:@"name"];
-    }
-
-    
-}
-
-
--(void)segueToAddToDoItem {
+-(IBAction)segueAddToDoItem:(id)sender {
     ALAddToDoItem *add = [[ALAddToDoItem alloc]init];
     [add setManagedObjectContext:self.managedObjectContext];
     [self.navigationController pushViewController:add animated:YES];
@@ -245,6 +191,9 @@
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
     // [tableView registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cell"];
+     
+     self.tableView.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+     
      
      ALToDoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
       [cell setEditing:YES animated:YES];
@@ -382,6 +331,31 @@
 - (IBAction)backTouched:(id)sender {
     menuViewController *menu = [[menuViewController alloc]init];
     [self.navigationController pushViewController:menu animated:YES];
+}
+
+-(void)addStuff {
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
+    
+    NSArray *array = @[@"tent", @"sunscreen", @"earplugs"];
+    
+    for (NSString *string in array) {
+        
+        NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
+        
+        [thing setValue:string forKey:@"name"];
+    }
+    
+    NSError *error;
+    [self.managedObjectContext save:&error];
+}
+
+- (void)oneTimeMethodCall{
+    BOOL was_called = [[NSUserDefaults standardUserDefaults] boolForKey: @"was_called"];
+    if (!was_called) {
+        [self addStuff];
+        //Call method you want to be called once here
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey: @"was_called"];
+    }
 }
 
 @end

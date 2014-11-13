@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "ALToDoTable.h"
 #import <CoreData/CoreData.h>
+#import "ALToDoTable.h"
 
 
 @interface ALAppDelegate ()
@@ -184,5 +185,6 @@
         }
     }
 }
+
 
 @end

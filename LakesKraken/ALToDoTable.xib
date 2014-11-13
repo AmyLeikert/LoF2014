@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALToDoTable">
             <connections>
-                <outlet property="suggButton" destination="brv-up-Dhq" id="FSD-TC-lTB"/>
                 <outlet property="tableView" destination="CzT-Cw-FLC" id="j2s-ff-trw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,83 +16,93 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brv-up-Dhq">
-                    <rect key="frame" x="193" y="56" width="41" height="41"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="41" id="Xfn-h0-WOL"/>
-                    </constraints>
-                    <state key="normal" image="woodAddButtoncircle">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="addSuggestion:" destination="-1" eventType="touchUpInside" id="hZR-dB-9fO"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-Sh-WVf">
                     <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o29-oG-v2P">
                     <rect key="frame" x="-1" y="13" width="55" height="46"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="55" id="xbe-hf-X7Z"/>
+                        <constraint firstAttribute="width" constant="55" id="QF4-Td-DAs"/>
+                        <constraint firstAttribute="height" constant="46" id="nDy-jN-48P"/>
                     </constraints>
                     <state key="normal" image="woodBackButton2">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="QF4-Td-DAs"/>
+                            <exclude reference="nDy-jN-48P"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="QF4-Td-DAs"/>
+                            <include reference="nDy-jN-48P"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="backTouched:" destination="-1" eventType="touchUpInside" id="W40-OZ-ecB"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Suggestions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH1-w6-rkR">
-                    <rect key="frame" x="242" y="66" width="166" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="V32-MS-e21"/>
-                        <constraint firstAttribute="width" constant="166" id="mAi-dw-9Pk"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <tableView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelectionDuringEditing="YES" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CzT-Cw-FLC">
                     <rect key="frame" x="0.0" y="95" width="600" height="505"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexTrackingBackgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <variation key="heightClass=regular" misplaced="YES">
+                        <rect key="frame" x="0.0" y="94" width="600" height="706"/>
+                    </variation>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="siD-w8-7HB"/>
                         <outlet property="delegate" destination="-1" id="0go-9D-8mL"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gko-lk-Qz4">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <state key="normal" image="woodAddButtoncircle">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=regular" fixedFrame="YES">
+                        <rect key="frame" x="492" y="4" width="55" height="55"/>
+                    </variation>
+                    <connections>
+                        <action selector="segueAddToDoItem:" destination="-1" eventType="touchUpInside" id="7vE-4l-zYR"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="XH1-w6-rkR" firstAttribute="centerY" secondItem="brv-up-Dhq" secondAttribute="centerY" id="J30-YA-LPY"/>
-                <constraint firstItem="CzT-Cw-FLC" firstAttribute="top" secondItem="o29-oG-v2P" secondAttribute="bottom" constant="36" id="KvO-2k-MqX"/>
-                <constraint firstItem="CzT-Cw-FLC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q2N-ky-La6"/>
-                <constraint firstItem="o29-oG-v2P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="TUt-Da-Zrt"/>
-                <constraint firstItem="XH1-w6-rkR" firstAttribute="leading" secondItem="brv-up-Dhq" secondAttribute="trailing" constant="8" symbolic="YES" id="XwY-gk-Gf5"/>
-                <constraint firstItem="o29-oG-v2P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="ZEB-XK-jZg"/>
-                <constraint firstAttribute="bottom" secondItem="CzT-Cw-FLC" secondAttribute="bottom" id="ZKK-Sd-Vvi"/>
-                <constraint firstAttribute="trailing" secondItem="CzT-Cw-FLC" secondAttribute="trailing" id="cAX-85-OcL"/>
-                <constraint firstItem="CzT-Cw-FLC" firstAttribute="top" secondItem="XH1-w6-rkR" secondAttribute="bottom" constant="8" symbolic="YES" id="dHl-Lk-Sr7"/>
-                <constraint firstItem="brv-up-Dhq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="rcs-Y0-gll"/>
-                <constraint firstAttribute="centerY" secondItem="brv-up-Dhq" secondAttribute="centerY" constant="323.5" id="v76-sk-oZD"/>
-                <constraint firstItem="XH1-w6-rkR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="66" id="wsD-FH-Mxn"/>
+                <constraint firstItem="CzT-Cw-FLC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="14K-3t-4Xv"/>
+                <constraint firstItem="o29-oG-v2P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="2Rz-I0-WeD"/>
+                <constraint firstItem="o29-oG-v2P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="bEV-qh-21Y"/>
+                <constraint firstAttribute="trailing" secondItem="CzT-Cw-FLC" secondAttribute="trailing" id="dZ8-e5-sEY"/>
+                <constraint firstAttribute="bottom" secondItem="CzT-Cw-FLC" secondAttribute="bottom" id="tLd-QW-8BT"/>
+                <constraint firstItem="CzT-Cw-FLC" firstAttribute="top" secondItem="o29-oG-v2P" secondAttribute="bottom" constant="2" id="vEt-e0-A9l"/>
             </constraints>
             <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="gko-lk-Qz4"/>
+                </mask>
                 <mask key="constraints">
-                    <exclude reference="Q2N-ky-La6"/>
-                    <exclude reference="ZKK-Sd-Vvi"/>
-                    <exclude reference="cAX-85-OcL"/>
-                    <exclude reference="v76-sk-oZD"/>
+                    <exclude reference="2Rz-I0-WeD"/>
+                    <exclude reference="bEV-qh-21Y"/>
+                    <exclude reference="14K-3t-4Xv"/>
+                    <exclude reference="dZ8-e5-sEY"/>
+                    <exclude reference="tLd-QW-8BT"/>
+                    <exclude reference="vEt-e0-A9l"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
+                <mask key="subviews">
+                    <include reference="gko-lk-Qz4"/>
+                </mask>
                 <mask key="constraints">
-                    <include reference="Q2N-ky-La6"/>
-                    <include reference="ZKK-Sd-Vvi"/>
-                    <include reference="cAX-85-OcL"/>
-                    <include reference="v76-sk-oZD"/>
+                    <include reference="2Rz-I0-WeD"/>
+                    <include reference="bEV-qh-21Y"/>
+                    <include reference="14K-3t-4Xv"/>
+                    <include reference="dZ8-e5-sEY"/>
+                    <include reference="tLd-QW-8BT"/>
+                    <include reference="vEt-e0-A9l"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="174" y="160"/>
