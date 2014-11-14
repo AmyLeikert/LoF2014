@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    [self.packedButton addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
@@ -23,6 +25,13 @@
     self.packed = !self.packed;
     self.packedButton.selected = self.packed;
     
+}
+
+- (void)didTapButton:(UIButton *)button {
+    if (self.didTapPackedButtonBlock
+        ) {
+        self.didTapPackedButtonBlock();
+    }
 }
 
 @end

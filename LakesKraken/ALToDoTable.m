@@ -11,7 +11,6 @@
 #import "ALToDoCell.h"
 #import "ALAppDelegate.h"
 #import <CoreData/CoreData.h>
-#import "YFJLeftSwipeDeleteTableView.h"
 #import "menuViewController.h"
 
 
@@ -217,6 +216,15 @@
     // Update Cell
     [cell.nameLabel setText:[record valueForKey:@"name"]];
     [cell.packedButton setSelected:[[record valueForKey:@"packed"] boolValue]];
+    
+    [cell setDidTapPackedButtonBlock:^{
+        BOOL isDone = [[record valueForKey:@"packed"] boolValue];
+        
+        // Update Record
+        [record setValue:@(!isDone) forKey:@"packed"];
+        NSError *error;
+        [self.managedObjectContext save:&error];
+    }];
 }
 
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
