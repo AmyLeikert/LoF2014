@@ -113,13 +113,13 @@
 }
 
 
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return YES;
-//}
-//
-//- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return NO;
-//}
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+        return YES;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -128,14 +128,13 @@
         
         if (record) {
             [self.fetchedResultsController.managedObjectContext deleteObject:record];
+            NSError *error;
+            [self.managedObjectContext save:&error];
         }
     }
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // You can return BOOL value based on which cell you want to enable delete
-    return YES;
-}
+
 
 -(IBAction)segueAddToDoItem:(id)sender {
     ALAddToDoItem *add = [[ALAddToDoItem alloc]init];
@@ -234,11 +233,6 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return UITableViewCellEditingStyleDelete;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return YES;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -31,15 +31,6 @@
     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     self.navigationController.navigationBar.translucent = NO;
     
-//    UIBarButtonItem *addToDoItem = [[UIBarButtonItem alloc]
-//                                    initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-//                                    target:self
-//                                    action:@selector(segueToAddToDoItem)];
-//    self.navigationItem.rightBarButtonItem = addToDoItem;
-    
-    
-    // Do any additional setup after loading the view from its nib.
-    
     UIBarButtonItem *addToDoItem = [[UIBarButtonItem alloc]
                                     initWithBarButtonSystemItem:UIBarButtonSystemItemSave                                    target:self
                                     action:@selector(save)];
@@ -56,7 +47,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)cancel:(id)sender {
@@ -71,22 +61,8 @@
     
     // Initialize Record
     NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    NSArray *array = @[@"two", @"three", @"four"];
-    
-    for (NSString *string in array) {
-        
-    NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
 
-    [thing setValue:string forKey:@"name"];
-    }
-    
         if (name && name.length) {
-            // Create Entity
-//            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-//            
-//            // Initialize Record
-//            NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
             
             // Populate Record
             [record setValue:name forKey:@"name"];
@@ -118,33 +94,6 @@
         }
     
 }
-
--(void)prepopulate {
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Entity" inManagedObjectContext:self.managedObjectContext];
-    
-    // Initialize Record
-    NSManagedObject *record = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    NSArray *array = @[@"2", @"3", @"4"];
-    
-    for (NSString *string in array) {
-        
-        NSManagedObject *thing = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-        
-        [thing setValue:string forKey:@"name"];
-    }
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 
 @end

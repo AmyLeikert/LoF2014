@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -59,11 +58,21 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gko-lk-Qz4">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="9EJ-W6-DYS"/>
+                    </constraints>
                     <state key="normal" image="woodAddButtoncircle">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="492" y="4" width="55" height="55"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9EJ-W6-DYS"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="9EJ-W6-DYS"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="segueAddToDoItem:" destination="-1" eventType="touchUpInside" id="7vE-4l-zYR"/>
@@ -74,8 +83,13 @@
             <constraints>
                 <constraint firstItem="CzT-Cw-FLC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="14K-3t-4Xv"/>
                 <constraint firstItem="o29-oG-v2P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="2Rz-I0-WeD"/>
+                <constraint firstItem="gko-lk-Qz4" firstAttribute="top" secondItem="o29-oG-v2P" secondAttribute="top" id="Lgz-Mm-lrY"/>
                 <constraint firstItem="o29-oG-v2P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="bEV-qh-21Y"/>
+                <constraint firstItem="gko-lk-Qz4" firstAttribute="bottom" secondItem="o29-oG-v2P" secondAttribute="bottom" id="bWI-sT-o2g"/>
                 <constraint firstAttribute="trailing" secondItem="CzT-Cw-FLC" secondAttribute="trailing" id="dZ8-e5-sEY"/>
+                <constraint firstItem="CzT-Cw-FLC" firstAttribute="top" secondItem="gko-lk-Qz4" secondAttribute="bottom" constant="35" id="mcf-f3-ERi"/>
+                <constraint firstItem="gko-lk-Qz4" firstAttribute="trailing" secondItem="XxO-Sh-WVf" secondAttribute="trailing" id="mtR-KX-AK9"/>
+                <constraint firstItem="gko-lk-Qz4" firstAttribute="trailing" secondItem="CzT-Cw-FLC" secondAttribute="trailing" id="sRC-V5-P0p"/>
                 <constraint firstAttribute="bottom" secondItem="CzT-Cw-FLC" secondAttribute="bottom" id="tLd-QW-8BT"/>
                 <constraint firstItem="CzT-Cw-FLC" firstAttribute="top" secondItem="o29-oG-v2P" secondAttribute="bottom" constant="2" id="vEt-e0-A9l"/>
             </constraints>
@@ -88,8 +102,13 @@
                     <exclude reference="bEV-qh-21Y"/>
                     <exclude reference="14K-3t-4Xv"/>
                     <exclude reference="dZ8-e5-sEY"/>
+                    <exclude reference="mcf-f3-ERi"/>
                     <exclude reference="tLd-QW-8BT"/>
                     <exclude reference="vEt-e0-A9l"/>
+                    <exclude reference="Lgz-Mm-lrY"/>
+                    <exclude reference="bWI-sT-o2g"/>
+                    <exclude reference="mtR-KX-AK9"/>
+                    <exclude reference="sRC-V5-P0p"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -101,8 +120,13 @@
                     <include reference="bEV-qh-21Y"/>
                     <include reference="14K-3t-4Xv"/>
                     <include reference="dZ8-e5-sEY"/>
+                    <include reference="mcf-f3-ERi"/>
                     <include reference="tLd-QW-8BT"/>
                     <include reference="vEt-e0-A9l"/>
+                    <include reference="Lgz-Mm-lrY"/>
+                    <include reference="bWI-sT-o2g"/>
+                    <include reference="mtR-KX-AK9"/>
+                    <include reference="sRC-V5-P0p"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="174" y="160"/>

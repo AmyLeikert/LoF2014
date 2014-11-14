@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -37,14 +38,14 @@
                     </connections>
                 </pickerView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSZ-OL-lIh">
-                    <rect key="frame" x="210" y="475" width="102" height="63"/>
+                    <rect key="frame" x="233" y="472" width="59" height="59"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="DSZ-OL-lIh" secondAttribute="height" multiplier="122:75" id="DMI-4d-ZKa"/>
+                        <constraint firstAttribute="height" constant="59" id="z0R-5x-W2D"/>
                     </constraints>
-                    <state key="normal" image="FreeFoodNewOff">
+                    <state key="normal" image="woodBoxOff">
                         <color key="titleShadowColor" white="0.5" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" image="FreeFoodNew">
+                    <state key="selected" image="woodBoxOn">
                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -68,10 +69,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-aA-6LH">
-                    <rect key="frame" x="118" y="480" width="80" height="80"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="I1H-aA-6LH" secondAttribute="height" multiplier="1:1" id="7Rz-fU-IEM"/>
-                    </constraints>
+                    <rect key="frame" x="119" y="480" width="80" height="80"/>
                     <state key="normal" image="woodGoButton">
                         <color key="titleColor" red="0.5" green="0.083376905589999994" blue="0.12177696070000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,54 +79,75 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0m-63-Brr">
-                    <rect key="frame" x="14" y="477" width="96" height="59"/>
+                    <rect key="frame" x="26" y="472" width="59" height="59"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="G0m-63-Brr" secondAttribute="height" multiplier="122:75" id="Px8-CW-cC1"/>
+                        <constraint firstAttribute="width" constant="59" id="Oh8-cf-4Vk"/>
+                        <constraint firstAttribute="height" constant="59" id="SSn-Th-Pw7"/>
                     </constraints>
-                    <state key="normal" image="AllDayNewOff">
+                    <state key="normal" image="woodBoxOff">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <state key="selected" image="AllDayNew"/>
+                    <state key="selected" image="woodBoxOn"/>
                     <connections>
                         <action selector="allDayPressed:" destination="-1" eventType="touchUpInside" id="IUB-ut-04T"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViA-mn-r2j">
+                    <rect key="frame" x="241" y="531" width="51" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="ViA-mn-r2j" secondAttribute="height" multiplier="17:7" id="FqK-D1-uU9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21J-d8-MnR">
+                    <rect key="frame" x="26" y="531" width="80" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="21J-d8-MnR" secondAttribute="height" multiplier="80:21" id="t53-KN-Ojw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="21J-d8-MnR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="3fS-ej-Wsi"/>
                 <constraint firstItem="Xpy-le-ucD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-19" id="5T4-DI-j1H"/>
-                <constraint firstAttribute="bottom" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="32" id="7ZI-Vo-IfA"/>
-                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="25" id="8Vn-Fw-vZG"/>
                 <constraint firstItem="P2O-de-85N" firstAttribute="leading" secondItem="7aX-eU-T8P" secondAttribute="leading" id="8oQ-Yi-GO7"/>
                 <constraint firstItem="yNA-CI-5W6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-31" id="9mT-YC-qmp"/>
+                <constraint firstAttribute="bottom" secondItem="21J-d8-MnR" secondAttribute="bottom" constant="16" id="Auu-xH-T9B"/>
                 <constraint firstItem="7aX-eU-T8P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="BKf-Bs-HNk"/>
-                <constraint firstAttribute="trailing" secondItem="DSZ-OL-lIh" secondAttribute="trailing" constant="8" id="FNR-eg-cv8"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="IIa-tX-J2C"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="22" id="KBV-AX-VuW"/>
+                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="26" id="Co3-CM-rcc"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="centerX" secondItem="P2O-de-85N" secondAttribute="centerX" id="DSd-JK-bcm"/>
+                <constraint firstAttribute="trailing" secondItem="ViA-mn-r2j" secondAttribute="trailing" constant="28" id="Gix-45-Tgr"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="Mp8-67-9DF"/>
                 <constraint firstAttribute="trailing" secondItem="Xpy-le-ucD" secondAttribute="trailing" constant="-20" id="OCb-Sz-ZvE"/>
                 <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="PBe-dz-hXk"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="6" id="PWF-gY-Mj6"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="100" id="Rft-ko-RWe"/>
-                <constraint firstAttribute="bottom" secondItem="I1H-aA-6LH" secondAttribute="bottom" constant="8" id="UzX-cc-sQE"/>
+                <constraint firstAttribute="bottom" secondItem="G0m-63-Brr" secondAttribute="bottom" constant="37" id="SZJ-OS-QiF"/>
+                <constraint firstAttribute="trailing" secondItem="DSZ-OL-lIh" secondAttribute="trailing" constant="28" id="Uf0-bk-7zk"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="G0m-63-Brr" secondAttribute="top" id="Wo4-gu-QeU"/>
                 <constraint firstItem="P2O-de-85N" firstAttribute="top" secondItem="Xpy-le-ucD" secondAttribute="bottom" constant="-18" id="c8B-fT-Afd"/>
-                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="20" id="chE-LL-X8j"/>
-                <constraint firstItem="I1H-aA-6LH" firstAttribute="centerX" secondItem="Xpy-le-ucD" secondAttribute="centerX" constant="-2.5" id="dvb-ko-Jc9"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="25" id="cvQ-rw-AlH"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="leading" secondItem="I1H-aA-6LH" secondAttribute="trailing" constant="34" id="gxN-xx-dKg"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="top" secondItem="P2O-de-85N" secondAttribute="bottom" constant="17" id="hP3-5Y-qCJ"/>
                 <constraint firstItem="7aX-eU-T8P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="i3m-8v-n3c"/>
+                <constraint firstItem="I1H-aA-6LH" firstAttribute="leading" secondItem="G0m-63-Brr" secondAttribute="trailing" constant="34" id="iwg-Xz-JLj"/>
                 <constraint firstAttribute="trailing" secondItem="yNA-CI-5W6" secondAttribute="trailing" id="ltC-hk-EhP"/>
+                <constraint firstItem="DSZ-OL-lIh" firstAttribute="bottom" secondItem="G0m-63-Brr" secondAttribute="bottom" id="q4T-66-euF"/>
                 <constraint firstItem="yNA-CI-5W6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="up4-7U-Syj"/>
                 <constraint firstItem="Xpy-le-ucD" firstAttribute="top" secondItem="7aX-eU-T8P" secondAttribute="bottom" constant="-5" id="vYW-Ki-VOg"/>
-                <constraint firstItem="G0m-63-Brr" firstAttribute="top" secondItem="DSZ-OL-lIh" secondAttribute="top" constant="2" id="wcQ-D6-CXW"/>
+                <constraint firstAttribute="bottom" secondItem="ViA-mn-r2j" secondAttribute="bottom" constant="16" id="z3O-eB-vZA"/>
             </constraints>
             <point key="canvasLocation" x="139" y="137"/>
         </view>
     </objects>
     <resources>
-        <image name="AllDayNew" width="232" height="113"/>
-        <image name="AllDayNewOff" width="232" height="113"/>
-        <image name="FreeFoodNew" width="232" height="113"/>
-        <image name="FreeFoodNewOff" width="232" height="113"/>
         <image name="WhatsKrakenSign3" width="552" height="458"/>
         <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodBoxOff" width="256" height="256"/>
+        <image name="woodBoxOn" width="256" height="256"/>
         <image name="woodGoButton" width="256" height="256"/>
         <image name="woodNavigation" width="550" height="108"/>
     </resources>
