@@ -15,10 +15,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-Sh-WVf">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-Sh-WVf">
                     <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o29-oG-v2P">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o29-oG-v2P">
                     <rect key="frame" x="-1" y="13" width="55" height="46"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="QF4-Td-DAs"/>
@@ -98,6 +98,10 @@
                     <exclude reference="gko-lk-Qz4"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="Lgz-Mm-lrY"/>
+                    <exclude reference="bWI-sT-o2g"/>
+                    <exclude reference="mtR-KX-AK9"/>
+                    <exclude reference="sRC-V5-P0p"/>
                     <exclude reference="2Rz-I0-WeD"/>
                     <exclude reference="bEV-qh-21Y"/>
                     <exclude reference="14K-3t-4Xv"/>
@@ -105,10 +109,6 @@
                     <exclude reference="mcf-f3-ERi"/>
                     <exclude reference="tLd-QW-8BT"/>
                     <exclude reference="vEt-e0-A9l"/>
-                    <exclude reference="Lgz-Mm-lrY"/>
-                    <exclude reference="bWI-sT-o2g"/>
-                    <exclude reference="mtR-KX-AK9"/>
-                    <exclude reference="sRC-V5-P0p"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular">
@@ -116,6 +116,10 @@
                     <include reference="gko-lk-Qz4"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="Lgz-Mm-lrY"/>
+                    <include reference="bWI-sT-o2g"/>
+                    <include reference="mtR-KX-AK9"/>
+                    <include reference="sRC-V5-P0p"/>
                     <include reference="2Rz-I0-WeD"/>
                     <include reference="bEV-qh-21Y"/>
                     <include reference="14K-3t-4Xv"/>
@@ -123,10 +127,6 @@
                     <include reference="mcf-f3-ERi"/>
                     <include reference="tLd-QW-8BT"/>
                     <include reference="vEt-e0-A9l"/>
-                    <include reference="Lgz-Mm-lrY"/>
-                    <include reference="bWI-sT-o2g"/>
-                    <include reference="mtR-KX-AK9"/>
-                    <include reference="sRC-V5-P0p"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="174" y="160"/>

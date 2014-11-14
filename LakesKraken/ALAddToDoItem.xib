@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALAddToDoItem">
@@ -15,14 +17,55 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What To Pack?" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="toW-82-23I">
-                    <rect key="frame" x="8" y="177" width="304" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="What To Pack?" textAlignment="center" minimumFontSize="17" background="bigWoodRectangle" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="toW-82-23I">
+                    <rect key="frame" x="8" y="158" width="304" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="xbf-uN-v0b"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                 </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="la4-h1-0xA">
+                    <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjq-Ur-iyR">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <state key="normal" image="woodBackButton2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backTouched:" destination="-1" eventType="touchUpInside" id="6P3-1U-2ua"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-h2-9fD">
+                    <rect key="frame" x="110" y="294" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="0yl-ks-1ae"/>
+                        <constraint firstAttribute="width" constant="100" id="O5J-kk-dxF"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="woodGoButton">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="Auj-G5-Gme"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="toW-82-23I" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="6Ej-DS-l8T"/>
+                <constraint firstItem="2z1-h2-9fD" firstAttribute="top" secondItem="toW-82-23I" secondAttribute="bottom" constant="36" id="UYK-m6-cZh"/>
+                <constraint firstItem="2z1-h2-9fD" firstAttribute="centerX" secondItem="toW-82-23I" secondAttribute="centerX" id="W0z-XL-72u"/>
+                <constraint firstItem="toW-82-23I" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="158" id="bUQ-9N-arH"/>
+                <constraint firstItem="toW-82-23I" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="sir-Sr-bnT"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
+    <resources>
+        <image name="bigWoodRectangle" width="936" height="256"/>
+        <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodGoButton" width="256" height="256"/>
+        <image name="woodNavigation" width="550" height="108"/>
+    </resources>
 </document>
