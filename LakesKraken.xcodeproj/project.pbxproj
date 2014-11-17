@@ -16,6 +16,9 @@
 		01CFB87919F96C4C00EE824B /* ALToDoTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CFB87719F96C4C00EE824B /* ALToDoTable.xib */; };
 		01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87B19FADEDC00EE824B /* ALToDoCell.m */; };
 		01CFB87E19FADEDC00EE824B /* ALToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */; };
+		01F0AE641A1A549D006A1AC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F0AE631A1A549D006A1AC8 /* MapKit.framework */; };
+		01F0AE681A1A5504006A1AC8 /* ALMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0AE661A1A5504006A1AC8 /* ALMapViewController.m */; };
+		01F0AE691A1A5504006A1AC8 /* ALMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F0AE671A1A5504006A1AC8 /* ALMapViewController.xib */; };
 		240F392D197A2EB80087D566 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F392C197A2EB80087D566 /* Parse.framework */; };
 		240F392F197A2EC70087D566 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F392E197A2EC70087D566 /* AudioToolbox.framework */; };
 		240F3931197A2ED70087D566 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240F3930197A2ED70087D566 /* CFNetwork.framework */; };
@@ -87,6 +90,10 @@
 		01CFB87A19FADEDC00EE824B /* ALToDoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoCell.h; sourceTree = "<group>"; };
 		01CFB87B19FADEDC00EE824B /* ALToDoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToDoCell.m; sourceTree = "<group>"; };
 		01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALToDoCell.xib; sourceTree = "<group>"; };
+		01F0AE631A1A549D006A1AC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		01F0AE651A1A5504006A1AC8 /* ALMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMapViewController.h; sourceTree = "<group>"; };
+		01F0AE661A1A5504006A1AC8 /* ALMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMapViewController.m; sourceTree = "<group>"; };
+		01F0AE671A1A5504006A1AC8 /* ALMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALMapViewController.xib; sourceTree = "<group>"; };
 		16A46122170A4BCE821B9F3E /* libPods-LakesKraken.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LakesKraken.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		240F392C197A2EB80087D566 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		240F392E197A2EC70087D566 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -158,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F0AE641A1A549D006A1AC8 /* MapKit.framework in Frameworks */,
 				01CFB86519F9576700EE824B /* CoreData.framework in Frameworks */,
 				240F39C9197A30680087D566 /* Social.framework in Frameworks */,
 				240F39C7197A2FA70087D566 /* Twitter.framework in Frameworks */,
@@ -200,6 +208,17 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		01F0AE6A1A1A550F006A1AC8 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				01F0AE651A1A5504006A1AC8 /* ALMapViewController.h */,
+				01F0AE661A1A5504006A1AC8 /* ALMapViewController.m */,
+				01F0AE671A1A5504006A1AC8 /* ALMapViewController.xib */,
+			);
+			name = Map;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		2324399449879AE28AD69233 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +251,7 @@
 		24370776194FCB3B00D8040E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01F0AE631A1A549D006A1AC8 /* MapKit.framework */,
 				01CFB86419F9576700EE824B /* CoreData.framework */,
 				240F39C8197A30680087D566 /* Social.framework */,
 				240F39C6197A2FA70087D566 /* Twitter.framework */,
@@ -258,6 +278,7 @@
 		2437077D194FCB3B00D8040E /* LakesKraken */ = {
 			isa = PBXGroup;
 			children = (
+				01F0AE6A1A1A550F006A1AC8 /* Map */,
 				24A60E0E19BE8F84009657F7 /* ToDo */,
 				24982E0D19888DA80094191E /* PhotoGallery */,
 				24982E071986D39B0094191E /* SearchStuff */,
@@ -430,6 +451,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = DetroitLabsUser;
 				TargetAttributes = {
+					24370773194FCB3B00D8040E = {
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					2437078E194FCB3B00D8040E = {
 						TestTargetID = 24370773194FCB3B00D8040E;
 					};
@@ -460,6 +488,7 @@
 			files = (
 				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
 				24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */,
+				01F0AE691A1A5504006A1AC8 /* ALMapViewController.xib in Resources */,
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */,
 				246C1832197D942D00BE9990 /* ALSearchResultsViewController.xib in Resources */,
@@ -536,6 +565,7 @@
 				24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */,
 				24370784194FCB3B00D8040E /* main.m in Sources */,
 				01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */,
+				01F0AE681A1A5504006A1AC8 /* ALMapViewController.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
 				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
 				01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */,

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALMapViewController">
+            <connections>
+                <outlet property="locationButton" destination="4j1-57-frJ" id="YFK-ZM-Uwl"/>
+                <outlet property="mapview" destination="vvN-9N-fMp" id="UKb-yi-Aov"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="Yge-9f-sFl">
+                    <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
+                </imageView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vvN-9N-fMp">
+                    <rect key="frame" x="0.0" y="143" width="600" height="413"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="yZZ-BH-n1Q"/>
+                    </connections>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-57-frJ">
+                    <rect key="frame" x="552" y="16" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="HQF-9s-EPZ"/>
+                        <constraint firstAttribute="height" constant="40" id="XJa-T4-ySp"/>
+                        <constraint firstAttribute="width" secondItem="4j1-57-frJ" secondAttribute="height" multiplier="1:1" id="YDf-E3-cEN"/>
+                    </constraints>
+                    <state key="normal" image="geoLocateIcon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="GetLocation:" destination="-1" eventType="touchUpInside" id="Zoa-i8-OAK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-ji-OSN">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="hDi-FI-JX5"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="woodBackButton2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucky Lake Campground 3977 W Wilke Rd. Rothbury, MI 49452" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-lh-r94">
+                    <rect key="frame" x="203" y="58" width="194" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Cnv-lh-r94" secondAttribute="height" multiplier="194:67" id="lAn-52-zGZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kTp-oY-YCd">
+                    <rect key="frame" x="8" y="564" width="228" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="DEw-Ol-0Rl"/>
+                        <constraint firstAttribute="width" constant="228" id="Gvc-5i-LVE"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Standard"/>
+                        <segment title="Satellite"/>
+                        <segment title="Hybrid"/>
+                    </segments>
+                    <connections>
+                        <action selector="setMap:" destination="-1" eventType="valueChanged" id="gRH-Os-yHj"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Yge-9f-sFl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="-31" id="1Ab-lP-1Db"/>
+                <constraint firstItem="Cnv-lh-r94" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="58" id="1i7-lL-oBo"/>
+                <constraint firstItem="Cnv-lh-r94" firstAttribute="centerX" secondItem="Yge-9f-sFl" secondAttribute="centerX" id="I0F-cY-MXV"/>
+                <constraint firstItem="vvN-9N-fMp" firstAttribute="top" secondItem="Yge-9f-sFl" secondAttribute="bottom" constant="66" id="R8P-cQ-KcA"/>
+                <constraint firstItem="vvN-9N-fMp" firstAttribute="top" secondItem="Cnv-lh-r94" secondAttribute="bottom" constant="18" id="RYq-He-bKg"/>
+                <constraint firstItem="Yge-9f-sFl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="San-4V-mra"/>
+                <constraint firstItem="kTp-oY-YCd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="TBl-Z2-nij"/>
+                <constraint firstItem="bmh-ji-OSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="U1d-Q9-8lN"/>
+                <constraint firstAttribute="bottom" secondItem="kTp-oY-YCd" secondAttribute="bottom" constant="5" id="Uca-iI-JAz"/>
+                <constraint firstItem="4j1-57-frJ" firstAttribute="centerY" secondItem="bmh-ji-OSN" secondAttribute="centerY" id="WOZ-aw-fcO"/>
+                <constraint firstItem="bmh-ji-OSN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="WwF-ZL-GsS"/>
+                <constraint firstAttribute="trailing" secondItem="4j1-57-frJ" secondAttribute="trailing" constant="8" id="cKp-10-KM3"/>
+                <constraint firstItem="vvN-9N-fMp" firstAttribute="trailing" secondItem="Yge-9f-sFl" secondAttribute="trailing" id="dXC-1f-MGH"/>
+                <constraint firstItem="kTp-oY-YCd" firstAttribute="top" secondItem="vvN-9N-fMp" secondAttribute="bottom" constant="8" symbolic="YES" id="g7e-5Z-SVd"/>
+                <constraint firstItem="vvN-9N-fMp" firstAttribute="top" secondItem="bmh-ji-OSN" secondAttribute="bottom" constant="84" id="kBF-DF-4Ti"/>
+                <constraint firstItem="4j1-57-frJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="lm1-JS-I7N"/>
+                <constraint firstAttribute="trailing" secondItem="Yge-9f-sFl" secondAttribute="trailing" id="r8u-9r-NU9"/>
+                <constraint firstItem="vvN-9N-fMp" firstAttribute="leading" secondItem="Yge-9f-sFl" secondAttribute="leading" id="spD-97-kpz"/>
+            </constraints>
+            <point key="canvasLocation" x="144" y="144"/>
+        </view>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="ZvF-Xy-ZgR">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <constraints>
+                <constraint firstAttribute="width" secondItem="ZvF-Xy-ZgR" secondAttribute="height" multiplier="150:11" id="or2-tY-Vku"/>
+            </constraints>
+            <items>
+                <barButtonItem style="plain" id="lIv-Y4-C8R">
+                    <segmentedControl key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="vWw-YO-1Mr">
+                        <rect key="frame" x="16" y="6" width="228" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <segments>
+                            <segment title="Standard"/>
+                            <segment title="Satellite"/>
+                            <segment title="Hybrid"/>
+                        </segments>
+                        <connections>
+                            <action selector="setMap:" destination="-1" eventType="valueChanged" id="NOe-2a-ez1"/>
+                        </connections>
+                    </segmentedControl>
+                </barButtonItem>
+            </items>
+            <point key="canvasLocation" x="225" y="505"/>
+        </toolbar>
+    </objects>
+    <resources>
+        <image name="geoLocateIcon" width="226" height="226"/>
+        <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodNavigation" width="550" height="108"/>
+    </resources>
+</document>
