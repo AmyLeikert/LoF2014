@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -22,12 +21,6 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="Yge-9f-sFl">
                     <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
                 </imageView>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vvN-9N-fMp">
-                    <rect key="frame" x="0.0" y="143" width="600" height="413"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="yZZ-BH-n1Q"/>
-                    </connections>
-                </mapView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-57-frJ">
                     <rect key="frame" x="552" y="16" width="40" height="40"/>
                     <constraints>
@@ -42,24 +35,6 @@
                         <action selector="GetLocation:" destination="-1" eventType="touchUpInside" id="Zoa-i8-OAK"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-ji-OSN">
-                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="55" id="hDi-FI-JX5"/>
-                    </constraints>
-                    <state key="normal" title="Button" image="woodBackButton2">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucky Lake Campground 3977 W Wilke Rd. Rothbury, MI 49452" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-lh-r94">
-                    <rect key="frame" x="203" y="58" width="194" height="67"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="Cnv-lh-r94" secondAttribute="height" multiplier="194:67" id="lAn-52-zGZ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kTp-oY-YCd">
                     <rect key="frame" x="8" y="564" width="228" height="32"/>
                     <constraints>
@@ -75,6 +50,30 @@
                         <action selector="setMap:" destination="-1" eventType="valueChanged" id="gRH-Os-yHj"/>
                     </connections>
                 </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmh-ji-OSN">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="hDi-FI-JX5"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="woodBackButton2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backTouched:" destination="-1" eventType="touchUpInside" id="EnK-9p-oFV"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucky Lake Campground 3977 W Wilke Rd. Rothbury, MI 49452" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cnv-lh-r94">
+                    <rect key="frame" x="203" y="58" width="194" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Cnv-lh-r94" secondAttribute="height" multiplier="194:67" id="lAn-52-zGZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vvN-9N-fMp">
+                    <rect key="frame" x="0.0" y="143" width="600" height="413"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

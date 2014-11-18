@@ -10,6 +10,8 @@
 		01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */; };
 		01368DCF1A09701B00DE2DDA /* ALUpdateListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */; };
 		01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */; };
+		01B6CB591A1BBEF500520427 /* ALPrinciplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */; };
+		01B6CB5A1A1BBEF500520427 /* ALPrinciplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */; };
 		01CFB86519F9576700EE824B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CFB86419F9576700EE824B /* CoreData.framework */; };
 		01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB86719F957D400EE824B /* ToDoData.xcdatamodeld */; };
 		01CFB87819F96C4C00EE824B /* ALToDoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87619F96C4C00EE824B /* ALToDoTable.m */; };
@@ -82,6 +84,9 @@
 		01368DCC1A09701B00DE2DDA /* ALUpdateListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUpdateListController.h; sourceTree = "<group>"; };
 		01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUpdateListController.m; sourceTree = "<group>"; };
 		01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALUpdateListController.xib; sourceTree = "<group>"; };
+		01B6CB561A1BBEF500520427 /* ALPrinciplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPrinciplesViewController.h; sourceTree = "<group>"; };
+		01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPrinciplesViewController.m; sourceTree = "<group>"; };
+		01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALPrinciplesViewController.xib; sourceTree = "<group>"; };
 		01CFB86419F9576700EE824B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01CFB86819F957D400EE824B /* ToDoData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoData.xcdatamodel; sourceTree = "<group>"; };
 		01CFB87519F96C4C00EE824B /* ALToDoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoTable.h; sourceTree = "<group>"; };
@@ -200,6 +205,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B6CB5B1A1BBEFB00520427 /* Principles */ = {
+			isa = PBXGroup;
+			children = (
+				01B6CB561A1BBEF500520427 /* ALPrinciplesViewController.h */,
+				01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */,
+				01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */,
+			);
+			name = Principles;
+			sourceTree = "<group>";
+		};
 		01CFB86619F957B500EE824B /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +309,7 @@
 				24A7C5FF19744D15005FAB18 /* Sounds */,
 				2437077E194FCB3B00D8040E /* Supporting Files */,
 				24A7C5F71974468C005FAB18 /* Images */,
+				01B6CB5B1A1BBEFB00520427 /* Principles */,
 			);
 			path = LakesKraken;
 			sourceTree = "<group>";
@@ -488,6 +504,7 @@
 			files = (
 				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
 				24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */,
+				01B6CB5A1A1BBEF500520427 /* ALPrinciplesViewController.xib in Resources */,
 				01F0AE691A1A5504006A1AC8 /* ALMapViewController.xib in Resources */,
 				24B1CCD6197A318C000B7309 /* ALSearchScheduleViewController.xib in Resources */,
 				01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */,
@@ -556,6 +573,7 @@
 				24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */,
 				24982E051986D3650094191E /* ALKrakenPhotoController.m in Sources */,
 				246C1831197D942D00BE9990 /* ALSearchResultsViewController.m in Sources */,
+				01B6CB591A1BBEF500520427 /* ALPrinciplesViewController.m in Sources */,
 				24A60E2119BE9020009657F7 /* ALAddToDoItem.m in Sources */,
 				24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */,
 				243707A9194FCB6400D8040E /* ALWelcomeView.m in Sources */,
@@ -696,6 +714,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
 				INFOPLIST_FILE = "LakesKraken/LakesKraken-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -715,6 +734,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LakesKraken/LakesKraken-Prefix.pch";
 				INFOPLIST_FILE = "LakesKraken/LakesKraken-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

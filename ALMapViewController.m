@@ -7,6 +7,7 @@
 //
 
 #import "ALMapViewController.h"
+#import "menuViewController.h"
 
 @interface ALMapViewController ()
 
@@ -14,8 +15,20 @@
 
 @implementation ALMapViewController
 
+@synthesize mapview;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    MKCoordinateRegion region = { {0.0, 0.0}, {0.0, 0.0} };
+    region.center.latitude = 40.707184;
+    region.center.longitude = -73.998392;
+    region.span.longitudeDelta = 0.01f;
+    region.span.latitudeDelta = 0.01f;
+    [mapview setRegion:region animated:YES];
+    
+  //  self.mapview.delegate = self;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -49,7 +62,29 @@
 }
 
 -(IBAction)GetLocation:(id)sender{
-    self.mapview.showsUserLocation = YES;
+    self.locationManager = [[CLLocationManager alloc]init];
+ //   self.locationManager.delegate = self;
+    
+    self.locationManager.distanceFilter = 1000;
+//    CLAuthorizationStatus authorizationStatus= [CLLocationManager authorizationStatus];
+//     [self.locationManager requestAlwaysAuthorization];
+//    if (authorizationStatus == kCLAuthorizationStatusAuthorized ||
+//        authorizationStatus == kCLAuthorizationStatusAuthorizedAlways ||
+//        authorizationStatus == kCLAuthorizationStatusAuthorizedWhenInUse) {
+//        
+//        
+//       
+//        [self.locationManager startUpdatingLocation];
+//        mapview.showsUserLocation = YES;
+//        
+//    }
+    
+
+   [self.locationManager requestAlwaysAuthorization];
+    mapview.showsUserLocation = YES;
+    [self.locationManager startUpdatingLocation];
+    mapview.userTrackingMode=YES;
+    
 }
 
 
@@ -61,6 +96,11 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (IBAction)backTouched:(id)sender {
+    menuViewController *menu = [[menuViewController alloc]init];
+    [self.navigationController pushViewController:menu animated:YES];
 }
 
 @end
