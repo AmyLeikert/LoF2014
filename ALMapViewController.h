@@ -24,4 +24,6 @@
 
 -(IBAction)GetLocation:(id)sender;
 
+-(IBAction)Direction:(id)sender;
+
 @end

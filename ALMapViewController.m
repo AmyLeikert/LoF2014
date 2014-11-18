@@ -8,6 +8,7 @@
 
 #import "ALMapViewController.h"
 #import "menuViewController.h"
+#import "ALMapPin.h"
 
 @interface ALMapViewController ()
 
@@ -26,6 +27,13 @@
     region.span.longitudeDelta = 0.01f;
     region.span.latitudeDelta = 0.01f;
     [mapview setRegion:region animated:YES];
+    
+    
+    ALMapPin *ann = [[ALMapPin alloc]init];
+    ann.title = @"Brooklyn Bridge";
+    ann.subtitle = @"New York";
+    ann.coordinate = region.center;
+    [mapview addAnnotation:ann];
     
   //  self.mapview.delegate = self;
     
@@ -101,6 +109,11 @@
 - (IBAction)backTouched:(id)sender {
     menuViewController *menu = [[menuViewController alloc]init];
     [self.navigationController pushViewController:menu animated:YES];
+}
+
+-(IBAction)Direction:(id)sender {
+    NSString *urlString = @"http://maps.apple.com/maps?daddr=40.707184,-73998392";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
 }
 
 @end

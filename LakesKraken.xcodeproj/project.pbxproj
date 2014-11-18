@@ -12,6 +12,7 @@
 		01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */; };
 		01B6CB591A1BBEF500520427 /* ALPrinciplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */; };
 		01B6CB5A1A1BBEF500520427 /* ALPrinciplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */; };
+		01B6CB5E1A1BDFEF00520427 /* ALMapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6CB5D1A1BDFEF00520427 /* ALMapPin.m */; };
 		01CFB86519F9576700EE824B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CFB86419F9576700EE824B /* CoreData.framework */; };
 		01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB86719F957D400EE824B /* ToDoData.xcdatamodeld */; };
 		01CFB87819F96C4C00EE824B /* ALToDoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87619F96C4C00EE824B /* ALToDoTable.m */; };
@@ -87,6 +88,8 @@
 		01B6CB561A1BBEF500520427 /* ALPrinciplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPrinciplesViewController.h; sourceTree = "<group>"; };
 		01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPrinciplesViewController.m; sourceTree = "<group>"; };
 		01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALPrinciplesViewController.xib; sourceTree = "<group>"; };
+		01B6CB5C1A1BDFEF00520427 /* ALMapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMapPin.h; sourceTree = "<group>"; };
+		01B6CB5D1A1BDFEF00520427 /* ALMapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMapPin.m; sourceTree = "<group>"; };
 		01CFB86419F9576700EE824B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01CFB86819F957D400EE824B /* ToDoData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoData.xcdatamodel; sourceTree = "<group>"; };
 		01CFB87519F96C4C00EE824B /* ALToDoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoTable.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				01F0AE651A1A5504006A1AC8 /* ALMapViewController.h */,
 				01F0AE661A1A5504006A1AC8 /* ALMapViewController.m */,
 				01F0AE671A1A5504006A1AC8 /* ALMapViewController.xib */,
+				01B6CB5C1A1BDFEF00520427 /* ALMapPin.h */,
+				01B6CB5D1A1BDFEF00520427 /* ALMapPin.m */,
 			);
 			name = Map;
 			path = ..;
@@ -573,6 +578,7 @@
 				24B1CCD5197A318C000B7309 /* ALSearchScheduleViewController.m in Sources */,
 				24982E051986D3650094191E /* ALKrakenPhotoController.m in Sources */,
 				246C1831197D942D00BE9990 /* ALSearchResultsViewController.m in Sources */,
+				01B6CB5E1A1BDFEF00520427 /* ALMapPin.m in Sources */,
 				01B6CB591A1BBEF500520427 /* ALPrinciplesViewController.m in Sources */,
 				24A60E2119BE9020009657F7 /* ALAddToDoItem.m in Sources */,
 				24982E0A1987EB850094191E /* ALThumbCollectionCell.m in Sources */,
