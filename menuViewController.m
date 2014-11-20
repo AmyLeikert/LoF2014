@@ -11,6 +11,7 @@
 #import "ALKrakenPhotoController.h"
 #import "ALToDoTable.h"
 #import "ALMapViewController.h"
+#import "ALPrinciplesViewController.h"
 @interface menuViewController ()
 
 @end
@@ -119,6 +120,7 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     ALKrakenPhotoController *photoController = [[ALKrakenPhotoController alloc]init];
     ALToDoTable *table = [[ALToDoTable alloc]init];
     ALMapViewController *map = [[ALMapViewController alloc]init];
+    ALPrinciplesViewController *princip = [[ALPrinciplesViewController alloc]init];
 
     
     
@@ -137,6 +139,10 @@ NSString* const cellReuseIdentifier = @"cellIdentifier";
     
     if (indexPath.section == 0 && indexPath.row == 1) {
         return [self.navigationController pushViewController:map animated:YES];
+    }
+    
+    if (indexPath.section == 0 && indexPath.row == 2) {
+        return [self.navigationController pushViewController:princip animated:YES];
     }
 
 }

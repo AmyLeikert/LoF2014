@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AE6F8D364579837A43FD11BD"
-               BuildableName = "libPods-LakesKraken-Facebook-iOS-SDK.a"
-               BlueprintName = "Pods-LakesKraken-Facebook-iOS-SDK"
+               BlueprintIdentifier = "517C341B74842390BA5615DB"
+               BuildableName = "libPods-LakesKraken-youtube-ios-player-helper.a"
+               BlueprintName = "Pods-LakesKraken-youtube-ios-player-helper"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

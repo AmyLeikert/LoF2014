@@ -21,17 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.addressLabel.textColor =[UIColor colorWithRed:0.18 green:0.102 blue:0.004 alpha:1];
+    
+     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    
     MKCoordinateRegion region = { {0.0, 0.0}, {0.0, 0.0} };
-    region.center.latitude = 40.707184;
-    region.center.longitude = -73.998392;
+    region.center.latitude = 43.507774;
+    region.center.longitude = -86.364268;
     region.span.longitudeDelta = 0.01f;
     region.span.latitudeDelta = 0.01f;
     [mapview setRegion:region animated:YES];
     
-    
     ALMapPin *ann = [[ALMapPin alloc]init];
-    ann.title = @"Brooklyn Bridge";
-    ann.subtitle = @"New York";
+    ann.title = @"Lucky Lake Campground";
+   // ann.subtitle = @"New York";
     ann.coordinate = region.center;
     [mapview addAnnotation:ann];
     
@@ -112,8 +115,75 @@
 }
 
 -(IBAction)Direction:(id)sender {
-    NSString *urlString = @"http://maps.apple.com/maps?daddr=40.707184,-73998392";
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+//    NSString *urlString = @"http://maps.apple.com/maps?daddr=43.507701,-86.364191";
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    
+    
+    MKPlacemark *source = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(42.556559, -83.161440)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
+    MKMapItem *srcMapItem = [[MKMapItem alloc]initWithPlacemark:source];
+    [srcMapItem setName:@""];
+    
+    MKPlacemark *destination = [[MKPlacemark alloc]initWithCoordinate:CLLocationCoordinate2DMake(43.507774,-86.364268) addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
+    
+    MKMapItem *distMapItem = [[MKMapItem alloc]initWithPlacemark:destination];
+    [distMapItem setName:@""];
+    
+    MKDirectionsRequest *request = [[MKDirectionsRequest alloc]init];
+    [request setSource:srcMapItem];
+    [request setDestination:distMapItem];
+    [request setTransportType:MKDirectionsTransportTypeWalking];
+    
+    MKDirections *direction = [[MKDirections alloc]initWithRequest:request];
+    
+    [direction calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+        
+        NSLog(@"response = %@",response);
+        NSArray *arrRoutes = [response routes];
+        [arrRoutes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            
+            MKRoute *rout = obj;
+            
+            MKPolyline *line = [rout polyline];
+            [self.mapview addOverlay:line];
+            NSLog(@"Rout Name : %@",rout.name);
+            NSLog(@"Total Distance (in Meters) :%f",rout.distance);
+            
+            NSArray *steps = [rout steps];
+            
+            NSLog(@"Total Steps : %d",[steps count]);
+            
+            [steps enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                NSLog(@"Rout Instruction : %@",[obj instructions]);
+                NSLog(@"Rout Distance : %f",[obj distance]);
+            }];
+        }];
+    }];
 }
+
+- (IBAction)centerLakeOnMap:(id)sender {
+    
+    
+    MKCoordinateRegion region = { {0.0, 0.0}, {0.0, 0.0} };
+    region.center.latitude = 43.507774;
+    region.center.longitude = -86.364268;
+    region.span.longitudeDelta = 0.01f;
+    region.span.latitudeDelta = 0.01f;
+    [mapview setRegion:region animated:YES];
+    
+    
+    ALMapPin *ann = [[ALMapPin alloc]init];
+    ann.title = @"Lucky Lake Campground";
+    //ann.subtitle = @"New York";
+    ann.coordinate = region.center;
+    [mapview addAnnotation:ann];
+
+    
+//    [self.mapview addAnnotation:newAnnotation];
+//    [self.mapview setRegion:region animated:TRUE];
+//    [self.mapview regionThatFits:region];
+    
+    
+}
+
 
 @end

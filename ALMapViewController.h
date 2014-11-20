@@ -19,6 +19,8 @@
 @property (nonatomic, retain) IBOutlet MKMapView *mapview;
 @property (nonatomic, strong) IBOutlet UIButton *locationButton;
 @property (nonatomic, retain) CLLocationManager *locationManager;
+@property (nonatomic, strong) IBOutlet UIButton *findLakeButton;
+@property (nonatomic, strong) IBOutlet UILabel *addressLabel;
 
 -(IBAction)setMapView:(id)sender;
 

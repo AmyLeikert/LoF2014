@@ -8,6 +8,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ALMapViewController">
             <connections>
+                <outlet property="addressLabel" destination="Cnv-lh-r94" id="FIN-Ns-hhI"/>
+                <outlet property="findLakeButton" destination="v37-5a-NHH" id="j8V-Py-ekD"/>
                 <outlet property="locationButton" destination="4j1-57-frJ" id="YFK-ZM-Uwl"/>
                 <outlet property="mapview" destination="vvN-9N-fMp" id="UKb-yi-Aov"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,6 +49,7 @@
                         <segment title="Satellite"/>
                         <segment title="Hybrid"/>
                     </segments>
+                    <color key="tintColor" red="0.24953294840000001" green="0.15871592809999999" blue="0.094445367099999997" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="setMap:" destination="-1" eventType="valueChanged" id="gRH-Os-yHj"/>
                     </connections>
@@ -81,8 +84,25 @@
                         <constraint firstAttribute="width" constant="87" id="UGD-n2-Xtv"/>
                     </constraints>
                     <state key="normal" title="Directions">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="0.24953294840000001" green="0.15871592809999999" blue="0.094445367099999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.35022503399999999" green="0.205612562" blue="0.08752951347" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="Direction:" destination="-1" eventType="touchUpInside" id="sIF-lf-IQc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v37-5a-NHH">
+                    <rect key="frame" x="162" y="54" width="261" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="261" id="grc-94-UcB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" red="0.24953294840000001" green="0.15871592809999999" blue="0.094445367099999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="centerLakeOnMap:" destination="-1" eventType="touchUpInside" id="iir-M7-hZl"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -100,11 +120,14 @@
                 <constraint firstItem="bmh-ji-OSN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="U1d-Q9-8lN"/>
                 <constraint firstItem="4j1-57-frJ" firstAttribute="centerY" secondItem="bmh-ji-OSN" secondAttribute="centerY" id="WOZ-aw-fcO"/>
                 <constraint firstItem="bmh-ji-OSN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="13" id="WwF-ZL-GsS"/>
+                <constraint firstItem="v37-5a-NHH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="Y89-jd-NfF"/>
                 <constraint firstAttribute="trailing" secondItem="4j1-57-frJ" secondAttribute="trailing" constant="8" id="cKp-10-KM3"/>
                 <constraint firstItem="vvN-9N-fMp" firstAttribute="trailing" secondItem="Yge-9f-sFl" secondAttribute="trailing" id="dXC-1f-MGH"/>
+                <constraint firstItem="v37-5a-NHH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="162" id="gVI-b3-J4B"/>
                 <constraint firstItem="vvN-9N-fMp" firstAttribute="top" secondItem="bmh-ji-OSN" secondAttribute="bottom" constant="84" id="kBF-DF-4Ti"/>
                 <constraint firstItem="4j1-57-frJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="16" id="lm1-JS-I7N"/>
                 <constraint firstItem="kTp-oY-YCd" firstAttribute="top" secondItem="vvN-9N-fMp" secondAttribute="bottom" constant="8" symbolic="YES" id="omQ-Wt-WbW"/>
+                <constraint firstItem="vvN-9N-fMp" firstAttribute="top" secondItem="v37-5a-NHH" secondAttribute="bottom" constant="3" id="pYH-C2-ow1"/>
                 <constraint firstAttribute="trailing" secondItem="Yge-9f-sFl" secondAttribute="trailing" id="r8u-9r-NU9"/>
                 <constraint firstItem="vvN-9N-fMp" firstAttribute="leading" secondItem="Yge-9f-sFl" secondAttribute="leading" id="spD-97-kpz"/>
             </constraints>
