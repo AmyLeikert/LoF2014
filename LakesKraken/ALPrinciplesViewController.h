@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <YTPlayerView.h>
+#import "ALPrincipleDescriptionController.h"
 
 @interface ALPrinciplesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) IBOutlet YTPlayerView *ytView;
+
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) IBOutlet UITableView *table;
-
+@property (nonatomic, strong) ALPrincipleDescriptionController *princDescrip;
 @end

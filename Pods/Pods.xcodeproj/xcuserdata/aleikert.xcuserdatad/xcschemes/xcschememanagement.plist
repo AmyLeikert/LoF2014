@@ -24,7 +24,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-LakesKraken-youtube-ios-player-helper.xcscheme</key>
+		<key>Pods-LakesKraken-XCDYouTubeKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0C738F58D0C17BF438A65620</key>
+		<key>2AFEA171C6E8C3CB4BF145FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12ACEB5C7B49388D8AE1B783</key>
+		<key>6158A807593804C372D7BC7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>517C341B74842390BA5615DB</key>
+		<key>A5ADC078D42F880E50B4D9ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8785B70A6B49525DCF96DA20</key>
+		<key>B022FF9F92583B733E07FFD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE6F8D364579837A43FD11BD</key>
+		<key>B476DC8229991F5484BD1144</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9ED64F27BCF4D50CFA70E1A</key>
+		<key>D4E2B164912042E82DE936F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

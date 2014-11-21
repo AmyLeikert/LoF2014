@@ -19,6 +19,8 @@
 		01CFB87919F96C4C00EE824B /* ALToDoTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CFB87719F96C4C00EE824B /* ALToDoTable.xib */; };
 		01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87B19FADEDC00EE824B /* ALToDoCell.m */; };
 		01CFB87E19FADEDC00EE824B /* ALToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */; };
+		01DE9ED21A1F91C700F2EF9B /* ALPrincipleDescriptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE9ED01A1F91C700F2EF9B /* ALPrincipleDescriptionController.m */; };
+		01DE9ED31A1F91C700F2EF9B /* ALPrincipleDescriptionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01DE9ED11A1F91C700F2EF9B /* ALPrincipleDescriptionController.xib */; };
 		01F0AE641A1A549D006A1AC8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F0AE631A1A549D006A1AC8 /* MapKit.framework */; };
 		01F0AE681A1A5504006A1AC8 /* ALMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F0AE661A1A5504006A1AC8 /* ALMapViewController.m */; };
 		01F0AE691A1A5504006A1AC8 /* ALMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F0AE671A1A5504006A1AC8 /* ALMapViewController.xib */; };
@@ -98,6 +100,9 @@
 		01CFB87A19FADEDC00EE824B /* ALToDoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoCell.h; sourceTree = "<group>"; };
 		01CFB87B19FADEDC00EE824B /* ALToDoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALToDoCell.m; sourceTree = "<group>"; };
 		01CFB87C19FADEDC00EE824B /* ALToDoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALToDoCell.xib; sourceTree = "<group>"; };
+		01DE9ECF1A1F91C700F2EF9B /* ALPrincipleDescriptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPrincipleDescriptionController.h; sourceTree = "<group>"; };
+		01DE9ED01A1F91C700F2EF9B /* ALPrincipleDescriptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPrincipleDescriptionController.m; sourceTree = "<group>"; };
+		01DE9ED11A1F91C700F2EF9B /* ALPrincipleDescriptionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALPrincipleDescriptionController.xib; sourceTree = "<group>"; };
 		01F0AE631A1A549D006A1AC8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		01F0AE651A1A5504006A1AC8 /* ALMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALMapViewController.h; sourceTree = "<group>"; };
 		01F0AE661A1A5504006A1AC8 /* ALMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALMapViewController.m; sourceTree = "<group>"; };
@@ -214,6 +219,9 @@
 				01B6CB561A1BBEF500520427 /* ALPrinciplesViewController.h */,
 				01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */,
 				01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */,
+				01DE9ECF1A1F91C700F2EF9B /* ALPrincipleDescriptionController.h */,
+				01DE9ED01A1F91C700F2EF9B /* ALPrincipleDescriptionController.m */,
+				01DE9ED11A1F91C700F2EF9B /* ALPrincipleDescriptionController.xib */,
 			);
 			name = Principles;
 			sourceTree = "<group>";
@@ -517,6 +525,7 @@
 				01CFB87E19FADEDC00EE824B /* ALToDoCell.xib in Resources */,
 				24370782194FCB3B00D8040E /* InfoPlist.strings in Resources */,
 				01CFB87919F96C4C00EE824B /* ALToDoTable.xib in Resources */,
+				01DE9ED31A1F91C700F2EF9B /* ALPrincipleDescriptionController.xib in Resources */,
 				2437078A194FCB3B00D8040E /* Images.xcassets in Resources */,
 				24A7C5FC19744926005FAB18 /* menuViewController.xib in Resources */,
 				01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */,
@@ -592,6 +601,7 @@
 				01F0AE681A1A5504006A1AC8 /* ALMapViewController.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
 				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
+				01DE9ED21A1F91C700F2EF9B /* ALPrincipleDescriptionController.m in Sources */,
 				01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */,
 				24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */,
 				246C182D197D906500BE9990 /* ALFilterEvent.m in Sources */,

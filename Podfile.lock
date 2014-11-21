@@ -4,19 +4,19 @@ PODS:
   - EXPhotoViewer (1.1.2)
   - Facebook-iOS-SDK (3.17.0):
     - Bolts
-  - youtube-ios-player-helper (0.1.1)
+  - XCDYouTubeKit (2.0.3)
 
 DEPENDENCIES:
   - BlinkButton (~> 0.0)
   - EXPhotoViewer (~> 1.1)
   - Facebook-iOS-SDK (~> 3.17)
-  - youtube-ios-player-helper (~> 0.1)
+  - XCDYouTubeKit (~> 2.0)
 
 SPEC CHECKSUMS:
   BlinkButton: c675681c6be0840f78c4f5543ee644695ec790e1
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   EXPhotoViewer: 0e9d3e4fbf5918ffeeadc047ed798d54f4a2a6b1
   Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
-  youtube-ios-player-helper: 53aecd0b4763a77e6890e9a7c55abb7b5c4bedea
+  XCDYouTubeKit: 840728453f0a22f54e4488ebeb8ee955a30c274c
 
 COCOAPODS: 0.34.4

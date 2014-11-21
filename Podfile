@@ -4,5 +4,5 @@ target "LakesKraken" do
   pod 'BlinkButton', '~> 0.0'
   pod 'EXPhotoViewer', '~> 1.1'
   pod 'Facebook-iOS-SDK', '~> 3.17'
-  pod 'youtube-ios-player-helper', '~> 0.1'
+  pod 'XCDYouTubeKit', '~> 2.0'
 end

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C738F58D0C17BF438A65620"
+               BlueprintIdentifier = "B476DC8229991F5484BD1144"
                BuildableName = "libPods-LakesKraken-EXPhotoViewer.a"
                BlueprintName = "Pods-LakesKraken-EXPhotoViewer"
                ReferencedContainer = "container:Pods.xcodeproj">
