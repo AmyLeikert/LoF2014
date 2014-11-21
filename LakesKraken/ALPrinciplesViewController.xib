@@ -24,7 +24,7 @@
                         <outlet property="delegate" destination="-1" id="kGE-8l-5yL"/>
                     </connections>
                 </tableView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-G0-Jup">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="jaW-G0-Jup">
                     <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
                 </imageView>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yh-ea-e4U">
@@ -35,6 +35,15 @@
                         <constraint firstAttribute="height" constant="200" id="t3y-Wj-GQy"/>
                     </constraints>
                 </webView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPB-3U-uVb">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <state key="normal" image="woodBackButton2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backTouched:" destination="-1" eventType="touchUpInside" id="zA2-oV-HfM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -51,6 +60,7 @@
         </view>
     </objects>
     <resources>
+        <image name="woodBackButton2" width="512" height="512"/>
         <image name="woodNavigation" width="550" height="108"/>
     </resources>
 </document>

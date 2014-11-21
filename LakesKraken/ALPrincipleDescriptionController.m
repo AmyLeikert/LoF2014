@@ -7,6 +7,7 @@
 //
 
 #import "ALPrincipleDescriptionController.h"
+#import "ALPrinciplesViewController.h"
 
 @interface ALPrincipleDescriptionController ()
 
@@ -65,6 +66,21 @@
     CGRect newFrame = textView.frame;
     newFrame.size = CGSizeMake(fmaxf(newSize.width, fixedWidth), newSize.height);
     textView.frame = newFrame;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
+- (IBAction)backTouched:(id)sender {
+    ALPrinciplesViewController *princ = [[ALPrinciplesViewController alloc]init];
+    [self.navigationController pushViewController:princ animated:YES];
 }
 
 @end

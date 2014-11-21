@@ -23,11 +23,22 @@
                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodNavigation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmy-6T-fBm">
+                    <rect key="frame" x="0.0" y="-31" width="600" height="108"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnz-aW-L93">
+                    <rect key="frame" x="-1" y="13" width="55" height="46"/>
+                    <state key="normal" title="Button" image="woodBackButton2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backTouched:" destination="-1" eventType="touchUpInside" id="Q7q-dr-ttk"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBX-AJ-reK">
-                    <rect key="frame" x="206" y="280" width="188" height="40"/>
+                    <rect key="frame" x="44" y="280" width="500" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="JOt-Qx-hyT"/>
-                        <constraint firstAttribute="width" constant="188" id="o9U-b7-UzB"/>
+                        <constraint firstAttribute="height" constant="40" id="Q7J-PW-Pq3"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -36,13 +47,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="WBX-AJ-reK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="0x1-gT-JVd"/>
                 <constraint firstAttribute="bottom" secondItem="Xwu-Kr-oIW" secondAttribute="bottom" constant="34" id="3rP-IV-K5o"/>
+                <constraint firstItem="WBX-AJ-reK" firstAttribute="centerX" secondItem="Xwu-Kr-oIW" secondAttribute="centerX" id="Hqp-mZ-PaL"/>
                 <constraint firstAttribute="trailing" secondItem="Xwu-Kr-oIW" secondAttribute="trailing" constant="47" id="IRv-H4-DUM"/>
-                <constraint firstItem="Xwu-Kr-oIW" firstAttribute="top" secondItem="WBX-AJ-reK" secondAttribute="bottom" constant="28" id="LGD-4C-5wb"/>
-                <constraint firstItem="WBX-AJ-reK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cYK-Wr-6Mg"/>
-                <constraint firstItem="WBX-AJ-reK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kza-cS-gZD"/>
+                <constraint firstItem="Xwu-Kr-oIW" firstAttribute="top" secondItem="WBX-AJ-reK" secondAttribute="bottom" constant="28" id="TUy-Hk-aRQ"/>
+                <constraint firstItem="WBX-AJ-reK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pPV-v8-biD"/>
                 <constraint firstItem="Xwu-Kr-oIW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="svw-2p-bRe"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="woodBackButton2" width="512" height="512"/>
+        <image name="woodNavigation" width="550" height="108"/>
+    </resources>
 </document>

@@ -8,6 +8,7 @@
 
 #import "ALPrinciplesViewController.h"
 #import "ALPrincipleDescriptionController.h"
+#import "menuViewController.h"
 
 @interface ALPrinciplesViewController ()
 
@@ -130,9 +131,11 @@
     princDescrip.princName = cellText;
     
     [self.navigationController pushViewController:princDescrip animated:YES];
-    
-    
-    
+}
+
+- (IBAction)backTouched:(id)sender {
+    menuViewController *princ = [[menuViewController alloc]init];
+    [self.navigationController pushViewController:princ animated:YES];
 }
 
 @end
