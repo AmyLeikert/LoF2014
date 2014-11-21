@@ -13,13 +13,15 @@
 
 @end
 
-//NSString* const cellReuseIdentifier = @"cellIdentifier";
 @implementation ALPrinciplesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.table registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cellReuseIdentifier"];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    self.table.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     
     NSString *stream = @"https://www.youtube.com/watch?v=ysl-Yu4Rhdw";
     NSURL *url = [NSURL URLWithString:stream];
@@ -45,18 +47,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
@@ -69,9 +60,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    ALPrincipleDescriptionController *descripView = [[ALPrincipleDescriptionController alloc]init];
-    
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellReuseIdentifier" forIndexPath:indexPath];
     
     if (!cell) {

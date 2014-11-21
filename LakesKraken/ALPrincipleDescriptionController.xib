@@ -16,28 +16,32 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwu-Kr-oIW">
-                    <rect key="frame" x="23" y="365" width="331" height="214"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xwu-Kr-oIW">
+                    <rect key="frame" x="36" y="348" width="517" height="218"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBX-AJ-reK">
-                    <rect key="frame" x="190" y="231" width="265" height="137"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBX-AJ-reK">
+                    <rect key="frame" x="206" y="280" width="188" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="137" id="Jr9-rk-nam"/>
-                        <constraint firstAttribute="width" constant="265" id="Poq-Gq-n4a"/>
+                        <constraint firstAttribute="height" constant="40" id="JOt-Qx-hyT"/>
+                        <constraint firstAttribute="width" constant="188" id="o9U-b7-UzB"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="WBX-AJ-reK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="231" id="PI0-kB-UeM"/>
-                <constraint firstItem="WBX-AJ-reK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="190" id="d9C-D0-wNt"/>
+                <constraint firstAttribute="bottom" secondItem="Xwu-Kr-oIW" secondAttribute="bottom" constant="34" id="3rP-IV-K5o"/>
+                <constraint firstAttribute="trailing" secondItem="Xwu-Kr-oIW" secondAttribute="trailing" constant="47" id="IRv-H4-DUM"/>
+                <constraint firstItem="Xwu-Kr-oIW" firstAttribute="top" secondItem="WBX-AJ-reK" secondAttribute="bottom" constant="28" id="LGD-4C-5wb"/>
+                <constraint firstItem="WBX-AJ-reK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cYK-Wr-6Mg"/>
+                <constraint firstItem="WBX-AJ-reK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kza-cS-gZD"/>
+                <constraint firstItem="Xwu-Kr-oIW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="svw-2p-bRe"/>
             </constraints>
         </view>
     </objects>
