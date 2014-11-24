@@ -9,6 +9,7 @@
 #import "ALMapViewController.h"
 #import "menuViewController.h"
 #import "ALMapPin.h"
+#import "ALDirectionsViewController.h"
 
 @interface ALMapViewController ()
 
@@ -73,6 +74,7 @@
 }
 
 -(IBAction)GetLocation:(id)sender{
+    NSLog(@"called");
     self.locationManager = [[CLLocationManager alloc]init];
  //   self.locationManager.delegate = self;
     
@@ -118,6 +120,12 @@
 //    NSString *urlString = @"http://maps.apple.com/maps?daddr=43.507701,-86.364191";
 //    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
     
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Directions" message:@"Where are you starting from?" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+    
+    ALDirectionsViewController *directions = [[ALDirectionsViewController alloc]init];
+     [self.navigationController pushViewController:directions animated:YES];
     
     MKPlacemark *source = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(42.556559, -83.161440)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
     MKMapItem *srcMapItem = [[MKMapItem alloc]initWithPlacemark:source];
@@ -183,6 +191,14 @@
 //    [self.mapview regionThatFits:region];
     
     
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    
+    ALDirectionsViewController *directions = [[ALDirectionsViewController alloc]init];
+    directions.address = [[alertView textFieldAtIndex:0]text]; 
+       
 }
 
 

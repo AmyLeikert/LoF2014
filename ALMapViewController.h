@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ALMapViewController : UIViewController <CLLocationManagerDelegate> {
+@interface ALMapViewController : UIViewController <CLLocationManagerDelegate, UIAlertViewDelegate> {
     MKMapView *mapview;
 }
 
