@@ -124,48 +124,46 @@
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [alert show];
     
-    ALDirectionsViewController *directions = [[ALDirectionsViewController alloc]init];
-     [self.navigationController pushViewController:directions animated:YES];
     
-    MKPlacemark *source = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(42.556559, -83.161440)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
-    MKMapItem *srcMapItem = [[MKMapItem alloc]initWithPlacemark:source];
-    [srcMapItem setName:@""];
-    
-    MKPlacemark *destination = [[MKPlacemark alloc]initWithCoordinate:CLLocationCoordinate2DMake(43.507774,-86.364268) addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
-    
-    MKMapItem *distMapItem = [[MKMapItem alloc]initWithPlacemark:destination];
-    [distMapItem setName:@""];
-    
-    MKDirectionsRequest *request = [[MKDirectionsRequest alloc]init];
-    [request setSource:srcMapItem];
-    [request setDestination:distMapItem];
-    [request setTransportType:MKDirectionsTransportTypeWalking];
-    
-    MKDirections *direction = [[MKDirections alloc]initWithRequest:request];
-    
-    [direction calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
-        
-        NSLog(@"response = %@",response);
-        NSArray *arrRoutes = [response routes];
-        [arrRoutes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            
-            MKRoute *rout = obj;
-            
-            MKPolyline *line = [rout polyline];
-            [self.mapview addOverlay:line];
-            NSLog(@"Rout Name : %@",rout.name);
-            NSLog(@"Total Distance (in Meters) :%f",rout.distance);
-            
-            NSArray *steps = [rout steps];
-            
-            NSLog(@"Total Steps : %d",[steps count]);
-            
-            [steps enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                NSLog(@"Rout Instruction : %@",[obj instructions]);
-                NSLog(@"Rout Distance : %f",[obj distance]);
-            }];
-        }];
-    }];
+//    MKPlacemark *source = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(42.556559, -83.161440)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
+//    MKMapItem *srcMapItem = [[MKMapItem alloc]initWithPlacemark:source];
+//    [srcMapItem setName:@""];
+//    
+//    MKPlacemark *destination = [[MKPlacemark alloc]initWithCoordinate:CLLocationCoordinate2DMake(43.507774,-86.364268) addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
+//    
+//    MKMapItem *distMapItem = [[MKMapItem alloc]initWithPlacemark:destination];
+//    [distMapItem setName:@""];
+//    
+//    MKDirectionsRequest *request = [[MKDirectionsRequest alloc]init];
+//    [request setSource:srcMapItem];
+//    [request setDestination:distMapItem];
+//    [request setTransportType:MKDirectionsTransportTypeWalking];
+//    
+//    MKDirections *direction = [[MKDirections alloc]initWithRequest:request];
+//    
+//    [direction calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+//        
+//        NSLog(@"response = %@",response);
+//        NSArray *arrRoutes = [response routes];
+//        [arrRoutes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            
+//            MKRoute *rout = obj;
+//            
+//            MKPolyline *line = [rout polyline];
+//            [self.mapview addOverlay:line];
+//            NSLog(@"Rout Name : %@",rout.name);
+//            NSLog(@"Total Distance (in Meters) :%f",rout.distance);
+//            
+//            NSArray *steps = [rout steps];
+//            
+//            NSLog(@"Total Steps : %d",[steps count]);
+//            
+//            [steps enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//                NSLog(@"Rout Instruction : %@",[obj instructions]);
+//                NSLog(@"Rout Distance : %f",[obj distance]);
+//            }];
+//        }];
+//    }];
 }
 
 - (IBAction)centerLakeOnMap:(id)sender {
@@ -197,7 +195,12 @@
     NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
     
     ALDirectionsViewController *directions = [[ALDirectionsViewController alloc]init];
-    directions.address = [[alertView textFieldAtIndex:0]text]; 
+    directions.address = [[alertView textFieldAtIndex:0]text];
+    
+    if (directions.address) {
+        
+        [self.navigationController pushViewController:directions animated:YES];
+    }
        
 }
 

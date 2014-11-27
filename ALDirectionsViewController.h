@@ -13,7 +13,9 @@
 @interface ALDirectionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *table;
+@property (nonatomic, strong) IBOutlet UILabel *fromLabel;
 @property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSArray *steps;
 
 -(void)getDirections;
 

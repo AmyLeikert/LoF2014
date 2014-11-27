@@ -17,11 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.fromLabel setText:self.address];
     
     [self.table registerClass: [UITableViewCell class] forCellReuseIdentifier:@"cellReuseIdentifier"];
     
     self.view.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
     self.table.backgroundColor = [UIColor colorWithRed:1 green:0.937 blue:0.78 alpha:1];
+    
+    [self getDirections];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +39,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return self.steps.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -68,7 +71,7 @@
             
             //      MKPlacemark *source = [[MKPlacemark   alloc]initWithCoordinate:CLLocationCoordinate2DMake(42.556559, -83.161440)   addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
             MKMapItem *srcMapItem = [[MKMapItem alloc]initWithPlacemark:source];
-            [srcMapItem setName:@""];
+            [srcMapItem setName:@"Home"];
             
             MKPlacemark *destination = [[MKPlacemark alloc]initWithCoordinate:CLLocationCoordinate2DMake(43.507774,-86.364268) addressDictionary:[NSDictionary dictionaryWithObjectsAndKeys:@"",@"", nil] ];
             
@@ -96,6 +99,7 @@
                     NSLog(@"Total Distance (in Meters) :%f",rout.distance);
                     
                     NSArray *steps = [rout steps];
+                    self.steps = [rout steps];
                     
                     NSLog(@"Total Steps : %d",[steps count]);
                     

@@ -10,11 +10,15 @@
 		01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCA1A09273B00DE2DDA /* ALAddToDoItem.xib */; };
 		01368DCF1A09701B00DE2DDA /* ALUpdateListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */; };
 		01368DD01A09701B00DE2DDA /* ALUpdateListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */; };
+		0157A5D01A27999200E22142 /* ALDirectionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0157A5CE1A27999200E22142 /* ALDirectionsCell.m */; };
+		0157A5D11A27999200E22142 /* ALDirectionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0157A5CF1A27999200E22142 /* ALDirectionsCell.xib */; };
 		01B6CB591A1BBEF500520427 /* ALPrinciplesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */; };
 		01B6CB5A1A1BBEF500520427 /* ALPrinciplesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */; };
 		01B6CB5E1A1BDFEF00520427 /* ALMapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B6CB5D1A1BDFEF00520427 /* ALMapPin.m */; };
 		01BD8C741A1FDF490082CE29 /* ALDirectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BD8C721A1FDF490082CE29 /* ALDirectionsViewController.m */; };
 		01BD8C751A1FDF490082CE29 /* ALDirectionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BD8C731A1FDF490082CE29 /* ALDirectionsViewController.xib */; };
+		01BD8C791A23AA380082CE29 /* ALAboutLakes.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BD8C771A23AA380082CE29 /* ALAboutLakes.m */; };
+		01BD8C7A1A23AA380082CE29 /* ALAboutLakes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BD8C781A23AA380082CE29 /* ALAboutLakes.xib */; };
 		01CFB86519F9576700EE824B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01CFB86419F9576700EE824B /* CoreData.framework */; };
 		01CFB86919F957D400EE824B /* ToDoData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB86719F957D400EE824B /* ToDoData.xcdatamodeld */; };
 		01CFB87819F96C4C00EE824B /* ALToDoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CFB87619F96C4C00EE824B /* ALToDoTable.m */; };
@@ -89,6 +93,9 @@
 		01368DCC1A09701B00DE2DDA /* ALUpdateListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALUpdateListController.h; sourceTree = "<group>"; };
 		01368DCD1A09701B00DE2DDA /* ALUpdateListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALUpdateListController.m; sourceTree = "<group>"; };
 		01368DCE1A09701B00DE2DDA /* ALUpdateListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALUpdateListController.xib; sourceTree = "<group>"; };
+		0157A5CD1A27999200E22142 /* ALDirectionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDirectionsCell.h; sourceTree = "<group>"; };
+		0157A5CE1A27999200E22142 /* ALDirectionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDirectionsCell.m; sourceTree = "<group>"; };
+		0157A5CF1A27999200E22142 /* ALDirectionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALDirectionsCell.xib; sourceTree = "<group>"; };
 		01B6CB561A1BBEF500520427 /* ALPrinciplesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALPrinciplesViewController.h; sourceTree = "<group>"; };
 		01B6CB571A1BBEF500520427 /* ALPrinciplesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALPrinciplesViewController.m; sourceTree = "<group>"; };
 		01B6CB581A1BBEF500520427 /* ALPrinciplesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALPrinciplesViewController.xib; sourceTree = "<group>"; };
@@ -97,6 +104,9 @@
 		01BD8C711A1FDF490082CE29 /* ALDirectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALDirectionsViewController.h; sourceTree = "<group>"; };
 		01BD8C721A1FDF490082CE29 /* ALDirectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALDirectionsViewController.m; sourceTree = "<group>"; };
 		01BD8C731A1FDF490082CE29 /* ALDirectionsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALDirectionsViewController.xib; sourceTree = "<group>"; };
+		01BD8C761A23AA380082CE29 /* ALAboutLakes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAboutLakes.h; sourceTree = "<group>"; };
+		01BD8C771A23AA380082CE29 /* ALAboutLakes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAboutLakes.m; sourceTree = "<group>"; };
+		01BD8C781A23AA380082CE29 /* ALAboutLakes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ALAboutLakes.xib; sourceTree = "<group>"; };
 		01CFB86419F9576700EE824B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		01CFB86819F957D400EE824B /* ToDoData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoData.xcdatamodel; sourceTree = "<group>"; };
 		01CFB87519F96C4C00EE824B /* ALToDoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALToDoTable.h; sourceTree = "<group>"; };
@@ -250,6 +260,9 @@
 				01BD8C711A1FDF490082CE29 /* ALDirectionsViewController.h */,
 				01BD8C721A1FDF490082CE29 /* ALDirectionsViewController.m */,
 				01BD8C731A1FDF490082CE29 /* ALDirectionsViewController.xib */,
+				0157A5CD1A27999200E22142 /* ALDirectionsCell.h */,
+				0157A5CE1A27999200E22142 /* ALDirectionsCell.m */,
+				0157A5CF1A27999200E22142 /* ALDirectionsCell.xib */,
 			);
 			name = Map;
 			path = ..;
@@ -321,6 +334,9 @@
 				243707A6194FCB6400D8040E /* ALWelcomeView.h */,
 				243707A7194FCB6400D8040E /* ALWelcomeView.m */,
 				243707A8194FCB6400D8040E /* ALWelcomeView.xib */,
+				01BD8C761A23AA380082CE29 /* ALAboutLakes.h */,
+				01BD8C771A23AA380082CE29 /* ALAboutLakes.m */,
+				01BD8C781A23AA380082CE29 /* ALAboutLakes.xib */,
 				24A7C5F819744926005FAB18 /* menuViewController.h */,
 				24A7C5F919744926005FAB18 /* menuViewController.m */,
 				24A7C5FA19744926005FAB18 /* menuViewController.xib */,
@@ -523,6 +539,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0157A5D11A27999200E22142 /* ALDirectionsCell.xib in Resources */,
 				24B1CCD4197A318C000B7309 /* ALScheduleTableViewCell.xib in Resources */,
 				24982E0C1987EEFC0094191E /* ALThumbCollectionCell.xib in Resources */,
 				01BD8C751A1FDF490082CE29 /* ALDirectionsViewController.xib in Resources */,
@@ -540,6 +557,7 @@
 				01368DCB1A09273B00DE2DDA /* ALAddToDoItem.xib in Resources */,
 				243707AA194FCB6400D8040E /* ALWelcomeView.xib in Resources */,
 				24982E061986D3650094191E /* ALKrakenPhotoController.xib in Resources */,
+				01BD8C7A1A23AA380082CE29 /* ALAboutLakes.xib in Resources */,
 				24ACAEC619CA054E00293B61 /* (null) in Resources */,
 				24A7C60319744E76005FAB18 /* OceanSounds.mp3 in Resources */,
 			);
@@ -607,6 +625,7 @@
 				24B1CCD2197A318C000B7309 /* ALEvent.m in Sources */,
 				24370784194FCB3B00D8040E /* main.m in Sources */,
 				01CFB87D19FADEDC00EE824B /* ALToDoCell.m in Sources */,
+				0157A5D01A27999200E22142 /* ALDirectionsCell.m in Sources */,
 				01F0AE681A1A5504006A1AC8 /* ALMapViewController.m in Sources */,
 				24370788194FCB3B00D8040E /* ALAppDelegate.m in Sources */,
 				24A7C5FB19744926005FAB18 /* menuViewController.m in Sources */,
@@ -615,6 +634,7 @@
 				24B1CCD3197A318C000B7309 /* ALScheduleTableViewCell.m in Sources */,
 				246C182D197D906500BE9990 /* ALFilterEvent.m in Sources */,
 				01BD8C741A1FDF490082CE29 /* ALDirectionsViewController.m in Sources */,
+				01BD8C791A23AA380082CE29 /* ALAboutLakes.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
